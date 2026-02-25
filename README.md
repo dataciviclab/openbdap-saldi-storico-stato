@@ -30,7 +30,7 @@
 ## Come si contribuisce
 
 1. **[Discussion](https://github.com/dataciviclab/openbdap-saldi-storico-stato/discussions)** per idee / contesto
-2. **Issue** per task concreti
+2. **[Issue](https://github.com/orgs/dataciviclab/projects/5/views/7?sliceBy%5Bvalue%5D=dataciviclab%2Fopenbdap-saldi-storico-stato)** per task concreti
 3. **Branch** per lavorare
 4. **Pull Request** per revisione e merge
 
