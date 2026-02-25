@@ -1,0 +1,97 @@
+name: Seed initial issues
+
+on:
+  workflow_dispatch:
+    inputs:
+      repo:
+        description: "owner/repo (default: current)"
+        required: false
+        default: ""
+      dry_run:
+        description: "If true, do not create issues (just print)"
+        required: false
+        default: "false"
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  seed:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Verify gh is available
+        run: gh --version
+
+      - name: Create issues from seed files
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          INPUT_REPO: ${{ inputs.repo }}
+          DRY_RUN: ${{ inputs.dry_run }}
+          DEFAULT_REPO: ${{ github.repository }}
+        run: |
+          set -euo pipefail
+
+          REPO="${INPUT_REPO:-}"
+          if [ -z "$REPO" ]; then
+            REPO="$DEFAULT_REPO"
+          fi
+
+          echo "Target repo: $REPO"
+          echo "Dry run: $DRY_RUN"
+
+          shopt -s nullglob
+          FILES=(.github/seed-issues/*.md)
+
+          if [ ${#FILES[@]} -eq 0 ]; then
+            echo "No seed issues found in .github/seed-issues/"
+            exit 0
+          fi
+
+          for f in "${FILES[@]}"; do
+            echo "----"
+            echo "Processing $f"
+
+            # Extract frontmatter (between first two --- lines)
+            FM="$(awk 'BEGIN{fm=0} /^---[[:space:]]*$/{fm++; next} fm==1{print} fm>=2{exit}' "$f")"
+            BODY="$(awk 'BEGIN{fm=0} /^---[[:space:]]*$/{fm++; next} fm>=2{print}' "$f")"
+
+            TITLE="$(echo "$FM" | sed -n 's/^title:[[:space:]]*"\(.*\)"/\1/p')"
+            if [ -z "${TITLE:-}" ]; then
+              TITLE="$(echo "$FM" | sed -n "s/^title:[[:space:]]*'\(.*\)'/\1/p")"
+            fi
+
+            LABELS_RAW="$(echo "$FM" | sed -n 's/^labels:[[:space:]]*\[\(.*\)\]/\1/p' | tr -d "\"' ")"
+            ASSIGNEES_RAW="$(echo "$FM" | sed -n 's/^assignees:[[:space:]]*\[\(.*\)\]/\1/p' | tr -d "\"' ")"
+
+            if [ -z "${TITLE:-}" ]; then
+              echo "ERROR: Missing title in frontmatter of $f"
+              exit 1
+            fi
+
+            # Build gh arguments
+            GH_ARGS=(issue create --repo "$REPO" --title "$TITLE" --body "$BODY")
+
+            if [ -n "${LABELS_RAW:-}" ]; then
+              IFS=',' read -ra LABELS <<< "$LABELS_RAW"
+              for l in "${LABELS[@]}"; do
+                [ -n "$l" ] && GH_ARGS+=(--label "$l")
+              done
+            fi
+
+            if [ -n "${ASSIGNEES_RAW:-}" ]; then
+              IFS=',' read -ra ASG <<< "$ASSIGNEES_RAW"
+              for a in "${ASG[@]}"; do
+                [ -n "$a" ] && GH_ARGS+=(--assignee "$a")
+              done
+            fi
+
+            if [ "$DRY_RUN" = "true" ]; then
+              echo "DRY_RUN: gh ${GH_ARGS[*]}"
+            else
+              gh "${GH_ARGS[@]}"
+            fi
+          done
