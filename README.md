@@ -1,4 +1,4 @@
-# 📊 Titolo del progetto
+# 📊 Titolo del progetto - TBD
 
 ## Domanda civica
 (Una sola frase, chiara, misurabile)
@@ -15,8 +15,10 @@
 - Docs:
 
 ## Dataset utilizzati
-- Nome dataset — Fonte ufficiale — Periodo — Livello
-- Nome dataset — Fonte ufficiale — Periodo — Livello
+- Fonte: OpenBDAP
+- Dataset: [Rendiconto Pubblicato - Serie storica - Saldi](https://bdap-opendata.rgs.mef.gov.it/content/rendiconto-pubblicato-serie-storica-saldi)
+- Periodo: 2003-2024
+- Livello: Anno
 
 ## Output pubblico
 - Tipo: (dashboard / report / pagina)
@@ -27,7 +29,7 @@
 
 ## Come si contribuisce
 
-1. **Discussion** per idee / contesto
+1. **[Discussion](https://github.com/dataciviclab/openbdap-saldi-storico-stato/discussions)** per idee / contesto
 2. **Issue** per task concreti
 3. **Branch** per lavorare
 4. **Pull Request** per revisione e merge
@@ -35,5 +37,4 @@
 Dettagli in `WORKFLOW.md`.
 
 ## Link utili
-- Spreadsheet progetto ([Template](https://docs.google.com/spreadsheets/d/17EmTUVLzimppd70kckX2r2UxPQIwGDMU_Fzsqec4idg/edit?gid=1775469119#gid=1775469119))
 - [Metodo DataCivicLab](https://github.com/dataciviclab/dataciviclab/blob/main/METHOD.md)
