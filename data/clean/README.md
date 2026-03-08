@@ -1,101 +1,140 @@
-# /data/clean - Dati puliti
+# 🧹 /data/clean — Dati puliti
 
-Questa cartella documenta il layer CLEAN del dataset OpenBDAP "Rendiconto pubblicato - Serie storica - Saldi".
+Il layer CLEAN normalizza i dati RAW senza alterarne il contenuto semantico.
+Input: CSV da `data/raw/`. Output: Parquet + metadata su Google Drive.
 
-Notebook che genera il clean:
-[02_raw_clean.ipynb](https://github.com/dataciviclab/openbdap-saldi-storico-stato/blob/20e49144f32db9a4a727e59b861f9935ef9cf5cd/notebooks/02_raw_clean.ipynb)
+---
 
-## Obiettivo del CLEAN
+## 🔗 Notebook di trasformazione
 
-Produrre una serie storica annuale coerente e pronta per analisi, senza alterare il significato dei valori di business.
+📓 [`02_raw_clean.ipynb`](../../notebooks/02_raw_clean.ipynb)
 
-Il passaggio RAW -> CLEAN applica solo:
-- parsing CSV
-- rename colonne in `snake_case`
-- mapping semantico dei nomi colonna attesi
-- cast dei tipi
-- export parquet
-- metadata di tracciabilita
+---
 
-Non vengono applicati:
-- ricalcoli contabili
-- correzioni manuali dei saldi
-- normalizzazioni economiche
-- interpretazioni del dato
+## 📂 Struttura Drive (CLEAN)
 
-## Struttura output
+```
+MyDrive/DataCivicLab/data/clean/
+├── openbdap_rendiconto_saldi_storico/
+│   └── <RUN_ID>/
+│       ├── saldi_storico.parquet
+│       ├── columns_mapping_raw_to_clean.json
+│       ├── profile_clean.json
+│       ├── validate_clean.json
+│       ├── data_dictionary.json
+│       └── clean_manifest.json
+└── openbdap_rendiconto_spese_missioni/
+    └── <RUN_ID>/
+        ├── spese_missioni.parquet
+        ├── columns_mapping_raw_to_clean.json
+        ├── profile_clean.json
+        ├── validate_clean.json
+        ├── data_dictionary.json
+        └── clean_manifest.json
+```
 
-Ogni esecuzione salva i file in:
+🔗 [Cartella Drive — CLEAN](https://drive.google.com/drive/folders/1JGJpf6jeFDzpgZRgfXoBShBt3zP9kQVg?usp=sharing)
 
-`data/clean/openbdap_rendiconto_saldi_storico/<RUN_ID>/`
+---
 
-Output attesi:
-- `saldi_storico.parquet`
-- `columns_mapping_raw_to_clean.json`
-- `profile_clean.json`
-- `clean_manifest.json`
+## 🔄 Policy di trasformazione
 
-## Schema logico atteso
+Le stesse regole si applicano a entrambi i dataset.
 
-Chiave:
-- `esercizio_finanziario` -> `INTEGER`
+### Null policy
+I seguenti valori vengono convertiti a `NULL`:
+`""` · `" "` · `"n.d."` · `"nd"` · `"N.D."` · `"null"` · `"NULL"`
 
-Misure principali:
-- `risparmio_pubblico` -> `DOUBLE`
-- `saldo_netto_da_finanziare` -> `DOUBLE`
-- `indebitamento_netto` -> `DOUBLE`
-- `ricorso_al_mercato` -> `DOUBLE`
-- `avanzo_primario` -> `DOUBLE`
+### Parsing numerico
+- `,` → `.` (separatore decimale)
+- `-` mantenuto come segno meno (non è null)
+- `%` → valore diviso 100
+- Cast finale: `TRY_CAST AS DOUBLE` (fallisce silenziosamente a NULL)
 
-Aggregati di spesa:
-- `spese_correnti` -> `DOUBLE`
-- `spese_per_interessi` -> `DOUBLE`
-- `spese_in_conto_capitale` -> `DOUBLE`
-- `spese_acquisizione_attivita_finanziarie` -> `DOUBLE`
-- `spese_per_rimborso_prestiti` -> `DOUBLE`
-- `spese_complessive` -> `DOUBLE`
-- `spese_finali` -> `DOUBLE`
-- `spese_finali_netto_att_fin` -> `DOUBLE`
+### Nomi colonne
+- Rinomina semantica esplicita via `SEMANTIC_MAP` (vedi `columns_mapping_raw_to_clean.json`)
+- Fallback automatico a `snake_case` per colonne non mappate
 
-Aggregati di entrata:
-- `entrate_tributarie` -> `DOUBLE`
-- `entrate_extra_tributarie` -> `DOUBLE`
-- `entrate_alienazioni_patrimoniali_e_riscossioni` -> `DOUBLE`
-- `riscossione_crediti` -> `DOUBLE`
-- `entrate_accensione_prestiti` -> `DOUBLE`
-- `entrate_finali` -> `DOUBLE`
-- `entrate_fin_netto_riscossione_crediti` -> `DOUBLE`
-- `entrate_correnti` -> `DOUBLE`
+### Cosa NON viene fatto
+- Nessun ricalcolo o modifica semantica dei valori economici
+- Nessuna aggregazione o join
+- Nessuna imputazione dei null
 
-Colonne non riconosciute dal mapping:
-- fallback a `snake_case`
-- cast conservativo a `VARCHAR`, salvo gestione esplicita nel notebook
+---
 
-## Policy di parsing
+## 📊 Dataset 1 — Saldi storici
 
-Parsing numerico:
-- trim degli spazi
-- supporto a valori con `,` o `.`
-- cast finale a `DOUBLE`
+**File output:** `saldi_storico.parquet`
+**Chiave:** `esercizio_finanziario` (unica per anno)
+**Righe attese:** 22 (2003–2024)
 
-Valori speciali:
-- `NULL` se il valore e vuoto o non parseabile
-- nessuna sostituzione arbitraria di valori economici
+### Schema colonne
 
-Policy generale:
-- i valori vengono solo convertiti di tipo
-- il significato economico resta invariato rispetto al RAW
+| Colonna CLEAN | Tipo | Colonna RAW |
+|---|---|---|
+| `esercizio_finanziario` | INTEGER | `ANNO` |
+| `risparmio_pubblico` | DOUBLE | `RISPARMIO_PUBBLICO` |
+| `saldo_netto_da_finanziare` | DOUBLE | `SALDO_NETTO` |
+| `indebitamento_netto` | DOUBLE | `INDEBITAMENTO_NETTO` |
+| `ricorso_al_mercato` | DOUBLE | `RICORSO_MERCATO` |
+| `avanzo_primario` | DOUBLE | `AVANZO_PRIMARIO` |
+| `spese_correnti` | DOUBLE | `SPESE_CORRENTI` |
+| `spese_per_interessi` | DOUBLE | `SPESE_INTERESSI` |
+| `spese_in_conto_capitale` | DOUBLE | `SPESE_CONTO_CAPITALE` |
+| `spese_acquisizione_attivita_finanziarie` | DOUBLE | `SPESE_ACQ_ATT_FINE` |
+| `spese_per_rimborso_prestiti` | DOUBLE | `SPESE_RIMBORSO_PRESTITI` |
+| `spese_complessive` | DOUBLE | `SPESE_COMPLESSIVE` |
+| `spese_finali` | DOUBLE | `SPESE_FINALI` |
+| `spese_finali_netto_att_fin` | DOUBLE | `SPESE_FIN_NETTO_ATT_FIN` |
+| `entrate_tributarie` | DOUBLE | `ENTRATE_TRIBUTARIE` |
+| `entrate_extra_tributarie` | DOUBLE | `ENTRATE_EXTRA_TRIBUTARIE` |
+| `entrate_alienazioni_patrimoniali_e_riscossioni` | DOUBLE | `ENTR_ALIEN_PATR_RISCOS` |
+| `riscossione_crediti` | DOUBLE | `RISCOSSIONE_CREDITI` |
+| `entrate_accensione_prestiti` | DOUBLE | `ENTR_ACCENSIONE_PRESTITI` |
+| `entrate_finali` | DOUBLE | `ENTRATE_FINALI` |
+| `entrate_fin_netto_riscossione_crediti` | DOUBLE | `ENTR_FIN_NETTO_RISCO_CRED` |
+| `entrate_correnti` | DOUBLE | `ENTRATE_CORRENTI` |
 
-## Controlli qualita minimi consigliati
+---
 
-- numero righe atteso coerente con la serie annuale
-- presenza della colonna `esercizio_finanziario`
-- assenza di duplicati sulla chiave anno
-- presenza delle colonne core attese
-- controllo null per colonna
+## 📊 Dataset 2 — Spese per Missione, Programma e Macroaggregato
 
-## Metadata salvati
+**File output:** `spese_missioni.parquet`
+**Chiave composta:** `(esercizio_finanziario, codice_missione, codice_programma, codice_macroaggregato)`
+**Righe attese:** ~2.000+ (2008–2024 × missioni × programmi × macroaggregati)
+**Encoding RAW originale:** `latin-1`
 
-- `columns_mapping_raw_to_clean.json`: mapping colonne RAW -> CLEAN
-- `profile_clean.json`: dimensioni, colonne, null, sample righe
-- `clean_manifest.json`: input/output e hash SHA256
+### Schema colonne
+
+| Colonna CLEAN | Tipo | Colonna RAW |
+|---|---|---|
+| `esercizio_finanziario` | INTEGER | `Esercizio Finanziario` |
+| `codice_missione` | INTEGER | `Codice Missione` |
+| `missione` | VARCHAR | `Missione` |
+| `codice_programma` | INTEGER | `Codice Programma` |
+| `programma` | VARCHAR | `Programma` |
+| `codice_macroaggregato` | INTEGER | `Codice Macroaggregato` |
+| `macroaggregato` | VARCHAR | `Macroaggregato` |
+| `previsioni_definitive_cp` | DOUBLE | `Previsioni Definitive CP` |
+| `previsioni_definitive_cs` | DOUBLE | `Previsioni Definitive CS` |
+
+> ⚠️ Null attesi: ~90 righe in `previsioni_definitive_cp` e `previsioni_definitive_cs` (anni iniziali senza dato).
+
+---
+
+## ✅ Validazioni automatiche
+
+Eseguite dal notebook al termine di ogni run:
+
+**Dataset 1 (Saldi)**
+- `row_count_ge_1` — dataset non vuoto
+- `required_columns_present` — colonne obbligatorie presenti
+- `unique_esercizio_finanziario` — nessun duplicato per anno
+- `year_bounds_present` — range anni valorizzato
+
+**Dataset 2 (Missioni)**
+- `row_count_ge_min` — almeno 100 righe
+- `required_columns_present` — colonne obbligatorie presenti
+- `unique_composite_key` — nessun duplicato sulla chiave composta
+- `year_bounds_present` — range anni valorizzato
+- `null_check_previsioni_definitive_cp/cs` — null entro soglia attesa (≤ 200)
