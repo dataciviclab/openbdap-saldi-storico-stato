@@ -7,3 +7,4 @@
 *.txt text eol=lf
 *.sql text eol=lf
 *.py text eol=lf
+*.ipynb text eol=lf

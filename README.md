@@ -2,7 +2,7 @@
 
 ## Domanda civica
 
-La spesa corrente comprime strutturalmente gli investimenti, o il pattern cambia per missione e programma?
+La spesa corrente comprime strutturalmente gli investimenti?
 
 ## Perché questo progetto
 

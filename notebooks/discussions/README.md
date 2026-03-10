@@ -39,11 +39,11 @@ Ogni notebook importato qui dovrebbe:
 - avere almeno una nota iniziale su input e output
 - essere collegato nel `README.md` del repo
 
-Finché i notebook non sono importati, questa cartella resta la destinazione canonica per chiudere il legame tra Discussions e output analitici.
+Questa cartella e la destinazione canonica per chiudere il legame tra Discussions e output analitici.
 
 ## Stato attuale
 
-- `04_risposta_discussion_09_deficit_strutturale.ipynb` importato
+- `04_risposta_discussion_09_deficit_strutturale.ipynb` importato e verificato
 - `05_risposta_discussion_10_spese_correnti_investimenti.ipynb` importato e verificato
 - `06_risposta_discussion_16_ricorso_mercato.ipynb` importato e verificato
 - `07_risposta_discussion_17_interessi_sul_debito.ipynb` importato e verificato
