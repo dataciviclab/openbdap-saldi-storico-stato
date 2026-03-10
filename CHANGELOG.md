@@ -15,6 +15,12 @@ Data: 2026-02-05
 ### Modificato
 - miglioramenti alla documentazione e al workflow di partenza del repo
 
+## v0.3 - Notebooks discussion-linked
+Data: 2026-03-10
+
+### Aggiunto
+- notebook di risposta alle Discussions #9, #10, #16, #17 importati nel repo
+
 ## v0.4 - Chiusura perimetro legacy
 Data: 2026-03-10
 

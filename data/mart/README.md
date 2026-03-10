@@ -56,8 +56,8 @@ Usi principali:
 Stato attuale:
 
 - questo dataset ha pipeline e struttura documentate
-- non esiste ancora, nel repo attuale, un output discussion-linked che usi davvero la granularita per missione / programma
-- quindi il suo ruolo oggi e di base dati pronta per follow-up, non di filone pubblico gia esaurito
+- non esiste ancora, nel repo attuale, un output discussion-linked che usi davvero la granularità per missione / programma
+- quindi il suo ruolo oggi è di base dati pronta per follow-up, non di filone pubblico già esaurito
 
 ## Sorgente del mart
 

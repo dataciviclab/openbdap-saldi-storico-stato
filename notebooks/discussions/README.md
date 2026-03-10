@@ -39,7 +39,7 @@ Ogni notebook importato qui dovrebbe:
 - avere almeno una nota iniziale su input e output
 - essere collegato nel `README.md` del repo
 
-Questa cartella e la destinazione canonica per chiudere il legame tra Discussions e output analitici.
+Questa cartella è la destinazione canonica per chiudere il legame tra Discussions e output analitici.
 
 ## Stato attuale
 
