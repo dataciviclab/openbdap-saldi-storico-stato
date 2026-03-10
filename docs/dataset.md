@@ -7,7 +7,7 @@ Questo progetto chiude il proprio perimetro su due dataset OpenBDAP:
 1. `Rendiconto Pubblicato - Serie storica - Saldi`
 2. `Rendiconto Pubblicato - Serie storica - Spese aggregato per missione, programma e macroaggregato`
 
-L'obiettivo e mantenere una pipeline trasparente e replicabile:
+L'obiettivo è mantenere una pipeline trasparente e replicabile:
 
 `RAW -> CLEAN -> MART`
 
@@ -61,9 +61,9 @@ Campi core:
 
 Stato nel repo:
 
-- il dataset 2 e coperto a livello `RAW -> CLEAN`
+- il dataset 2 è coperto a livello `RAW -> CLEAN`
 - la sua presenza nel repo serve a tenere aperto un possibile filone di lettura sulla composizione della spesa
-- al momento, pero, gli output pubblici discussion-linked gia chiusi restano centrati soprattutto sul dataset 1 (`saldi storici`)
+- al momento, però, gli output pubblici discussion-linked già chiusi restano centrati soprattutto sul dataset 1 (`saldi storici`)
 
 ## Limiti noti
 

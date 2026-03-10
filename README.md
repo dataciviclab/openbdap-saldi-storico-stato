@@ -4,7 +4,7 @@
 
 La spesa corrente comprime strutturalmente gli investimenti, o il pattern cambia per missione e programma?
 
-## Perche questo progetto
+## Perché questo progetto
 
 Negli ultimi vent'anni lo Stato italiano ha chiuso ogni esercizio in deficit, con la spesa corrente che assorbe in media il 64% del totale. La spesa in conto capitale si e fermata all'8,5%, toccando il minimo del 4,9% nel 2015. L'avanzo primario e stato positivo in 16 anni su 22, ma gli interessi sul debito (75-90 mld/anno) lo hanno azzerato sistematicamente.
 
@@ -21,7 +21,7 @@ Stato effettivo degli output:
 ## Ruoli
 
 - Project Lead: [Gabri](https://github.com/Gabrymi93)
-- Data: [Matteo](https://github.com/matteocavo) + [Gabri](https://github.com/Gabrymi93)
+- Data: [Matteo](https://github.com/matteocavo) · [Gabri](https://github.com/Gabrymi93)
 - Ricerca semantica CERES: [Andrea](https://github.com/AndreaBozzo)
 - Viz: [Matteo](https://github.com/matteocavo)
 - QA: [Gabri](https://github.com/Gabrymi93)
@@ -31,7 +31,7 @@ Stato effettivo degli output:
 
 - Fonte: [OpenBDAP - Rendiconto Pubblicato, Serie storica Saldi](https://bdap-opendata.rgs.mef.gov.it/content/rendiconto-pubblicato-serie-storica-saldi)
 - Fonte: [OpenBDAP - Spese per Missione, Programma e Macroaggregato](https://bdap-opendata.rgs.mef.gov.it/content/rendiconto-pubblicato-serie-storica-spese-aggregato-missione-programma-e-macroaggregato)
-- Periodo: 2003-2024 (saldi) + 2008-2024 (spese)
+- Periodo: 2003-2024 (saldi) · 2008-2024 (spese)
 - Livello: Nazionale - Stato centrale
 
 ## Perimetro finale del progetto

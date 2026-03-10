@@ -2,7 +2,7 @@
 
 Questo layer raccoglie gli output finali usati per rispondere alle Discussions e alimentare eventuali dashboard.
 
-Nel progetto attuale il layer `MART` non e gestito da un file SQL unico o da un `dataset.yml`.
+Nel progetto attuale il layer `MART` non è gestito da un file SQL unico o da un `dataset.yml`.
 La sua implementazione vive nei notebook / query di analisi che partono dai parquet CLEAN.
 
 ## Stato del layer
@@ -66,4 +66,4 @@ I mart effettivi di questo progetto sono prodotti da:
 - notebook di analisi / risposta alle Discussions
 - eventuali query documentate in `queries/`
 
-Se in futuro nascera una versione `toolkit-native`, dovra essere trattata come filone separato.
+Se in futuro nascerà una versione `toolkit-native`, dovrà essere trattata come filone separato.
