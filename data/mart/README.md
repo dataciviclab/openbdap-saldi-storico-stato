@@ -53,6 +53,12 @@ Usi principali:
 - leggere composizione e dinamica della spesa
 - verificare se la compressione degli investimenti e strutturale o cambia per missione
 
+Stato attuale:
+
+- questo dataset ha pipeline e struttura documentate
+- non esiste ancora, nel repo attuale, un notebook discussion-linked equivalente a quelli gia chiusi sui `saldi`
+- quindi il suo ruolo oggi e di base dati pronta per follow-up, non di filone pubblico gia esaurito
+
 ## Sorgente del mart
 
 I mart effettivi di questo progetto sono prodotti da:
@@ -60,4 +66,4 @@ I mart effettivi di questo progetto sono prodotti da:
 - notebook di analisi / risposta alle Discussions
 - eventuali query documentate in `queries/`
 
-Se in futuro nascerà una versione `toolkit-native`, dovrà essere trattata come filone separato.
+Se in futuro nascera una versione `toolkit-native`, dovra essere trattata come filone separato.

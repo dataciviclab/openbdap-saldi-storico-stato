@@ -59,6 +59,12 @@ Campi core:
 - dimensioni: `missione`, `programma`, `macroaggregato`
 - misure principali: `previsioni_definitive_cp`, `previsioni_definitive_cs`
 
+Stato nel repo:
+
+- il dataset 2 e coperto a livello `RAW -> CLEAN`
+- la sua presenza nel repo serve a tenere aperto un possibile filone di lettura sulla composizione della spesa
+- al momento, pero, gli output pubblici discussion-linked gia chiusi restano centrati soprattutto sul dataset 1 (`saldi storici`)
+
 ## Limiti noti
 
 1. Revisione storica possibile
