@@ -22,14 +22,14 @@ Fuori perimetro:
 
 ## Stato delle Discussions principali
 
-| Discussion | Stato repo |
-|---|---|
-| Deficit strutturale | risposta pubblicata, notebook importato |
-| Ricorso al mercato | commento pronto, notebook in attesa di push |
-| Avanzo primario | materiale da riallineare nel repo |
-| Entrate tributarie | materiale da riallineare nel repo, notebook in attesa di push |
-| Spese correnti vs investimenti | commento pronto, notebook in attesa di push |
-| Interessi sul debito | discussion pubblicata, output da collegare |
+| Discussion | Tema | Stato repo |
+|---|---|---|
+| `#9` | Deficit strutturale | risposta pubblicata, notebook importato |
+| `#16` | Ricorso al mercato | commento pronto, notebook in attesa di push |
+| `#14` | Avanzo primario | materiale da riallineare nel repo |
+| `#12` | Entrate tributarie | materiale da riallineare nel repo, notebook in attesa di push |
+| `#10` | Spese correnti vs investimenti | commento pronto, notebook in attesa di push |
+| `#17` | Interessi sul debito | discussion pubblicata, output da collegare |
 
 ## Cosa manca per chiudere bene
 

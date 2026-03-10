@@ -25,6 +25,8 @@ Esempi:
 - `06_risposta_discussion_12_entrate_tributarie.ipynb`
 - `07_risposta_discussion_10_spese_correnti_investimenti.ipynb`
 
+Il prefisso numerico segue l'ordine di lavorazione/import dei notebook Discussion-linked nel repo.
+
 ## Stato atteso
 
 Ogni notebook importato qui dovrebbe:

@@ -47,7 +47,7 @@ Il progetto viene quindi mantenuto come `legacy-active / stable`, con pipeline e
 ## Output pubblico
 
 - Tipo: dashboard / discussions
-- Link: (quando disponibile)
+- Link: dashboard pubblica non ancora collegata in questa fase di chiusura
 
 ## Stato progetto
 
