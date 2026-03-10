@@ -85,12 +85,14 @@ Questo progetto si considera chiuso bene quando:
 | Discussion | Tema | Stato | Notebook collegato |
 |---|---|---|---|
 | `#9` | Deficit strutturale | risposta pubblicata + follow-up numerico pubblicato | `notebooks/discussions/04_risposta_discussion_09_deficit_strutturale.ipynb` |
-| `#16` | Ricorso al mercato | commento pronto / notebook in attesa di push | da importare |
+| `#16` | Ricorso al mercato | risposta notebook presente e verificata | `notebooks/discussions/06_risposta_discussion_16_ricorso_mercato.ipynb` |
 | `#14` | Avanzo primario | materiale analitico presente, stato da riallineare nel repo | da collegare |
-| `#12` | Entrate tributarie e copertura della macchina | materiale analitico presente, notebook in attesa di push | da collegare |
-| `#10` | Spese correnti vs investimenti | commento pronto / notebook in attesa di push | da importare |
-| `#17` | Interessi sul debito | discussion pubblicata, output da collegare nel repo | da collegare |
+| `#12` | Entrate tributarie e copertura della macchina | materiale analitico presente, stato da riallineare nel repo | da collegare |
+| `#10` | Spese correnti vs investimenti | risposta notebook presente e verificata | `notebooks/discussions/05_risposta_discussion_10_spese_correnti_investimenti.ipynb` |
+| `#17` | Interessi sul debito | risposta notebook presente e verificata | `notebooks/discussions/07_risposta_discussion_17_interessi_sul_debito.ipynb` |
 
 Il criterio di chiusura non e avere una nuova architettura, ma rendere leggibile il legame:
 
 `Discussion -> notebook -> risposta dati`
+
+Le discussion `#12` e `#14` possono restare aperte intenzionalmente come spazio di contributo e follow-up leggero, non come ambiguita di perimetro del repo.
