@@ -48,4 +48,9 @@ Per questo repo, la chiusura e considerata sufficiente quando:
 - il layer `mart` e documentato anche se realizzato nei notebook
 - il repo non resta in sospeso tra due architetture diverse
 
+Eccezione ammessa:
+
+- una o due discussion possono restare aperte intenzionalmente come backlog contributivo leggero
+- questo e accettabile se il README chiarisce che non si tratta di un buco di perimetro o di una migrazione incompleta
+
 > Nota: una sintesi operativa resta in `WORKFLOW.md`.

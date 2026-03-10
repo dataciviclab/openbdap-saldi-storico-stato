@@ -26,16 +26,16 @@ Fuori perimetro:
 |---|---|---|
 | `#9` | Deficit strutturale | risposta pubblicata, notebook importato |
 | `#16` | Ricorso al mercato | notebook importato e verificato |
-| `#14` | Avanzo primario | materiale da riallineare nel repo |
-| `#12` | Entrate tributarie | materiale da riallineare nel repo |
+| `#14` | Avanzo primario | aperta intenzionalmente come follow-up contributivo leggero; materiale da collegare nel repo |
+| `#12` | Entrate tributarie | aperta intenzionalmente come follow-up contributivo leggero; materiale da collegare nel repo |
 | `#10` | Spese correnti vs investimenti | notebook importato e verificato |
 | `#17` | Interessi sul debito | notebook importato e verificato |
 
 ## Cosa manca per chiudere bene
 
-1. collegare anche `#12` e `#14` a un notebook o commento dati dentro il repo
-2. riallineare README / stato quando una Discussion cambia stato reale
-3. lasciare esplicito cosa resta fuori dal progetto
+1. mantenere allineati README / stato quando una Discussion cambia stato reale
+2. lasciare esplicito cosa resta fuori dal progetto
+3. tenere visibili gli ingressi contributivi ancora aperti senza confonderli con buchi di perimetro
 
 Nota:
 

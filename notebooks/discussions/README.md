@@ -18,7 +18,11 @@ Non vanno qui:
 
 Usare un nome che renda chiaro il collegamento con la Discussion.
 
-Esempi:
+Formato:
+
+- `NN_risposta_discussion_<numero>_<slug>.ipynb`
+
+Notebook gia importati:
 
 - `04_risposta_discussion_09_deficit_strutturale.ipynb`
 - `05_risposta_discussion_10_spese_correnti_investimenti.ipynb`
@@ -43,4 +47,4 @@ Finche i notebook non sono importati, questa cartella resta la destinazione cano
 - `05_risposta_discussion_10_spese_correnti_investimenti.ipynb` importato e verificato
 - `06_risposta_discussion_16_ricorso_mercato.ipynb` importato e verificato
 - `07_risposta_discussion_17_interessi_sul_debito.ipynb` importato e verificato
-- notebook su entrate tributarie e avanzo primario ancora da collegare o importare nel repo
+- materiale su entrate tributarie e avanzo primario ancora da collegare nel repo

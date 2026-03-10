@@ -42,12 +42,18 @@ Non entra in questo perimetro finale:
 - una migrazione completa al `toolkit`
 - una rifondazione dell'architettura dati del repo
 
+Nota sul perimetro:
+
+- "fuori perimetro" su `entrate` significa non aprire ora un terzo dataset dedicato
+- non significa escludere l'uso dei campi di entrata gia presenti nel dataset `saldi storici`
+
 Il progetto viene quindi mantenuto come `legacy-active / stable`, con pipeline esplicita nei notebook e output pubblici nelle Discussions / dashboard.
 
 ## Output pubblico
 
 - Tipo: dashboard / discussions
-- Link: dashboard pubblica non ancora collegata in questa fase di chiusura
+- Output principale: [Discussions pubbliche del repo](https://github.com/dataciviclab/openbdap-saldi-storico-stato/discussions)
+- Eventuale dashboard: parte dell'output pubblico del progetto, ma non requisito bloccante per la chiusura del perimetro legacy
 
 ## Stato progetto
 
@@ -86,8 +92,8 @@ Questo progetto si considera chiuso bene quando:
 |---|---|---|---|
 | `#9` | Deficit strutturale | risposta pubblicata + follow-up numerico pubblicato | `notebooks/discussions/04_risposta_discussion_09_deficit_strutturale.ipynb` |
 | `#16` | Ricorso al mercato | risposta notebook presente e verificata | `notebooks/discussions/06_risposta_discussion_16_ricorso_mercato.ipynb` |
-| `#14` | Avanzo primario | materiale analitico presente, stato da riallineare nel repo | da collegare |
-| `#12` | Entrate tributarie e copertura della macchina | materiale analitico presente, stato da riallineare nel repo | da collegare |
+| `#14` | Avanzo primario | aperta intenzionalmente come follow-up contributivo leggero | materiale analitico presente da collegare nel repo |
+| `#12` | Entrate tributarie e copertura della macchina | aperta intenzionalmente come follow-up contributivo leggero | materiale analitico presente da collegare nel repo |
 | `#10` | Spese correnti vs investimenti | risposta notebook presente e verificata | `notebooks/discussions/05_risposta_discussion_10_spese_correnti_investimenti.ipynb` |
 | `#17` | Interessi sul debito | risposta notebook presente e verificata | `notebooks/discussions/07_risposta_discussion_17_interessi_sul_debito.ipynb` |
 
