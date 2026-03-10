@@ -1,37 +1,51 @@
 # Definition of Done (DoD)
 
-Un progetto è “Done” quando:
+Un progetto e "Done" quando:
 
 ## Domanda civica
-- La domanda è una sola, chiara e misurabile
-- L’output risponde davvero alla domanda (anche con limiti espliciti)
+
+- la domanda e una sola, chiara e misurabile
+- l'output risponde davvero alla domanda, anche con limiti espliciti
 
 ## Dati
-- Raw immutato
-- Clean/Mart riproducibili
-- Tipi coerenti e naming standard (snake_case)
-- Nessuna logica “magica” nascosta
+
+- raw immutato
+- clean / mart riproducibili nel perimetro reale del repo
+- tipi coerenti e naming standard
+- nessuna logica "magica" nascosta
 
 ## Metodo
-- Assunzioni dichiarate
-- Limiti dichiarati
-- Confronti omogenei (perimetro, periodo, definizioni)
 
-## Viz
-- Dashboard leggibile da non tecnico
-- Titoli “parlanti”
-- Unità di misura sempre visibili
-- Filtri essenziali (no overload)
+- assunzioni dichiarate
+- limiti dichiarati
+- confronti omogenei per perimetro, periodo e definizioni
+
+## Viz / Output
+
+- dashboard o notebook leggibili da non tecnico
+- titoli parlanti
+- unita di misura sempre visibili
+- almeno un output pubblico collegato alle Discussions principali
 
 ## QA
-- Sanity check superati (totali, outlier, ordini di grandezza)
-- Cross-check con fonte o riferimenti dove possibile
-- Issue aperte per anomalie residue + severità
+
+- sanity check superati
+- cross-check con fonte o riferimenti dove possibile
+- eventuali anomalie residue rese esplicite
 
 ## Doc
-- README aggiornato con: scopo, dataset, metodo, output, limiti
-- Link a dashboard + dataset + query/notebook principali
-- “Cosa emerge” e “cosa non emerge” scritto chiaramente
 
+- README aggiornato con scopo, dataset, metodo, output, limiti
+- link ai notebook principali e agli output pubblici
+- "cosa emerge" e "cosa non emerge" scritto chiaramente
 
-> Nota: una sintesi è in `WORKFLOW.md`.
+## Chiusura legacy
+
+Per questo repo, la chiusura e considerata sufficiente quando:
+
+- il perimetro finale del progetto e dichiarato senza ambiguita
+- le Discussions principali hanno una risposta dati pubblica
+- il layer `mart` e documentato anche se realizzato nei notebook
+- il repo non resta in sospeso tra due architetture diverse
+
+> Nota: una sintesi operativa resta in `WORKFLOW.md`.
