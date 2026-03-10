@@ -1,32 +1,45 @@
-# 📓 /notebooks – Pipeline e analisi
+# /notebooks/discussions
 
-Questa cartella contiene notebook (Colab / Jupyter) per:
-- ingestione dati (raw)
-- pulizia/normalizzazione (clean)
-- aggregazioni e KPI (mart)
-- analisi esplorative (quando servono)
+Questa cartella raccoglie i notebook collegati direttamente alle Discussions pubbliche del progetto.
 
----
+Qui vanno solo notebook che hanno almeno una di queste caratteristiche:
 
-## ✅ Regole minime
+- sono stati condivisi pubblicamente come risposta a una Discussion
+- generano i numeri o i grafici usati in un commento pubblico
+- rappresentano il layer `mart` effettivo del progetto legacy
 
-- notebook numerati: `01_...`, `02_...`, `03_...`
-- eseguibili dall’inizio alla fine (no “celle magiche”)
-- commenti brevi: **cosa** fai e **perché**
-- niente path locali: usare riferimenti chiari al Drive / cartelle di progetto
+Non vanno qui:
 
----
+- notebook puramente esplorativi
+- prove temporanee
+- versioni duplicate o intermedie
 
-## 🔁 Collegamento con `/data`
+## Naming consigliato
 
-Ogni notebook dovrebbe aggiornare (o citare) i README di:
-- `/data/raw`
-- `/data/clean`
-- `/data/mart`
+Usare un nome che renda chiaro il collegamento con la Discussion.
 
-Così chi arriva dopo capisce:
-- da dove arrivano i dati
-- cosa è stato fatto
-- dove trovare i file su Drive
+Esempi:
 
----
+- `04_risposta_discussion_09_deficit_strutturale.ipynb`
+- `05_risposta_discussion_10_spese_correnti_investimenti.ipynb`
+- `06_risposta_discussion_16_ricorso_mercato.ipynb`
+- `07_risposta_discussion_17_interessi_sul_debito.ipynb`
+
+Il prefisso numerico segue l'ordine di lavorazione/import dei notebook Discussion-linked nel repo.
+
+## Stato atteso
+
+Ogni notebook importato qui dovrebbe:
+
+- evitare path locali non replicabili
+- avere almeno una nota iniziale su input e output
+- essere collegato nel `README.md` del repo
+
+Finche i notebook non sono importati, questa cartella resta la destinazione canonica per chiudere il legame tra Discussions e output analitici.
+
+## Stato attuale
+
+- `04_risposta_discussion_09_deficit_strutturale.ipynb` importato
+- `05_risposta_discussion_10_spese_correnti_investimenti.ipynb` creato (split da `openbdap_discussions_risposte_v3.ipynb`)
+- `06_risposta_discussion_16_ricorso_mercato.ipynb` creato (split da `openbdap_discussions_risposte_v3.ipynb`)
+- `07_risposta_discussion_17_interessi_sul_debito.ipynb` creato (split da `openbdap_discussions_risposte_v3.ipynb`)
