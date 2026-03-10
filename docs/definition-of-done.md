@@ -1,10 +1,10 @@
 # Definition of Done (DoD)
 
-Un progetto e "Done" quando:
+Un progetto è "Done" quando:
 
 ## Domanda civica
 
-- la domanda e una sola, chiara e misurabile
+- la domanda è una sola, chiara e misurabile
 - l'output risponde davvero alla domanda, anche con limiti espliciti
 
 ## Dati
@@ -41,11 +41,11 @@ Un progetto e "Done" quando:
 
 ## Chiusura legacy
 
-Per questo repo, la chiusura e considerata sufficiente quando:
+Per questo repo, la chiusura è considerata sufficiente quando:
 
-- il perimetro finale del progetto e dichiarato senza ambiguita
+- il perimetro finale del progetto è dichiarato senza ambiguità
 - le Discussions principali hanno una risposta dati pubblica
-- il layer `mart` e documentato anche se realizzato nei notebook
+- il layer `mart` è documentato anche se realizzato nei notebook
 - il repo non resta in sospeso tra due architetture diverse
 
 Eccezione ammessa:

@@ -22,7 +22,7 @@ Formato:
 
 - `NN_risposta_discussion_<numero>_<slug>.ipynb`
 
-Notebook gia importati:
+Notebook già importati:
 
 - `04_risposta_discussion_09_deficit_strutturale.ipynb`
 - `05_risposta_discussion_10_spese_correnti_investimenti.ipynb`
@@ -39,7 +39,7 @@ Ogni notebook importato qui dovrebbe:
 - avere almeno una nota iniziale su input e output
 - essere collegato nel `README.md` del repo
 
-Finche i notebook non sono importati, questa cartella resta la destinazione canonica per chiudere il legame tra Discussions e output analitici.
+Finché i notebook non sono importati, questa cartella resta la destinazione canonica per chiudere il legame tra Discussions e output analitici.
 
 ## Stato attuale
 

@@ -6,7 +6,7 @@ La spesa corrente comprime strutturalmente gli investimenti, o il pattern cambia
 
 ## Perché questo progetto
 
-Negli ultimi vent'anni lo Stato italiano ha chiuso ogni esercizio in deficit, con la spesa corrente che assorbe in media il 64% del totale. La spesa in conto capitale si e fermata all'8,5%, toccando il minimo del 4,9% nel 2015. L'avanzo primario e stato positivo in 16 anni su 22, ma gli interessi sul debito (75-90 mld/anno) lo hanno azzerato sistematicamente.
+Negli ultimi vent'anni lo Stato italiano ha chiuso ogni esercizio in deficit, con la spesa corrente che assorbe in media il 64% del totale. La spesa in conto capitale si è fermata all'8,5%, toccando il minimo del 4,9% nel 2015. L'avanzo primario è stato positivo in 16 anni su 22, ma gli interessi sul debito (75-90 mld/anno) lo hanno azzerato sistematicamente.
 
 Questo progetto verifica se la compressione degli investimenti sia strutturale o congiunturale, lavorando su:
 
@@ -15,8 +15,8 @@ Questo progetto verifica se la compressione degli investimenti sia strutturale o
 
 Stato effettivo degli output:
 
-- il filone oggi piu chiuso e discussion-linked e quello sui `saldi`
-- il dataset `spese per missione / programma / macroaggregato` e incluso nel perimetro del repo con pipeline documentata, ma non ha ancora un filone pubblico equivalente gia chiuso
+- il filone oggi più chiuso e discussion-linked è quello sui `saldi`
+- il dataset `spese per missione / programma / macroaggregato` è incluso nel perimetro del repo con pipeline documentata, ma non ha ancora un filone pubblico equivalente già chiuso
 
 ## Ruoli
 
@@ -50,7 +50,7 @@ Non entra in questo perimetro finale:
 Nota sul perimetro:
 
 - "fuori perimetro" su `entrate` significa non aprire ora un terzo dataset dedicato
-- non significa escludere l'uso dei campi di entrata gia presenti nel dataset `saldi storici`
+- non significa escludere l'uso dei campi di entrata già presenti nel dataset `saldi storici`
 
 Il progetto viene quindi mantenuto come `legacy-active / stable`, con pipeline esplicita nei notebook e output pubblici nelle Discussions / dashboard.
 
@@ -65,7 +65,7 @@ Il progetto viene quindi mantenuto come `legacy-active / stable`, con pipeline e
 Legacy-active / stable
 
 - il repo resta valido e consultabile
-- la pipeline corrente e documentata
+- la pipeline corrente è documentata
 - eventuali evoluzioni future `toolkit-native` vanno trattate come filone separato
 
 ## Come si contribuisce
@@ -102,7 +102,7 @@ Questo progetto si considera chiuso bene quando:
 | `#10` | Spese correnti vs investimenti | risposta notebook presente e verificata | `notebooks/discussions/05_risposta_discussion_10_spese_correnti_investimenti.ipynb` |
 | `#17` | Interessi sul debito | risposta notebook presente e verificata | `notebooks/discussions/07_risposta_discussion_17_interessi_sul_debito.ipynb` |
 
-Il criterio di chiusura non e avere una nuova architettura, ma rendere leggibile il legame:
+Il criterio di chiusura non è avere una nuova architettura, ma rendere leggibile il legame:
 
 `Discussion -> notebook -> risposta dati`
 

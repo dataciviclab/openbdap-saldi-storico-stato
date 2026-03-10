@@ -15,12 +15,12 @@ Questo repo usa una architettura legacy esplicita:
 - notebook `02_raw_clean.ipynb` per il layer `CLEAN`
 - notebook di analisi / risposta alle Discussions come layer `MART` e output pubblico
 
-Questa scelta e accettata come parte del progetto.
+Questa scelta è accettata come parte del progetto.
 Non viene trattata come migrazione incompleta.
 
 ## Assunzioni
 
-- il CSV ufficiale OpenBDAP e la fonte di verita per ogni dataset
+- il CSV ufficiale OpenBDAP è la fonte di verità per ogni dataset
 - il layer `RAW` deve restare immutato
 - il layer `CLEAN` normalizza naming e tipi, ma non reinterpreta i dati
 - le risposte pubbliche usano notebook e output dati espliciti, non trasformazioni nascoste
@@ -29,7 +29,7 @@ Non viene trattata come migrazione incompleta.
 
 - i valori sono nominali
 - i dati possono essere rivisti ex post dalla fonte
-- non c'e contesto macro integrato (PIL, inflazione, debito)
+- non c'è contesto macro integrato (PIL, inflazione, debito)
 - il dataset spese non copre da solo l'intero lato entrate / fabbisogno
 
 ## Scelte metodologiche

@@ -19,7 +19,7 @@ Significa che:
 
 ### 1. Saldi storici dello Stato
 
-Granularita:
+Granularità:
 
 - una riga per anno
 
@@ -39,7 +39,7 @@ Usi principali:
 
 ### 2. Spese per missione / programma / macroaggregato
 
-Granularita:
+Granularità:
 
 - anno / missione / programma / macroaggregato
 
@@ -51,7 +51,7 @@ KPI principali:
 Usi principali:
 
 - leggere composizione e dinamica della spesa
-- verificare se la compressione degli investimenti e strutturale o cambia per missione
+- verificare se la compressione degli investimenti è strutturale o cambia per missione
 
 Stato attuale:
 

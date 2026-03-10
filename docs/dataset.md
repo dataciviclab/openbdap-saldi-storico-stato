@@ -25,7 +25,7 @@ Accesso dati:
 
 - nel progetto viene utilizzato il CSV diretto come snapshot RAW
 
-Unita di analisi:
+Unità di analisi:
 
 - primaria: `esercizio_finanziario`
 - livello: Stato centrale
@@ -48,11 +48,11 @@ Accesso dati:
 
 - nel progetto viene utilizzato il CSV diretto come snapshot RAW
 
-Unita di analisi:
+Unità di analisi:
 
 - chiave composta: `esercizio_finanziario`, `codice_missione`, `codice_programma`, `codice_macroaggregato`
 - livello: Stato centrale
-- granularita: missione / programma / macroaggregato
+- granularità: missione / programma / macroaggregato
 
 Campi core:
 
