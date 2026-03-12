@@ -1,25 +1,34 @@
-# 📜 Changelog — Progetto
+# Changelog - Progetto
 
 Questo changelog documenta le modifiche rilevanti al progetto.
 
----
-
-## v0.1 — MVP iniziale
-📅 Data: 26/1/26
+## v0.1 - MVP iniziale
+Data: 2026-01-26
 
 ### Aggiunto
-- Prima versione dell’output pubblico
-- Metodo iniziale
+- prima versione dell'output pubblico
+- metodo iniziale
 
----
-
-## v0.2 — Miglioramenti
-📅 Data: 5/2/26
+## v0.2 - Miglioramenti
+Data: 2026-02-05
 
 ### Modificato
-Miglioramenti documentazione e workflow di partenza di tutto il Repo
+- miglioramenti alla documentazione e al workflow di partenza del repo
 
-## v0.3 — 
-📅 Data: 
+## v0.3 - Notebooks discussion-linked
+Data: 2026-03-10
 
 ### Aggiunto
+- notebook di risposta alle Discussions #9, #10, #16, #17 importati nel repo
+
+## v0.4 - Chiusura perimetro legacy
+Data: 2026-03-10
+
+### Modificato
+- perimetro del progetto fissato su `saldi + spese`
+- documentazione aggiornata per trattare il repo come legacy project stabile
+- layer `mart` descritto in modo coerente con il ruolo dei notebook
+
+### Escluso dal perimetro
+- nuova linea dataset `entrate`
+- migrazione completa al `toolkit` dentro questo repo

@@ -1,144 +1,108 @@
-# 📄 docs/dataset.md
+# docs/dataset.md
 
-## OpenBDAP – Saldi storici dello Stato
+## Dataset coperti dal progetto
 
-Fonte: Rendiconto Pubblicato – Serie storica – Saldi
+Questo progetto chiude il proprio perimetro su due dataset OpenBDAP:
 
-# 🎯 Scopo del dataset
+1. `Rendiconto Pubblicato - Serie storica - Saldi`
+2. `Rendiconto Pubblicato - Serie storica - Spese aggregato per missione, programma e macroaggregato`
 
-Questo progetto utilizza la **serie storica dei saldi di finanza pubblica dello Stato** pubblicata tramite OpenBDAP (RGS/MEF).
+L'obiettivo è mantenere una pipeline trasparente e replicabile:
 
-L’obiettivo è costruire una pipeline trasparente e replicabile:
+`RAW -> CLEAN -> MART`
 
-RAW → CLEAN → MART
+senza introdurre interpretazioni o rielaborazioni concettuali nel layer dati.
 
-senza introdurre interpretazioni o rielaborazioni concettuali.
-
-# 🔗 Fonte ufficiale
+## Dataset 1 - Saldi storici dello Stato
 
 Fonte primaria:
 
-* Portale OpenBDAP – Ragioneria Generale dello Stato (RGS)
-* Dataset: *[Rendiconto Pubblicato – Serie storica – Saldi](https://bdap-opendata.rgs.mef.gov.it/content/rendiconto-pubblicato-serie-storica-saldi)*
-* Metadata ufficiale [(documentazione tecnica)](https://bdap-opendata.rgs.mef.gov.it/sites/default/files/metadata_updfile/report/5191_Saldi%20Rendiconto.pdf)
+- Portale OpenBDAP - Ragioneria Generale dello Stato (RGS)
+- Dataset: [Rendiconto Pubblicato - Serie storica - Saldi](https://bdap-opendata.rgs.mef.gov.it/content/rendiconto-pubblicato-serie-storica-saldi)
+- Metadata ufficiale: [documentazione tecnica](https://bdap-opendata.rgs.mef.gov.it/sites/default/files/metadata_updfile/report/5191_Saldi%20Rendiconto.pdf)
 
 Accesso dati:
-Nel progetto viene utilizzato **il CSV diretto come snapshot RAW**.
 
-# 🧩 Unità di analisi
+- nel progetto viene utilizzato il CSV diretto come snapshot RAW
 
-Unità primaria:
+Unità di analisi:
 
-* **Anno (Esercizio finanziario)**
+- primaria: `esercizio_finanziario`
+- livello: Stato centrale
+- aggregazione: nazionale
 
-Granularità:
+Campi core:
 
-* Livello: **Stato centrale**
-* Aggregazione: **nazionale**
-* Non sono presenti disaggregazioni territoriali o per missione.
+- saldi: `saldo_netto_da_finanziare`, `indebitamento_netto`, `avanzo_primario`, `ricorso_al_mercato`, `risparmio_pubblico`
+- spesa aggregata: `spese_correnti`, `spese_per_interessi`, `spese_in_conto_capitale`, `spese_finali`, `spese_complessive`
+- entrata aggregata: `entrate_tributarie`, `entrate_extra_tributarie`, `entrate_correnti`, `entrate_finali`, `entrate_accensione_prestiti`
 
-Ogni riga rappresenta:
+## Dataset 2 - Spese per missione, programma e macroaggregato
 
-```
-1 anno = insieme completo dei principali saldi e aggregati di entrata/spesa
-```
+Fonte primaria:
 
-# 🗝 Campi core identificati
+- Portale OpenBDAP - Ragioneria Generale dello Stato (RGS)
+- Dataset: [Rendiconto Pubblicato - Serie storica - Spese aggregato per missione, programma e macroaggregato](https://bdap-opendata.rgs.mef.gov.it/content/rendiconto-pubblicato-serie-storica-spese-aggregato-missione-programma-e-macroaggregato)
 
-Chiave primaria:
+Accesso dati:
 
-* `esercizio_finanziario`
+- nel progetto viene utilizzato il CSV diretto come snapshot RAW
 
-Misure principali:
+Unità di analisi:
 
-* `saldo_netto_da_finanziare`
-* `indebitamento_netto`
-* `avanzo_primario`
-* `ricorso_al_mercato`
-* `risparmio_pubblico`
+- chiave composta: `esercizio_finanziario`, `codice_missione`, `codice_programma`, `codice_macroaggregato`
+- livello: Stato centrale
+- granularità: missione / programma / macroaggregato
 
-Aggregati di spesa:
+Campi core:
 
-* `spese_correnti`
-* `spese_per_interessi`
-* `spese_in_conto_capitale`
-* `spese_finali`
-* `spese_complessive`
+- dimensioni: `missione`, `programma`, `macroaggregato`
+- misure principali: `previsioni_definitive_cp`, `previsioni_definitive_cs`
 
-Aggregati di entrata:
+Stato nel repo:
 
-* `entrate_tributarie`
-* `entrate_extra_tributarie`
-* `entrate_correnti`
-* `entrate_finali`
-* `entrate_accensione_prestiti`
+- il dataset 2 è coperto a livello `RAW -> CLEAN`
+- la sua presenza nel repo serve a tenere aperto un possibile filone di lettura sulla composizione della spesa
+- al momento, però, gli output pubblici discussion-linked già chiusi restano centrati soprattutto sul dataset 1 (`saldi storici`)
 
-Tutte le misure sono trattate come:
-
-```
-DOUBLE (valori nominali in euro)
-```
-
-# ⚠ Limiti noti
+## Limiti noti
 
 1. Revisione storica possibile
-   I valori possono essere oggetto di revisioni nel tempo da parte di RGS.
+- i valori possono essere oggetto di revisioni nel tempo da parte di RGS
 
 2. Valori nominali
-   Non sono deflazionati.
-   Nessun aggiustamento per inflazione è applicato nel CLEAN.
+- nessun aggiustamento per inflazione nel CLEAN
 
 3. Assenza di contesto macro
-   Il dataset non include:
-
-   * PIL
-   * inflazione
-   * debito pubblico totale
+- il progetto non integra PIL, inflazione o debito pubblico totale
 
 4. Definizioni tecniche
-   I saldi sono definiti secondo criteri contabili ufficiali.
-   Non sono reinterpretati nel progetto.
+- i saldi e le voci di spesa seguono le definizioni contabili ufficiali
 
-5. Serie limitata temporalmente
-   La serie parte dal 2003 (nella versione attuale disponibile).
+5. Perimetro chiuso
+- questo repo non aggiunge ora una terza linea dataset su `entrate`
 
-# 🧠 Assunzioni minime adottate nel progetto
+## Assunzioni minime adottate
 
-Nel passaggio RAW → CLEAN:
+Nel passaggio `RAW -> CLEAN`:
 
-* Nessuna modifica ai valori numerici
-* Nessuna normalizzazione
-* Nessuna conversione valutaria
-* Nessun ricalcolo di saldi
-* Nessuna correzione per inflazione
+- nessuna modifica semantica ai valori
+- nessun ricalcolo di saldi
+- nessuna imputazione dei null
+- rename coerente in `snake_case`
+- cast tipi numerici
+- export Parquet
 
-Operazioni applicate:
+## Cosa questo progetto non fa
 
-* Parsing CSV
-* Rename coerente snake_case
-* Cast tipi numerici
-* Export Parquet
+- non costruisce un data model unico multi-dataset in stile `toolkit`
+- non integra ora una serie dedicata sulle entrate
+- non usa i layer dati per produrre giudizi politici automatici
 
-# 🚫 Cosa NON stiamo facendo (importante)
+## Evoluzione futura fuori scope
 
-* Non stiamo reinterpretando i saldi.
-* Non stiamo correggendo discrepanze contabili.
-* Non stiamo stimando indicatori mancanti.
-* Non stiamo producendo giudizi politici o valutazioni qualitative.
+Possibili evoluzioni future, ma non parte della chiusura di questo repo:
 
-Il progetto è esclusivamente:
-
-```
-metodologico + analitico + riproducibile
-```
-
-# 🔄 Evoluzioni future (fuori scope attuale)
-
-Possibili estensioni:
-
-* Deflazione valori (euro costanti)
-* Collegamento con PIL ISTAT
-* Indicatori % su PIL
-* Serie integrate con debito pubblico
-
-Non fanno parte dello scope iniziale.
+- prototipo `toolkit-native` separato
+- estensione a un dataset entrate
+- serie integrate con indicatori macro esterni
