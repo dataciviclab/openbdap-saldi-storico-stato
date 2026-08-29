@@ -1,0 +1,3 @@
+# Dipendenze runtime del repo
+dataciviclab-toolkit @ git+https://github.com/dataciviclab/toolkit.git
+duckdb>=1.5.3
