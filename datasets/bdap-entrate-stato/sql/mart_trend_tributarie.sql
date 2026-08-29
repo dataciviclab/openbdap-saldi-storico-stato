@@ -14,7 +14,7 @@ WITH tributarie AS (
         SUM(previsioni_definitive_cp) AS totale_cp,
         SUM(previsioni_definitive_cs) AS totale_cs
     FROM clean_input
-    WHERE esercizio_finanziario BETWEEN 2008 AND 2024
+    WHERE esercizio_finanziario BETWEEN 2008 AND 2025
       AND codice_titolo IS NOT NULL
       AND codice_tipologia IS NOT NULL
     GROUP BY 1
