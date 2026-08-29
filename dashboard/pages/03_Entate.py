@@ -15,6 +15,9 @@ if df_anno.empty:
     st.warning("Nessun dato.")
     st.stop()
 
+latest = int(df_anno["anno"].max())
+prev = latest - 1
+
 # --- Trend entrate totali ---
 st.subheader("Trend entrate totali (Previsioni Definitive CP)")
 
@@ -40,9 +43,8 @@ fig2.update_layout(yaxis_title="% sul totale", height=300, margin={"t": 30})
 st.plotly_chart(fig2, width="stretch")
 
 # --- Top titoli ---
-st.subheader(f"Composizione entrate per Titolo ({int(df_anno['anno'].max())})")
+st.subheader(f"Composizione entrate per Titolo ({latest})")
 
-latest = int(df_anno["anno"].max())
 titoli = df_titolo[df_titolo["anno"] == latest].copy()
 if not titoli.empty:
     fig3 = go.Figure(go.Bar(
@@ -52,12 +54,18 @@ if not titoli.empty:
     fig3.update_layout(yaxis_title="Milioni di €", height=350, margin={"t": 30})
     st.plotly_chart(fig3, width="stretch")
 
-# --- KPI ---
+# --- KPI con delta ---
 latest_row = df_anno[df_anno["anno"] == latest].iloc[0]
+prev_row = df_anno[df_anno["anno"] == prev].iloc[0] if prev in df_anno["anno"].values else None
 trib_row = df_trib[df_trib["anno"] == latest].iloc[0] if latest in df_trib["anno"].values else None
 
 col1, col2, col3 = st.columns(3)
-col1.metric("Entrate totali CP", f"€ {latest_row['entrate_totali_cp']/1e9:,.0f} mld")
-col2.metric("Variazione %", f"{latest_row['var_pct_cp']:+.1f}%")
+delta_ent = f"{latest_row['var_pct_cp']:+.1f}%" if latest_row["var_pct_cp"] == latest_row["var_pct_cp"] else None
+col1.metric("Entrate totali CP", f"€ {latest_row['entrate_totali_cp']/1e9:,.0f} mld", delta=delta_ent)
 if trib_row is not None:
-    col3.metric("Quota tributarie", f"{trib_row['quota_tributarie_cp']*100:.1f}%")
+    trib_prev = df_trib[df_trib["anno"] == prev].iloc[0] if prev in df_trib["anno"].values else None
+    delta_trib = None
+    if trib_prev is not None:
+        delta_trib = f"{(trib_row['quota_tributarie_cp'] - trib_prev['quota_tributarie_cp'])*100:+.1f}pp"
+    col2.metric("Quota tributarie", f"{trib_row['quota_tributarie_cp']*100:.1f}%", delta=delta_trib)
+col3.metric("Anni disponibili", f"{len(df_anno)}")

@@ -3,7 +3,7 @@
 import streamlit as st
 import plotly.graph_objects as go
 
-from sources import load_pagamenti_anno, load_costo_debito
+from sources import load_pagamenti_anno, load_costo_debito, load_pagamenti_missione_anno
 
 st.title("🏛️ Pagamenti e Costo del Debito")
 
@@ -13,6 +13,9 @@ df_deb = load_costo_debito()
 if df_pag.empty:
     st.warning("Nessun dato.")
     st.stop()
+
+latest = int(df_pag["anno"].max())
+prev = latest - 1
 
 # --- Trend pagamenti ---
 st.subheader("Trend pagamenti totali")
@@ -42,14 +45,32 @@ fig2.add_trace(go.Scatter(
 fig2.update_layout(yaxis_title="Milioni di €", height=350, margin={"t": 30})
 st.plotly_chart(fig2, width="stretch")
 
-# --- KPI ---
-latest = int(df_pag["anno"].max())
+# --- Top missioni pagamenti ---
+st.subheader("Le 10 missioni più pagate (tutti gli anni)")
+
+df_missioni = load_pagamenti_missione_anno()
+if not df_missioni.empty:
+    top = (df_missioni.groupby("missione")["totale_pagato"]
+           .sum().nlargest(10).reset_index())
+    fig3 = go.Figure(go.Bar(
+        x=top["totale_pagato"] / 1e9,
+        y=top["missione"],
+        orientation="h",
+        marker_color="#3498db",
+    ))
+    fig3.update_layout(yaxis=dict(autorange="reversed"), xaxis_title="Milioni di € (totale cumulato)", height=350, margin={"t": 30})
+    st.plotly_chart(fig3, width="stretch")
+
+# --- KPI con delta ---
 row_pag = df_pag[df_pag["anno"] == latest].iloc[0]
+row_pag_prev = df_pag[df_pag["anno"] == prev].iloc[0] if prev in df_pag["anno"].values else None
 row_deb = df_deb[df_deb["anno"] == latest].iloc[0] if latest in df_deb["anno"].values else None
+row_deb_prev = df_deb[df_deb["anno"] == prev].iloc[0] if prev in df_deb["anno"].values else None
 
 col1, col2, col3 = st.columns(3)
-col1.metric("Pagato totale", f"€ {row_pag['pagato_totale']/1e9:,.0f} mld")
+delta_pag = f"{row_pag['var_pct_pagato']:+.1f}%" if row_pag["var_pct_pagato"] == row_pag["var_pct_pagato"] else None
+col1.metric("Pagato totale", f"€ {row_pag['pagato_totale']/1e9:,.0f} mld", delta=delta_pag)
 col2.metric("Quota erario", f"{row_pag['quota_erario_pct']:.1f}%")
 if row_deb is not None:
-    col3.metric("Costo debito", f"€ {row_deb['costo_debito_bilancio']/1e9:,.0f} mld",
-                delta=f"{row_deb['var_pct']:+.1f}%")
+    delta_deb = f"{row_deb['var_pct']:+.1f}%" if row_deb["var_pct"] == row_deb["var_pct"] else None
+    col3.metric("Costo debito", f"€ {row_deb['costo_debito_bilancio']/1e9:,.0f} mld", delta=delta_deb)

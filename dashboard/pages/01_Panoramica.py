@@ -3,9 +3,10 @@
 import streamlit as st
 import plotly.graph_objects as go
 
-from sources import load_saldi_anno, load_composizione_spesa, load_pagamenti_anno, load_costo_debito
+from sources import load_saldi_anno, load_composizione_spesa, load_pagamenti_anno, load_costo_debito, get_last_updated
 
 st.title("🇮🇹 Bilancio dello Stato Italiano")
+st.sidebar.caption(f"Aggiornato: {get_last_updated()}")
 
 # --- KPI ---
 df_saldi = load_saldi_anno()
@@ -18,18 +19,29 @@ if df_saldi.empty:
     st.stop()
 
 latest = int(df_saldi["anno"].max())
+prev = latest - 1
 row = df_saldi[df_saldi["anno"] == latest].iloc[0]
+row_prev = df_saldi[df_saldi["anno"] == prev].iloc[0] if prev in df_saldi["anno"].values else None
 row_comp = df_comp[df_comp["anno"] == latest].iloc[0] if latest in df_comp["anno"].values else None
 
 col1, col2, col3, col4 = st.columns(4)
+delta_deficit = None
+if row_prev is not None:
+    d = abs(row["saldo_netto_da_finanziare"]) - abs(row_prev["saldo_netto_da_finanziare"])
+    delta_deficit = f"{d/1e9:+,.0f} mld"
 col1.metric(
     "📉 Deficit",
     f"€ {abs(row['saldo_netto_da_finanziare'])/1e9:,.0f} mld",
+    delta=delta_deficit,
     help=f"Saldo netto da finanziare {latest}",
 )
+delta_avanzo = None
+if row_prev is not None:
+    delta_avanzo = f"{(row['avanzo_primario'] - row_prev['avanzo_primario'])/1e9:+,.0f} mld"
 col2.metric(
     "⚖️ Avanzo Primario",
     f"€ {row['avanzo_primario']/1e9:,.0f} mld",
+    delta=delta_avanzo,
 )
 if row_comp is not None:
     col3.metric(
@@ -62,35 +74,21 @@ fig.update_layout(
 )
 st.plotly_chart(fig, width="stretch")
 
-# --- Composizione Spesa (stacked bar) ---
+# --- Composizione Spesa (testo formattato) ---
 st.subheader(f"Composizione spesa ({latest})")
 
 if row_comp is not None:
-    voci = ["Trasferimenti", "Debito (interessi+rimborso)", "Investimenti reali", "Funzionamento", "Altri"]
-    valori = [
-        row_comp["trasferimenti_mld"],
-        row_comp["onere_debito_mld"] + row_comp["rimborso_debito_mld"],
-        row_comp["investimenti_mld"],
-        row_comp["funzionamento_mld"],
-        row_comp["altri_mld"],
+    voci = [
+        ("🔵 Trasferimenti", row_comp["trasferimenti_mld"]),
+        ("🔴 Debito (interessi+rimborso)", row_comp["onere_debito_mld"] + row_comp["rimborso_debito_mld"]),
+        ("🟢 Investimenti reali", row_comp["investimenti_mld"]),
+        ("🟡 Funzionamento", row_comp["funzionamento_mld"]),
+        ("⚪ Altri", row_comp["altri_mld"]),
     ]
-    colori = ["#3498db", "#e74c3c", "#2ecc71", "#f39c12", "#95a5a6"]
-
-    fig2 = go.Figure(go.Bar(
-        x=[sum(valori)], y=["Spesa totale"],
-        orientation="h",
-        marker=dict(color=colori, line=dict(width=0)),
-        name="",
-        text=[f"{v:.0f} mld" for v in valori],
-        textposition="inside",
-    ))
-    fig2.update_layout(
-        barmode="stack", height=120, margin={"t": 0, "b": 0},
-        showlegend=True,
-        legend=dict(orientation="h", y=-0.3),
-    )
-    # Use a simple legend instead
-    st.markdown(" | ".join([f"**{v}**: {val:.0f} mld ({val/sum(valori)*100:.0f}%)" for v, val in zip(voci, valori)]))
+    totale = row_comp["totale_mld"]
+    cols = st.columns(len(voci))
+    for col, (label, val) in zip(cols, voci):
+        col.metric(label, f"{val:.0f} mld", f"{val/totale*100:.0f}%")
 
 # --- Trend Debito Bilancio ---
 st.subheader(f"Costo del debito a bilancio (2014-{latest})")

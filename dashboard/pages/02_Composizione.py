@@ -2,7 +2,6 @@
 
 import streamlit as st
 import plotly.graph_objects as go
-from plotly.subplots import make_subplots
 
 from sources import load_composizione_spesa
 

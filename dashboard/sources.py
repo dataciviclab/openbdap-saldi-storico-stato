@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from pathlib import Path
 
 import duckdb
@@ -9,19 +10,6 @@ import streamlit as st
 
 REPO_ROOT = Path(__file__).parent.parent
 MART_DIR = REPO_ROOT / "out" / "data" / "mart"
-
-
-def _q(mart_path: Path, sql: str) -> "pd.DataFrame":
-    """Query a parquet file via DuckDB."""
-    import pandas as pd
-    con = duckdb.connect()
-    try:
-        df = con.execute(f"SELECT * FROM read_parquet('{mart_path}')").fetchdf()
-        if sql.strip().upper().startswith("SELECT"):
-            df = con.execute(sql.replace("read_parquet_input", f"'{mart_path}'"), read={"clean_input": df}).fetchdf()
-        return df
-    finally:
-        con.close()
 
 
 def _read_parquet(path: Path):
@@ -34,14 +22,17 @@ def _read_parquet(path: Path):
         con.close()
 
 
-def _query_parquet(path: Path, sql: str):
-    """Run SQL against a parquet file."""
-    import pandas as pd
-    con = duckdb.connect()
-    try:
-        return con.execute(sql.replace("t", f"read_parquet('{path}')")).fetchdf() if "FROM t" in sql else con.execute(sql).fetchdf()
-    finally:
-        con.close()
+def get_last_updated() -> str:
+    """Return the most recent modification time across all mart parquet files."""
+    latest_ts = 0.0
+    for p in MART_DIR.rglob("*.parquet"):
+        mtime = p.stat().st_mtime
+        if mtime > latest_ts:
+            latest_ts = mtime
+    if latest_ts == 0.0:
+        return "N/A"
+    from datetime import datetime, timezone
+    return datetime.fromtimestamp(latest_ts, tz=timezone.utc).strftime("%d/%m/%Y %H:%M")
 
 
 # --- Saldi ---
@@ -100,3 +91,19 @@ def load_pagamenti_anno():
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_costo_debito():
     return _read_parquet(MART_DIR / "bdap_pagamenti_stato" / "mart_costo_debito_bilancio.parquet")
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def load_pagamenti_missione_anno():
+    """Load all per-year pagamenti missioni mart and concatenate."""
+    import pandas as pd
+    frames = []
+    base = MART_DIR / "bdap_pagamenti_stato"
+    for year_dir in sorted(base.iterdir()):
+        if year_dir.is_dir() and year_dir.name.isdigit():
+            pq = year_dir / "mart_pagamenti_missione_categoria.parquet"
+            if pq.exists():
+                df = _read_parquet(pq)
+                frames.append(df)
+    return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
+
