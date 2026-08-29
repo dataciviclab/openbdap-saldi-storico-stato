@@ -30,7 +30,7 @@ if st.button("Esegui"):
         con = duckdb.connect()
         df = con.execute(sql.replace("FROM t", f"FROM read_parquet('{path}')")).fetchdf()
         con.close()
-        st.dataframe(df, use_container_width=True)
+        st.dataframe(df, width="stretch")
         st.caption(f"{len(df)} righe")
     except Exception as e:
         st.error(f"Errore: {e}")

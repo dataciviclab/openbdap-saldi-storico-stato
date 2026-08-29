@@ -1,4 +1,5 @@
 streamlit>=1.61
 plotly>=5.18
+altair>=6.2
 pandas>=3.0
 duckdb>=1.5.3

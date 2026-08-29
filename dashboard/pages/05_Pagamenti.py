@@ -17,6 +17,18 @@ if df_pag.empty:
 latest = int(df_pag["anno"].max())
 prev = latest - 1
 
+# --- KPI in alto ---
+row_pag = df_pag[df_pag["anno"] == latest].iloc[0]
+row_deb = df_deb[df_deb["anno"] == latest].iloc[0] if latest in df_deb["anno"].values else None
+
+col1, col2, col3 = st.columns(3)
+delta_pag = f"{row_pag['var_pct_pagato']:+.1f}%" if row_pag["var_pct_pagato"] == row_pag["var_pct_pagato"] else None
+col1.metric("Pagato totale", f"€ {row_pag['pagato_totale']/1e9:,.0f} mld", delta=delta_pag)
+col2.metric("Quota erario", f"{row_pag['quota_erario_pct']:.1f}%")
+if row_deb is not None:
+    delta_deb = f"{row_deb['var_pct']:+.1f}%" if row_deb["var_pct"] == row_deb["var_pct"] else None
+    col3.metric("Costo debito", f"€ {row_deb['costo_debito_bilancio']/1e9:,.0f} mld", delta=delta_deb)
+
 # --- Trend pagamenti ---
 st.subheader("Trend pagamenti totali")
 
@@ -60,17 +72,3 @@ if not df_missioni.empty:
     ))
     fig3.update_layout(yaxis=dict(autorange="reversed"), xaxis_title="Milioni di € (totale cumulato)", height=350, margin={"t": 30})
     st.plotly_chart(fig3, width="stretch")
-
-# --- KPI con delta ---
-row_pag = df_pag[df_pag["anno"] == latest].iloc[0]
-row_pag_prev = df_pag[df_pag["anno"] == prev].iloc[0] if prev in df_pag["anno"].values else None
-row_deb = df_deb[df_deb["anno"] == latest].iloc[0] if latest in df_deb["anno"].values else None
-row_deb_prev = df_deb[df_deb["anno"] == prev].iloc[0] if prev in df_deb["anno"].values else None
-
-col1, col2, col3 = st.columns(3)
-delta_pag = f"{row_pag['var_pct_pagato']:+.1f}%" if row_pag["var_pct_pagato"] == row_pag["var_pct_pagato"] else None
-col1.metric("Pagato totale", f"€ {row_pag['pagato_totale']/1e9:,.0f} mld", delta=delta_pag)
-col2.metric("Quota erario", f"{row_pag['quota_erario_pct']:.1f}%")
-if row_deb is not None:
-    delta_deb = f"{row_deb['var_pct']:+.1f}%" if row_deb["var_pct"] == row_deb["var_pct"] else None
-    col3.metric("Costo debito", f"€ {row_deb['costo_debito_bilancio']/1e9:,.0f} mld", delta=delta_deb)

@@ -16,6 +16,13 @@ if df_miss.empty:
 
 latest = int(df_anno["anno"].max()) if not df_anno.empty else 2024
 
+# --- KPI in alto ---
+if not df_anno.empty:
+    row = df_anno[df_anno["anno"] == latest].iloc[0]
+    col1, col2 = st.columns(2)
+    col1.metric("Spese totali CP", f"€ {row['spese_totali_cp']/1e9:,.0f} mld")
+    col2.metric("Variazione %", f"{row['var_pct_cp']:+.1f}%")
+
 # --- Top10 missioni ---
 st.subheader(f"Top 10 missioni per importo ({latest})")
 
@@ -41,10 +48,3 @@ if not df_anno.empty:
     ))
     fig2.update_layout(yaxis_title="Milioni di €", height=300, margin={"t": 30})
     st.plotly_chart(fig2, width="stretch")
-
-# --- KPI ---
-if not df_anno.empty:
-    row = df_anno[df_anno["anno"] == latest].iloc[0]
-    col1, col2 = st.columns(2)
-    col1.metric("Spese totali CP", f"€ {row['spese_totali_cp']/1e9:,.0f} mld")
-    col2.metric("Variazione %", f"{row['var_pct_cp']:+.1f}%")

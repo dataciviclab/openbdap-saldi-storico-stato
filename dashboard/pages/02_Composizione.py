@@ -12,19 +12,27 @@ if df.empty:
     st.warning("Nessun dato.")
     st.stop()
 
+latest = int(df["anno"].max())
+row = df[df["anno"] == latest].iloc[0]
+
+# --- KPI in alto ---
+col1, col2, col3, col4 = st.columns(4)
+col1.metric("Investimenti reali", f"{row['pct_investimenti']:.1f}%",
+            help=f"Trend: {df['pct_investimenti'].iloc[0]:.1f}% nel {int(df['anno'].iloc[0])}")
+col2.metric("Debito totale", f"{row['quota_debito_totale_pct']:.1f}%",
+            help="Interessi + rimborso")
+col3.metric("Trasferimenti", f"{row['pct_trasferimenti']:.1f}%")
+col4.metric("Funzionamento", f"{row['pct_funzionamento']:.1f}%")
+
+st.info("**Trasferimenti** = a regioni, enti locali, famiglie, imprese. "
+        "**Investimenti reali** = investimenti fissi lordi. "
+        "**Debito** = oneri (interessi) + rimborso.")
+
 # --- Trend area chart ---
 st.subheader("Evoluzione composizione spesa (2008-2024)")
 
 fig = go.Figure()
-colors = {
-    "Trasferimenti": "#3498db",
-    "Debito (interessi)": "#e74c3c",
-    "Investimenti reali": "#2ecc71",
-    "Funzionamento": "#f39c12",
-    "Rimborso debito": "#c0392b",
-    "Altri": "#95a5a6",
-}
-for col, label, color in [
+for col_name, label, color in [
     ("trasferimenti_mld", "Trasferimenti", "#3498db"),
     ("onere_debito_mld", "Debito (interessi)", "#e74c3c"),
     ("investimenti_mld", "Investimenti reali", "#2ecc71"),
@@ -33,7 +41,7 @@ for col, label, color in [
     ("altri_mld", "Altri", "#95a5a6"),
 ]:
     fig.add_trace(go.Scatter(
-        x=df["anno"], y=df[col], name=label,
+        x=df["anno"], y=df[col_name], name=label,
         stackgroup="one", line=dict(width=0.5, color=color),
         fillcolor=color,
     ))
@@ -50,7 +58,7 @@ st.plotly_chart(fig, width="stretch")
 st.subheader("Quote percentuali sul totale")
 
 fig2 = go.Figure()
-for col, label, color in [
+for col_name, label, color in [
     ("pct_trasferimenti", "Trasferimenti", "#3498db"),
     ("pct_onere_debito", "Interessi debito", "#e74c3c"),
     ("pct_investimenti", "Investimenti reali", "#2ecc71"),
@@ -58,7 +66,7 @@ for col, label, color in [
     ("pct_rimborso_debito", "Rimborso debito", "#c0392b"),
 ]:
     fig2.add_trace(go.Scatter(
-        x=df["anno"], y=df[col], name=label,
+        x=df["anno"], y=df[col_name], name=label,
         line=dict(width=2),
     ))
 
@@ -69,16 +77,3 @@ fig2.update_layout(
     margin={"t": 30},
 )
 st.plotly_chart(fig2, width="stretch")
-
-# --- KPI chiave ---
-latest = int(df["anno"].max())
-row = df[df["anno"] == latest].iloc[0]
-
-col1, col2, col3 = st.columns(3)
-col1.metric("Investimenti reali", f"{row['pct_investimenti']:.1f}%", help=f"Trend: {df['pct_investimenti'].iloc[0]:.1f}% nel {int(df['anno'].iloc[0])}")
-col2.metric("Debito totale", f"{row['quota_debito_totale_pct']:.1f}%", help="Interessi + rimborso")
-col3.metric("Trasferimenti", f"{row['pct_trasferimenti']:.1f}%")
-
-st.info("**Trasferimenti** = trasferimenti a regioni, enti locali, famiglie, imprese. "
-        "**Investimenti reali** = investimenti fissi lordi. "
-        "**Debito** = oneri (interessi) + rimborso passivita finanziarie.")
