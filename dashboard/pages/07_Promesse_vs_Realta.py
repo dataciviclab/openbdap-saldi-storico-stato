@@ -14,23 +14,33 @@ if df_lb_anno.empty or df_lb_vs.empty:
     st.warning("Nessun dato LB disponibile. Esegui `make run` sul dataset bdap-lb-spese-missione.")
     st.stop()
 
+# Find overlapping year range
+from sources import load_spese_missione
+df_rnd_m = load_spese_missione()
+lb_years = set(df_lb_anno["anno"].astype(int))
+rnd_years = set(df_rnd_m["anno"].astype(int)) if not df_rnd_m.empty else set()
+common_years = sorted(lb_years & rnd_years)
+
+if not common_years:
+    st.warning("Nessun anno in comune tra LB e Rendiconto.")
+    st.stop()
+
+latest = common_years[-1]
+
 # --- KPI in alto ---
-latest = int(df_lb_anno["anno"].max())
 row = df_lb_anno[df_lb_anno["anno"] == latest].iloc[0]
 
 col1, col2, col3 = st.columns(3)
 col1.metric("📋 Previsione governo (LB)", f"€ {row['lb_totale_cp_mld']:.0f} mld")
-col2.metric("📅 Anni disponibili", f"{len(df_lb_anno)}")
-col3.metric("🎯 Missioni per anno", f"{df_lb_vs[df_lb_vs['anno']==latest]['missione'].nunique()}")
+col2.metric("📅 Anni confrontabili", f"{len(common_years)} ({common_years[0]}-{latest})")
+col3.metric("🎯 Missioni", f"{df_lb_vs[df_lb_vs['anno']==latest]['missione'].nunique()}")
 
-st.info("**LB** = Legge di Bilancio (previsioni iniziali del governo). "
-        "**Rendiconto** = consuntivo effettivo. Il gap indica dove il governo ha "
-        "sottovalutato o sopravvalutato le spese.")
+st.info(f"**LB** = Legge di Bilancio (previsioni iniziali). **Rendiconto** = consuntivo. "
+        f"Confronto disponibile dal {common_years[0]} al {latest}.")
 
 # --- Trend LB vs Rendiconto ---
 st.subheader("Trend: previsione governo vs consuntivo")
 
-# Load rendiconto for comparison
 from sources import load_spese_anno
 df_rnd = load_spese_anno()
 
@@ -57,9 +67,6 @@ st.subheader(f"Confronto per missione ({latest})")
 
 lb_latest = df_lb_vs[df_lb_vs["anno"] == latest].copy()
 if not lb_latest.empty:
-    # Load rendiconto for same year
-    from sources import load_spese_missione
-    df_rnd_m = load_spese_missione()
     rnd_latest = df_rnd_m[df_rnd_m["anno"] == latest][["missione", "totale_cp"]].copy()
     rnd_latest["rnd_mld"] = rnd_latest["totale_cp"] / 1e9
 
@@ -71,7 +78,6 @@ if not lb_latest.empty:
     )
     merged = merged.sort_values("lb_previsto_mld", ascending=False)
 
-    # Table
     st.dataframe(
         merged[["missione", "lb_previsto_mld", "rnd_mld", "gap_pct"]].rename(columns={
             "missione": "Missione",
@@ -83,7 +89,6 @@ if not lb_latest.empty:
         hide_index=True,
     )
 
-    # Chart top10
     top10 = merged.head(10)
     fig2 = go.Figure()
     fig2.add_trace(go.Bar(
