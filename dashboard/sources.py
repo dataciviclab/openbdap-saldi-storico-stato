@@ -107,3 +107,15 @@ def load_pagamenti_missione_anno():
                 frames.append(df)
     return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
 
+
+# --- LB (Legge di Bilancio) ---
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def load_lb_spese_anno():
+    return _read_parquet(MART_DIR / "bdap_lb_spese_missione" / "mart_lb_spese_anno.parquet")
+
+
+@st.cache_data(ttl=3600, show_spinner=False)
+def load_lb_vs_rendiconto():
+    return _read_parquet(MART_DIR / "bdap_lb_spese_missione" / "mart_lb_vs_rendiconto.parquet")
+

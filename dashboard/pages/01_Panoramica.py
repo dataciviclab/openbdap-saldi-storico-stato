@@ -3,7 +3,7 @@
 import streamlit as st
 import plotly.graph_objects as go
 
-from sources import load_saldi_anno, load_composizione_spesa, load_pagamenti_anno, load_costo_debito, get_last_updated
+from sources import load_saldi_anno, load_composizione_spesa, load_pagamenti_anno, load_costo_debito, get_last_updated, load_lb_spese_anno
 
 st.title("🇮🇹 Bilancio dello Stato Italiano")
 st.sidebar.caption(f"Aggiornato: {get_last_updated()}")
@@ -13,6 +13,7 @@ df_saldi = load_saldi_anno()
 df_comp = load_composizione_spesa()
 df_pag = load_pagamenti_anno()
 df_deb = load_costo_debito()
+df_lb = load_lb_spese_anno()
 
 if df_saldi.empty:
     st.warning("Nessun dato disponibile. Esegui `make run` prima.")
@@ -43,6 +44,13 @@ col2.metric(
     f"€ {row['avanzo_primario']/1e9:,.0f} mld",
     delta=delta_avanzo,
 )
+
+# LB KPI
+if not df_lb.empty:
+    lb_latest = int(df_lb["anno"].max())
+    lb_row = df_lb[df_lb["anno"] == lb_latest].iloc[0]
+    st.metric("📋 Previsione governo (LB)", f"€ {lb_row['lb_totale_cp_mld']:.0f} mld",
+              help=f"Legge di Bilancio {lb_latest} — previsioni iniziali")
 
 # --- Trend Saldo Netto ---
 st.subheader(f"Evoluzione saldi (2003-{latest})")

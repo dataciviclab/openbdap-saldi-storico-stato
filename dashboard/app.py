@@ -21,6 +21,7 @@ pages = {
         st.Page("pages/03_Entate.py", title="Entrate", icon="📈"),
         st.Page("pages/04_Spese.py", title="Spese per Missione", icon="💰"),
         st.Page("pages/05_Pagamenti.py", title="Pagamenti e Debito", icon="🏛️"),
+        st.Page("pages/07_Promesse_vs_Realta.py", title="Promesse vs Realtà", icon="⚖️"),
     ],
     "Strumenti": [
         st.Page("pages/06_SQL.py", title="Query SQL", icon="🧪"),
