@@ -11,14 +11,14 @@ st.info("Seleziona un dataset e scrivi una query SQL. I dati sono i mart parquet
 REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 
 DATASETS = {
-    "saldi_anno": "out/data/mart/bdap_saldi_stato/2024/mart_saldi_anno.parquet",
-    "composizione_spesa": "out/data/mart/bdap_spese_stato/2024/mart_investimenti_vs_corrente.parquet",
-    "avanzo_primario": "out/data/mart/bdap_saldi_stato/2024/mart_avanzo_primario.parquet",
-    "entrate_anno": "out/data/mart/bdap_entrate_stato/2024/mart_entrate_anno.parquet",
-    "entrate_titolo": "out/data/mart/bdap_entrate_stato/2024/mart_entrate_titolo_natura_anno.parquet",
-    "trend_tributarie": "out/data/mart/bdap_entrate_stato/2024/mart_trend_tributarie.parquet",
-    "spese_missione": "out/data/mart/bdap_spese_stato/2024/mart_spese_missione_anno.parquet",
-    "spese_anno": "out/data/mart/bdap_spese_stato/2024/mart_spese_anno.parquet",
+    "saldi_anno": "out/data/mart/bdap_saldi_stato/2025/mart_saldi_anno.parquet",
+    "composizione_spesa": "out/data/mart/bdap_spese_stato/2025/mart_investimenti_vs_corrente.parquet",
+    "avanzo_primario": "out/data/mart/bdap_saldi_stato/2025/mart_avanzo_primario.parquet",
+    "entrate_anno": "out/data/mart/bdap_entrate_stato/2025/mart_entrate_anno.parquet",
+    "entrate_titolo": "out/data/mart/bdap_entrate_stato/2025/mart_entrate_titolo_natura_anno.parquet",
+    "trend_tributarie": "out/data/mart/bdap_entrate_stato/2025/mart_trend_tributarie.parquet",
+    "spese_missione": "out/data/mart/bdap_spese_stato/2025/mart_spese_missione_anno.parquet",
+    "spese_anno": "out/data/mart/bdap_spese_stato/2025/mart_spese_anno.parquet",
     "pagamenti_anno": "out/data/mart/bdap_pagamenti_stato/mart_pagamenti_anno.parquet",
     "costo_debito": "out/data/mart/bdap_pagamenti_stato/mart_costo_debito_bilancio.parquet",
 }

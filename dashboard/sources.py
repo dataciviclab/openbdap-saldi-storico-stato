@@ -39,46 +39,46 @@ def get_last_updated() -> str:
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_saldi_anno():
-    return _read_parquet(MART_DIR / "bdap_saldi_stato" / "2024" / "mart_saldi_anno.parquet")
+    return _read_parquet(MART_DIR / "bdap_saldi_stato" / "2025" / "mart_saldi_anno.parquet")
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_composizione_spesa():
-    return _read_parquet(MART_DIR / "bdap_spese_stato" / "2024" / "mart_investimenti_vs_corrente.parquet")
+    return _read_parquet(MART_DIR / "bdap_spese_stato" / "2025" / "mart_investimenti_vs_corrente.parquet")
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_avanzo_primario():
-    return _read_parquet(MART_DIR / "bdap_saldi_stato" / "2024" / "mart_avanzo_primario.parquet")
+    return _read_parquet(MART_DIR / "bdap_saldi_stato" / "2025" / "mart_avanzo_primario.parquet")
 
 
 # --- Entrate ---
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_entrate_anno():
-    return _read_parquet(MART_DIR / "bdap_entrate_stato" / "2024" / "mart_entrate_anno.parquet")
+    return _read_parquet(MART_DIR / "bdap_entrate_stato" / "2025" / "mart_entrate_anno.parquet")
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_entrate_titolo():
-    return _read_parquet(MART_DIR / "bdap_entrate_stato" / "2024" / "mart_entrate_titolo_natura_anno.parquet")
+    return _read_parquet(MART_DIR / "bdap_entrate_stato" / "2025" / "mart_entrate_titolo_natura_anno.parquet")
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_trend_tributarie():
-    return _read_parquet(MART_DIR / "bdap_entrate_stato" / "2024" / "mart_trend_tributarie.parquet")
+    return _read_parquet(MART_DIR / "bdap_entrate_stato" / "2025" / "mart_trend_tributarie.parquet")
 
 
 # --- Spese ---
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_spese_missione():
-    return _read_parquet(MART_DIR / "bdap_spese_stato" / "2024" / "mart_spese_missione_anno.parquet")
+    return _read_parquet(MART_DIR / "bdap_spese_stato" / "2025" / "mart_spese_missione_anno.parquet")
 
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_spese_anno():
-    return _read_parquet(MART_DIR / "bdap_spese_stato" / "2024" / "mart_spese_anno.parquet")
+    return _read_parquet(MART_DIR / "bdap_spese_stato" / "2025" / "mart_spese_anno.parquet")
 
 
 # --- Pagamenti ---

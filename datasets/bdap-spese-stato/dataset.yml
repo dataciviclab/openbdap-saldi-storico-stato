@@ -7,10 +7,10 @@ dataset:
   tags: [finanza-pubblica, bdap, spese, bilancio-stato]
   category: finanza-pubblica
   description: "Spese dello Stato per Missione/Programma/Macroaggregato — Previsioni Definitive CP/CS. Serie storica 2008-2024."
-  years: [2024]
+  years: [2025]
   time_coverage:
     start_year: 2008
-    end_year: 2024
+    end_year: 2025
 
 raw:
   output_policy: overwrite
@@ -24,7 +24,16 @@ raw:
 
 clean:
   sql: "sql/clean.sql"
-  required_columns: [esercizio_finanziario, codice_missione, missione, codice_programma, programma, codice_macroaggregato, macroaggregato]
+  required_columns:
+    [
+      esercizio_finanziario,
+      codice_missione,
+      missione,
+      codice_programma,
+      programma,
+      codice_macroaggregato,
+      macroaggregato,
+    ]
   read:
     source: config_only
     mode: latest
@@ -72,7 +81,15 @@ mart:
       mart_investimenti_vs_corrente:
         min_rows: 15
         primary_key: [anno]
-        required_columns: [anno, funzionamento_mld, trasferimenti_mld, investimenti_mld, onere_debito_mld, totale_mld]
+        required_columns:
+          [
+            anno,
+            funzionamento_mld,
+            trasferimenti_mld,
+            investimenti_mld,
+            onere_debito_mld,
+            totale_mld,
+          ]
 
 validation:
   fail_on_error: true
