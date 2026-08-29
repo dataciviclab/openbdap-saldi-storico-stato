@@ -8,7 +8,7 @@ from sources import load_saldi_anno, load_composizione_spesa, load_pagamenti_ann
 st.title("🇮🇹 Bilancio dello Stato Italiano")
 st.sidebar.caption(f"Aggiornato: {get_last_updated()}")
 
-# --- KPI ---
+# --- Load data ---
 df_saldi = load_saldi_anno()
 df_comp = load_composizione_spesa()
 df_pag = load_pagamenti_anno()
@@ -22,9 +22,9 @@ latest = int(df_saldi["anno"].max())
 prev = latest - 1
 row = df_saldi[df_saldi["anno"] == latest].iloc[0]
 row_prev = df_saldi[df_saldi["anno"] == prev].iloc[0] if prev in df_saldi["anno"].values else None
-row_comp = df_comp[df_comp["anno"] == latest].iloc[0] if latest in df_comp["anno"].values else None
 
-col1, col2, col3, col4 = st.columns(4)
+# --- KPI in alto ---
+col1, col2 = st.columns(2)
 delta_deficit = None
 if row_prev is not None:
     d = abs(row["saldo_netto_da_finanziare"]) - abs(row_prev["saldo_netto_da_finanziare"])
@@ -43,17 +43,6 @@ col2.metric(
     f"€ {row['avanzo_primario']/1e9:,.0f} mld",
     delta=delta_avanzo,
 )
-if row_comp is not None:
-    col3.metric(
-        "🏗️ Investimenti Reali",
-        f"{row_comp['pct_investimenti']:.1f}%",
-        help="Quota investimenti fissi sul totale spese",
-    )
-    col4.metric(
-        "💸 Debito Totale",
-        f"{row_comp['quota_debito_totale_pct']:.1f}%",
-        help="Interessi + rimborso sul totale spese",
-    )
 
 # --- Trend Saldo Netto ---
 st.subheader(f"Evoluzione saldi (2003-{latest})")
@@ -74,24 +63,26 @@ fig.update_layout(
 )
 st.plotly_chart(fig, width="stretch")
 
-# --- Composizione Spesa (testo formattato) ---
-st.subheader(f"Composizione spesa ({latest})")
+# --- Composizione Spesa ---
+st.subheader("Composizione della spesa")
 
-if row_comp is not None:
-    voci = [
-        ("🔵 Trasferimenti", row_comp["trasferimenti_mld"]),
-        ("🔴 Debito (interessi+rimborso)", row_comp["onere_debito_mld"] + row_comp["rimborso_debito_mld"]),
-        ("🟢 Investimenti reali", row_comp["investimenti_mld"]),
-        ("🟡 Funzionamento", row_comp["funzionamento_mld"]),
-        ("⚪ Altri", row_comp["altri_mld"]),
-    ]
-    totale = row_comp["totale_mld"]
-    cols = st.columns(len(voci))
-    for col, (label, val) in zip(cols, voci):
-        col.metric(label, f"{val:.0f} mld", f"{val/totale*100:.0f}%")
+if not df_comp.empty:
+    latest_comp = min(latest, int(df_comp["anno"].max()))
+    row_comp = df_comp[df_comp["anno"] == latest_comp].iloc[0]
+
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("🔵 Trasferimenti", f"{row_comp['trasferimenti_mld']:.0f} mld", f"{row_comp['pct_trasferimenti']:.0f}%")
+    c2.metric("🔴 Debito", f"{row_comp['onere_debito_mld'] + row_comp['rimborso_debito_mld']:.0f} mld",
+              f"{row_comp['quota_debito_totale_pct']:.0f}%")
+    c3.metric("🟢 Investimenti", f"{row_comp['investimenti_mld']:.0f} mld",
+              f"{row_comp['pct_investimenti']:.0f}%")
+    c4.metric("🟡 Funzionamento", f"{row_comp['funzionamento_mld']:.0f} mld",
+              f"{row_comp['pct_funzionamento']:.0f}%")
+
+    st.caption(f"Anno: {latest_comp} · Totale: {row_comp['totale_mld']:.0f} mld")
 
 # --- Trend Debito Bilancio ---
-st.subheader(f"Costo del debito a bilancio (2014-{latest})")
+st.subheader("Costo del debito a bilancio")
 
 if not df_deb.empty:
     fig3 = go.Figure()
