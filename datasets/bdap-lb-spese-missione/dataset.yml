@@ -7,7 +7,7 @@ dataset:
   tags: [finanza-pubblica, bdap, bilancio-stato, legge-bilancio, previsione]
   category: finanza-pubblica
   description: "Legge di Bilancio Pubblicata — Spese per Missione DPCM Art.3. Previsioni iniziali del governo per amministrazione, programma e capitolo. Confronto con rendiconto e pagamenti."
-  years: [2022]
+  years: [2025, 2026]
   time_coverage:
     start_year: 2015
     end_year: 2026
@@ -18,12 +18,9 @@ raw:
     - name: "lb_spese_missione_{year}"
       type: "http_file"
       args:
-        url: "https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/"
+        url: "https://bdap-opendata.rgs.mef.gov.it/export/csv/{year}---Legge-di-Bilancio---99-Stato---DPCM-22-09-2014-art3.csv"
         filename: "lb_spese_missione_{year}.csv"
-        url_suffix_by_year:
-          2022: "2fe9a2f4-aad2-4e95-b2ac-43a603b648b2.csv"
       primary: true
-      notes: "UUID validato. Aggiungere gli altri anni dopo l'inventario completo."
 
 clean:
   sql: "sql/clean.sql"
@@ -74,10 +71,10 @@ mart:
   tables:
     - name: "mart_lb_spese_anno"
       sql: "sql/mart_spese_anno.sql"
-      years: [2022]
+      years: [2025, 2026]
     - name: "mart_lb_vs_rendiconto"
       sql: "sql/mart_vs_rendiconto.sql"
-      years: [2022]
+      years: [2025, 2026]
   required_tables:
     - "mart_lb_spese_anno"
     - "mart_vs_rendiconto"
