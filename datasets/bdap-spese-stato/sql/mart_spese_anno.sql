@@ -23,12 +23,10 @@ SELECT
     anno,
     spese_totali_cp,
     spese_totali_cs,
-    CASE WHEN cp_prev = 0 OR cp_prev IS NULL THEN NULL
-         ELSE ROUND((spese_totali_cp - cp_prev) / cp_prev, 4)
-    END AS var_pct_cp,
-    CASE WHEN cs_prev = 0 OR cs_prev IS NULL THEN NULL
-         ELSE ROUND((spese_totali_cs - cs_prev) / cs_prev, 4)
-    END AS var_pct_cs,
+    ROUND(100.0 * (spese_totali_cp - LAG(spese_totali_cp) OVER (ORDER BY anno))
+          / NULLIF(LAG(spese_totali_cp) OVER (ORDER BY anno), 0), 2) AS var_pct_cp,
+    ROUND(100.0 * (spese_totali_cs - LAG(spese_totali_cs) OVER (ORDER BY anno))
+          / NULLIF(LAG(spese_totali_cs) OVER (ORDER BY anno), 0), 2) AS var_pct_cs,
     CASE WHEN spese_totali_cs = 0 THEN NULL
          ELSE ROUND(spese_totali_cp / spese_totali_cs, 4)
     END AS rapporto_cp_cs

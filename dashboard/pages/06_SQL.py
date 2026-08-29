@@ -2,10 +2,13 @@
 
 import streamlit as st
 import duckdb
+from pathlib import Path
 
 st.title("🧪 Query SQL")
 
 st.info("Seleziona un dataset e scrivi una query SQL. I dati sono i mart parquet.")
+
+REPO_ROOT = Path(__file__).resolve().parent.parent.parent
 
 DATASETS = {
     "saldi_anno": "out/data/mart/bdap_saldi_stato/2024/mart_saldi_anno.parquet",
@@ -21,14 +24,15 @@ DATASETS = {
 }
 
 dataset = st.selectbox("Dataset", list(DATASETS.keys()))
-default_sql = f"SELECT * FROM t ORDER BY 1 LIMIT 20"
+default_sql = "SELECT * FROM t ORDER BY 1 LIMIT 20"
 sql = st.text_area("SQL", value=default_sql, height=100)
 
 if st.button("Esegui"):
     try:
-        path = DATASETS[dataset]
+        rel_path = DATASETS[dataset]
+        abs_path = str(REPO_ROOT / rel_path)
         con = duckdb.connect()
-        df = con.execute(sql.replace("FROM t", f"FROM read_parquet('{path}')")).fetchdf()
+        df = con.execute(sql.replace("FROM t", f"FROM read_parquet('{abs_path}')")).fetchdf()
         con.close()
         st.dataframe(df, width="stretch")
         st.caption(f"{len(df)} righe")
