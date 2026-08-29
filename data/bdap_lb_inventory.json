@@ -1,0 +1,1638 @@
+{
+  "total": 149,
+  "items": [
+    {
+      "uuid": "099e36e5-1372-43bd-a34d-7d8615bbaba8",
+      "name": "spd_lbf_spe_dpc_m07_01_2019",
+      "title": "2019 - Legge di Bilancio - 07 Istruzione, Università e Ricerca - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/099e36e5-1372-43bd-a34d-7d8615bbaba8.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "2fe9a2f4-aad2-4e95-b2ac-43a603b648b2",
+      "name": "spd_lbf_spe_dpc_m00_01_2022",
+      "title": "2022 - Legge di Bilancio - 99 Stato - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2fe9a2f4-aad2-4e95-b2ac-43a603b648b2.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "1aff7a66-f912-4d4f-87c0-f2074863c42f",
+      "name": "spd_lbf_spe_dpc_m14_01_2019",
+      "title": "2019 - Legge di Bilancio - 14 Beni e Attività Culturali e Turismo - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/1aff7a66-f912-4d4f-87c0-f2074863c42f.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "b0ac27ea-df28-4d05-9e1c-4611c2324a8a",
+      "name": "spd_lbf_spe_dpc_m03_01_2020",
+      "title": "2020 - Legge di Bilancio - 03 Sviluppo Economico - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/b0ac27ea-df28-4d05-9e1c-4611c2324a8a.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "7050321b-2e44-4d7f-bb56-3668d457a3b1",
+      "name": "spd_lbf_spe_dpc_m02_01_2022",
+      "title": "2022 - Legge di Bilancio - 02 Economia e Finanze - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/7050321b-2e44-4d7f-bb56-3668d457a3b1.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "c0f7f6d6-e057-479f-9d89-eacc3502b719",
+      "name": "spd_lbf_spe_dpc_m14_01_2018",
+      "title": "2018 - Legge di Bilancio - 14 Beni e Attività Culturali e Turismo - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c0f7f6d6-e057-479f-9d89-eacc3502b719.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "d3ef7c18-9cc1-42c5-a966-92a644ba4fd1",
+      "name": "spd_lbf_spe_dpc_m13_01_2020",
+      "title": "2020 - Legge di Bilancio - 13 Politiche Agricole Alimentari e Forestali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d3ef7c18-9cc1-42c5-a966-92a644ba4fd1.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "43f05c19-203c-4c98-ac9a-93bc01a34084",
+      "name": "spd_lbf_spe_dpc_m09_01_2019",
+      "title": "2019 - Legge di Bilancio - 09 Ambiente e Tutela del Territorio e del Mare - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/43f05c19-203c-4c98-ac9a-93bc01a34084.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "9437a38f-f214-48b8-a19b-dcdf88779697",
+      "name": "spd_lbf_spe_dpc_m00_01_2024",
+      "title": "2024 - Legge di Bilancio - 99 Stato - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/9437a38f-f214-48b8-a19b-dcdf88779697.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "18b9759f-1425-4ffc-ae88-f25b6b145dd4",
+      "name": "spd_lbf_spe_dpc_m04_01_2024",
+      "title": "2024 - Legge di Bilancio - 04 Lavoro e Politiche Sociali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/18b9759f-1425-4ffc-ae88-f25b6b145dd4.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "6088b9e1-487f-47bc-ab00-9ff328f986a7",
+      "name": "spd_lbf_spe_dpc_m00_01_2025",
+      "title": "2025 - Legge di Bilancio - 99 Stato - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/6088b9e1-487f-47bc-ab00-9ff328f986a7.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "1cacf3b5-8405-426c-b89d-5a67cd7f141c",
+      "name": "spd_lbf_spe_dpc_m15_01_2021",
+      "title": "2021 - Legge di Bilancio - 15 Salute - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/1cacf3b5-8405-426c-b89d-5a67cd7f141c.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "b5923826-3526-483f-b0c0-feb89410f400",
+      "name": "spd_lbf_spe_dpc_m14_01_2022",
+      "title": "2022 - Legge di Bilancio - 14 Cultura - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/b5923826-3526-483f-b0c0-feb89410f400.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "cebb75c4-1b74-45bc-b1c1-efc10f4f2f57",
+      "name": "spd_lbf_spe_dpc_m12_01_2017",
+      "title": "2017 - Legge di Bilancio - 12 Difesa - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/cebb75c4-1b74-45bc-b1c1-efc10f4f2f57.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "2745847d-22a3-46e3-ae8f-dd33ec4ba37d",
+      "name": "spd_lbf_spe_dpc_m11_01_2021",
+      "title": "2021 - Legge di Bilancio - 11 Università e Ricerca - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2745847d-22a3-46e3-ae8f-dd33ec4ba37d.csv",
+      "tags": [
+        "Bilancio",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "5ca2d8e2-8992-4ba1-ab2f-71cfbb45e4e7",
+      "name": "spd_lbf_spe_dpc_m13_01_2019",
+      "title": "2019 - Legge di Bilancio - 13 Politiche Agricole Alimentari e Forestali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/5ca2d8e2-8992-4ba1-ab2f-71cfbb45e4e7.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "ef41c258-75e3-4be6-98f8-99a3dc6f9441",
+      "name": "spd_lbf_spe_dpc_m14_01_2023",
+      "title": "2023 - Legge di Bilancio - 14 Cultura - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/ef41c258-75e3-4be6-98f8-99a3dc6f9441.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "6e711edd-7f46-44e5-a117-1dbf7e478313",
+      "name": "spd_lbf_spe_dpc_m14_01_2021",
+      "title": "2021 - Legge di Bilancio - 14 Beni e Attività Culturali e Turismo - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/6e711edd-7f46-44e5-a117-1dbf7e478313.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "2b0832ad-063f-4a52-b9e9-a99fb44d6354",
+      "name": "spd_lbf_spe_dpc_m14_01_2024",
+      "title": "2024 - Legge di Bilancio - 14 Cultura - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2b0832ad-063f-4a52-b9e9-a99fb44d6354.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "21df1a1c-4ff0-4293-99ea-156fdcb0cc82",
+      "name": "spd_lbf_spe_dpc_m13_01_2023",
+      "title": "2023 - Legge di Bilancio - 13 Agricoltura e sovranita' alimentare - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/21df1a1c-4ff0-4293-99ea-156fdcb0cc82.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "ace72a0e-9f53-43e8-af4d-c2498c31b973",
+      "name": "spd_lbf_spe_dpc_m05_01_2023",
+      "title": "2023 - Legge di Bilancio - 05 Giustizia - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/ace72a0e-9f53-43e8-af4d-c2498c31b973.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "c9b36f9d-798d-4450-8e08-3ab12cbc54c2",
+      "name": "spd_lbf_spe_dpc_m10_01_2020",
+      "title": "2020 - Legge di Bilancio - 10 Infrastrutture e Trasporti - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c9b36f9d-798d-4450-8e08-3ab12cbc54c2.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "8f2d4301-30e7-40df-8c95-a970b3bde649",
+      "name": "spd_lbf_spe_dpc_m08_01_2022",
+      "title": "2022 - Legge di Bilancio - 08 Interno - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/8f2d4301-30e7-40df-8c95-a970b3bde649.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "a8fad88d-eb95-4069-8c89-9c56faafa950",
+      "name": "spd_lbf_spe_dpc_m07_01_2020",
+      "title": "2020 - Legge di Bilancio - 07 Istruzione, Università e Ricerca - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/a8fad88d-eb95-4069-8c89-9c56faafa950.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "8b332e57-d230-4903-8047-7b3f2b082c04",
+      "name": "spd_lbf_spe_dpc_m12_01_2024",
+      "title": "2024 - Legge di Bilancio - 12 Difesa - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/8b332e57-d230-4903-8047-7b3f2b082c04.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "d63368d8-ef2b-44c0-9442-2366e80afe40",
+      "name": "spd_lbf_spe_dpc_m10_01_2024",
+      "title": "2024 - Legge di Bilancio - 10 Infrastrutture e Trasporti - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d63368d8-ef2b-44c0-9442-2366e80afe40.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "53bf04bb-31a6-4b07-925f-3bd8195ccca8",
+      "name": "spd_lbf_spe_dpc_m04_01_2017",
+      "title": "2017 - Legge di Bilancio - 04 Lavoro e Politiche Sociali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/53bf04bb-31a6-4b07-925f-3bd8195ccca8.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "153003ca-9677-45ba-9697-6f0e0e2657ba",
+      "name": "spd_lbf_spe_dpc_m04_01_2021",
+      "title": "2021 - Legge di Bilancio - 04 Lavoro e Politiche Sociali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/153003ca-9677-45ba-9697-6f0e0e2657ba.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "e4ba8125-5acd-4446-8498-89a479131b5b",
+      "name": "spd_lbf_spe_dpc_m05_01_2017",
+      "title": "2017 - Legge di Bilancio - 05 Giustizia - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/e4ba8125-5acd-4446-8498-89a479131b5b.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "4549974d-5e56-45b2-90e1-1d9192961bf3",
+      "name": "spd_lbf_spe_dpc_m04_01_2023",
+      "title": "2023 - Legge di Bilancio - 04 Lavoro e Politiche Sociali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/4549974d-5e56-45b2-90e1-1d9192961bf3.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "31175710-32dc-4b7a-8e86-55cb3fcea3b9",
+      "name": "spd_lbf_spe_dpc_m11_01_2023",
+      "title": "2023 - Legge di Bilancio - 11 Università - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/31175710-32dc-4b7a-8e86-55cb3fcea3b9.csv",
+      "tags": [
+        "Bilancio",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "4f5bf911-cf67-4d72-bf4a-b7a123656b1e",
+      "name": "spd_lbf_spe_dpc_m07_01_2017",
+      "title": "2017 - Legge di Bilancio - 07 Istruzione, Università e Ricerca - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/4f5bf911-cf67-4d72-bf4a-b7a123656b1e.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "df4ce207-5813-4407-9c8a-14714313e0b5",
+      "name": "spd_lbf_spe_dpc_m10_01_2026",
+      "title": "2026 - Legge di Bilancio - 10 Infrastrutture e Trasporti - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/df4ce207-5813-4407-9c8a-14714313e0b5.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "3c450fb0-9229-4d6c-97f7-90d8b068596d",
+      "name": "spd_lbf_spe_dpc_m08_01_2026",
+      "title": "2026 - Legge di Bilancio - 08 Interno - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/3c450fb0-9229-4d6c-97f7-90d8b068596d.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "a2112a4c-d7ab-441a-ac2e-5f8373c068c2",
+      "name": "spd_lbf_spe_dpc_m15_01_2025",
+      "title": "2025 - Legge di Bilancio - 15 Salute - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/a2112a4c-d7ab-441a-ac2e-5f8373c068c2.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "8de6a144-72e9-46a5-ad82-2a59ef02f0e3",
+      "name": "spd_lbf_spe_dpc_m04_01_2020",
+      "title": "2020 - Legge di Bilancio - 04 Lavoro e Politiche Sociali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/8de6a144-72e9-46a5-ad82-2a59ef02f0e3.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "ffd9e52e-1477-4fa3-b230-865e24ccb754",
+      "name": "spd_lbf_spe_dpc_m05_01_2020",
+      "title": "2020 - Legge di Bilancio - 05 Giustizia - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/ffd9e52e-1477-4fa3-b230-865e24ccb754.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "e564a47d-6a39-4fc7-8ee2-e690fd24a585",
+      "name": "spd_lbf_spe_dpc_m13_01_2024",
+      "title": "2024 - Legge di Bilancio - 13 Agricoltura e sovranita' alimentare - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/e564a47d-6a39-4fc7-8ee2-e690fd24a585.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "d46d9ab6-5180-4152-9d78-b966a58e5275",
+      "name": "spd_lbf_spe_dpc_m05_01_2022",
+      "title": "2022 - Legge di Bilancio - 05 Giustizia - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d46d9ab6-5180-4152-9d78-b966a58e5275.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "bf00f34d-b5b1-4a4b-ab7b-027e9eefdd79",
+      "name": "spd_lbf_spe_dpc_m12_01_2025",
+      "title": "2025 - Legge di Bilancio - 12 Difesa - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/bf00f34d-b5b1-4a4b-ab7b-027e9eefdd79.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "7bfa80a0-6c7e-4440-b8d8-135ab5a38888",
+      "name": "spd_lbf_spe_dpc_m13_01_2021",
+      "title": "2021 - Legge di Bilancio - 13 Politiche Agricole Alimentari e Forestali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/7bfa80a0-6c7e-4440-b8d8-135ab5a38888.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "e1f70757-2245-4e7d-a14c-5847ce7cbe11",
+      "name": "spd_lbf_spe_dpc_m12_01_2018",
+      "title": "2018 - Legge di Bilancio - 12 Difesa - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/e1f70757-2245-4e7d-a14c-5847ce7cbe11.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "d15ecad7-af39-4868-bfea-c858525af4b2",
+      "name": "spd_lbf_spe_dpc_m13_01_2025",
+      "title": "2025 - Legge di Bilancio - 13 Agricoltura e sovranita' alimentare - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d15ecad7-af39-4868-bfea-c858525af4b2.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "d5c075b2-3eff-414a-b8ea-f3ed82f9b753",
+      "name": "spd_lbf_spe_dpc_m10_01_2019",
+      "title": "2019 - Legge di Bilancio - 10 Infrastrutture e Trasporti - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d5c075b2-3eff-414a-b8ea-f3ed82f9b753.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "36fb2aad-0af7-402a-8c8d-aa9727c2adaa",
+      "name": "spd_lbf_spe_dpc_m05_01_2024",
+      "title": "2024 - Legge di Bilancio - 05 Giustizia - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/36fb2aad-0af7-402a-8c8d-aa9727c2adaa.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "b8a9230b-d678-40c2-9a5f-9a0e85e32503",
+      "name": "spd_lbf_spe_dpc_m02_01_2021",
+      "title": "2021 - Legge di Bilancio - 02 Economia e Finanze - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/b8a9230b-d678-40c2-9a5f-9a0e85e32503.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "ae24876f-6a6f-41de-b53f-00a205f188dd",
+      "name": "spd_lbf_spe_dpc_m12_01_2022",
+      "title": "2022 - Legge di Bilancio - 12 Difesa - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/ae24876f-6a6f-41de-b53f-00a205f188dd.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "121c3804-3306-473b-aefd-9c2c27cc2023",
+      "name": "spd_lbf_spe_dpc_m08_01_2020",
+      "title": "2020 - Legge di Bilancio - 08 Interno - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/121c3804-3306-473b-aefd-9c2c27cc2023.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "ce48e13c-8466-4ab4-b3b4-0557cf6f7dc5",
+      "name": "spd_lbf_spe_dpc_m04_01_2022",
+      "title": "2022 - Legge di Bilancio - 04 Lavoro e Politiche Sociali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/ce48e13c-8466-4ab4-b3b4-0557cf6f7dc5.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "ab0e20e5-459e-4e3a-82c5-51f5fa1eaa0e",
+      "name": "spd_lbf_spe_dpc_m06_01_2026",
+      "title": "2026 - Legge di Bilancio - 06 Affari Esteri e della Cooperazione Internazionale - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/ab0e20e5-459e-4e3a-82c5-51f5fa1eaa0e.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "4d2d4015-0c4b-43bb-892a-6b44b67ab501",
+      "name": "spd_lbf_spe_dpc_m02_01_2024",
+      "title": "2024 - Legge di Bilancio - 02 Economia e Finanze - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/4d2d4015-0c4b-43bb-892a-6b44b67ab501.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "f66d2984-f3ff-4c12-b8de-47b65193bd29",
+      "name": "spd_lbf_spe_dpc_m16_01_2023",
+      "title": "2023 - Legge di Bilancio - 16 Turismo - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/f66d2984-f3ff-4c12-b8de-47b65193bd29.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "d559708b-f048-4325-876f-4d3dbbdf0655",
+      "name": "spd_lbf_spe_dpc_m12_01_2020",
+      "title": "2020 - Legge di Bilancio - 12 Difesa - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d559708b-f048-4325-876f-4d3dbbdf0655.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "c7753fe3-faae-47aa-96d3-c28246c9a49d",
+      "name": "spd_lbf_spe_dpc_m10_01_2018",
+      "title": "2018 - Legge di Bilancio - 10 Infrastrutture e Trasporti - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c7753fe3-faae-47aa-96d3-c28246c9a49d.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "9093fff5-a47d-4ade-9c9e-eb479b59210a",
+      "name": "spd_lbf_spe_dpc_m00_01_2021",
+      "title": "2021 - Legge di Bilancio - 99 Stato - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/9093fff5-a47d-4ade-9c9e-eb479b59210a.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "79c24996-585d-45b7-a3a3-b213d8b4f8e5",
+      "name": "spd_lbf_spe_dpc_m11_01_2025",
+      "title": "2025 - Legge di Bilancio - 11 Università e della Ricerca - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/79c24996-585d-45b7-a3a3-b213d8b4f8e5.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Bilancio"
+      ]
+    },
+    {
+      "uuid": "c21b43bb-cc92-4fc8-873a-f81b2cc5379f",
+      "name": "spd_lbf_spe_dpc_m14_01_2020",
+      "title": "2020 - Legge di Bilancio - 14 Beni e Attività Culturali e Turismo - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c21b43bb-cc92-4fc8-873a-f81b2cc5379f.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "18a22590-301d-4e5a-a7d6-03c9770f1eb3",
+      "name": "spd_lbf_spe_dpc_m02_01_2017",
+      "title": "2017 - Legge di Bilancio - 02 Economia e Finanze - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/18a22590-301d-4e5a-a7d6-03c9770f1eb3.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "2807a32e-c015-4477-aabb-8a7caffd9a63",
+      "name": "spd_lbf_spe_dpc_m03_01_2025",
+      "title": "2025 - Legge di Bilancio - 03 Imprese e Made in Italy - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2807a32e-c015-4477-aabb-8a7caffd9a63.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "ee5123b7-714c-4f26-bd8b-d5ca36591cea",
+      "name": "spd_lbf_spe_dpc_m05_01_2026",
+      "title": "2026 - Legge di Bilancio - 05 Giustizia - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/ee5123b7-714c-4f26-bd8b-d5ca36591cea.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "f54bd35c-1910-4da7-9cbe-9c8774231844",
+      "name": "spd_lbf_spe_dpc_m05_01_2021",
+      "title": "2021 - Legge di Bilancio - 05 Giustizia - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/f54bd35c-1910-4da7-9cbe-9c8774231844.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "3631f73f-4545-46bc-98a8-7f96cee5ef92",
+      "name": "spd_lbf_spe_dpc_m09_01_2023",
+      "title": "2023 - Legge di Bilancio - 09 Ambiente e sicurezza energetica - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/3631f73f-4545-46bc-98a8-7f96cee5ef92.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "d5350db1-53cc-45cb-936f-1d2688979f8b",
+      "name": "spd_lbf_spe_dpc_m09_01_2025",
+      "title": "2025 - Legge di Bilancio - 09 Ambiente e sicurezza energetica - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d5350db1-53cc-45cb-936f-1d2688979f8b.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "2853e71d-ab6b-4f17-b593-0060f5ecf93b",
+      "name": "spd_lbf_spe_dpc_m00_01_2017",
+      "title": "2017 - Legge di Bilancio - 99 Stato - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2853e71d-ab6b-4f17-b593-0060f5ecf93b.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "d5698b28-3427-4f82-ab72-3cbb1e58beca",
+      "name": "spd_lbf_spe_dpc_m04_01_2026",
+      "title": "2026 - Legge di Bilancio - 04 Lavoro e Politiche Sociali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d5698b28-3427-4f82-ab72-3cbb1e58beca.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "d6d768b1-c4b2-45d0-9a69-48f4c8198163",
+      "name": "spd_lbf_spe_dpc_m11_01_2026",
+      "title": "2026 - Legge di Bilancio - 11 Università e della Ricerca - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d6d768b1-c4b2-45d0-9a69-48f4c8198163.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Bilancio"
+      ]
+    },
+    {
+      "uuid": "bfa711e3-3b37-4e3e-b8a3-b7b2e08c45e8",
+      "name": "spd_lbf_spe_dpc_m08_01_2025",
+      "title": "2025 - Legge di Bilancio - 08 Interno - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/bfa711e3-3b37-4e3e-b8a3-b7b2e08c45e8.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "0b78e5b6-afe0-47ad-b6a6-592267f959ed",
+      "name": "spd_lbf_spe_dpc_m02_01_2020",
+      "title": "2020 - Legge di Bilancio - 02 Economia e Finanze - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/0b78e5b6-afe0-47ad-b6a6-592267f959ed.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "f50fa222-a404-4310-94b8-7e34a172ace9",
+      "name": "spd_lbf_spe_dpc_m08_01_2021",
+      "title": "2021 - Legge di Bilancio - 08 Interno - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/f50fa222-a404-4310-94b8-7e34a172ace9.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "423b3e1f-4044-41b3-9b6f-6a8949ca6e9f",
+      "name": "spd_lbf_spe_dpc_m07_01_2024",
+      "title": "2024 - Legge di Bilancio - 07 Istruzione e Merito - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/423b3e1f-4044-41b3-9b6f-6a8949ca6e9f.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "371cbdc7-d14f-43c6-96b4-868248f827c0",
+      "name": "spd_lbf_spe_dpc_m09_01_2018",
+      "title": "2018 - Legge di Bilancio - 09 Ambiente e Tutela del Territorio e del Mare - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/371cbdc7-d14f-43c6-96b4-868248f827c0.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "60b599b1-da6a-4d8f-b868-b13e5211ccba",
+      "name": "spd_lbf_spe_dpc_m14_01_2026",
+      "title": "2026 - Legge di Bilancio - 14 Cultura - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/60b599b1-da6a-4d8f-b868-b13e5211ccba.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "3c755e01-0dbf-46e4-aa61-22e8b0659850",
+      "name": "spd_lbf_spe_dpc_m13_01_2022",
+      "title": "2022 - Legge di Bilancio - 13 Politiche Agricole Alimentari e Forestali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/3c755e01-0dbf-46e4-aa61-22e8b0659850.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "ccef12d3-601e-4502-b01e-832727585b44",
+      "name": "spd_lbf_spe_dpc_m08_01_2023",
+      "title": "2023 - Legge di Bilancio - 08 Interno - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/ccef12d3-601e-4502-b01e-832727585b44.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "2f14a028-ef12-48c2-baeb-4860a32962b3",
+      "name": "spd_lbf_spe_dpc_m02_01_2026",
+      "title": "2026 - Legge di Bilancio - 02 Economia e Finanze - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2f14a028-ef12-48c2-baeb-4860a32962b3.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "4f12af8d-6c3d-40b6-8560-6e2821e5e5e2",
+      "name": "spd_lbf_spe_dpc_m02_01_2025",
+      "title": "2025 - Legge di Bilancio - 02 Economia e Finanze - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/4f12af8d-6c3d-40b6-8560-6e2821e5e5e2.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "fcbb21e3-5b9b-4391-afea-a24c84f54673",
+      "name": "spd_lbf_spe_dpc_m00_01_2020",
+      "title": "2020 - Legge di Bilancio - 99 Stato - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/fcbb21e3-5b9b-4391-afea-a24c84f54673.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "ce66c79f-3344-4154-a3b6-09bffb435e5e",
+      "name": "spd_lbf_spe_dpc_m00_01_2018",
+      "title": "2018 - Legge di Bilancio - 99 Stato - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/ce66c79f-3344-4154-a3b6-09bffb435e5e.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "a2b63ee0-1683-4e37-9dc6-e032256e2729",
+      "name": "spd_lbf_spe_dpc_m15_01_2023",
+      "title": "2023 - Legge di Bilancio - 15 Salute - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/a2b63ee0-1683-4e37-9dc6-e032256e2729.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "56e8643f-2c81-49b3-b847-fa2a4b14b8d1",
+      "name": "spd_lbf_spe_dpc_m04_01_2019",
+      "title": "2019 - Legge di Bilancio - 04 Lavoro e Politiche Sociali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/56e8643f-2c81-49b3-b847-fa2a4b14b8d1.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "425947cc-e61b-4bb6-b13c-d6661c5f1455",
+      "name": "spd_lbf_spe_dpc_m10_01_2021",
+      "title": "2021 - Legge di Bilancio - 10 Infrastrutture e Trasporti - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/425947cc-e61b-4bb6-b13c-d6661c5f1455.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "17005712-071f-44e2-ba4d-7a9cf1b7fd16",
+      "name": "spd_lbf_spe_dpc_m03_01_2017",
+      "title": "2017 - Legge di Bilancio - 03 Sviluppo Economico - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/17005712-071f-44e2-ba4d-7a9cf1b7fd16.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "a79e47a0-0a4c-4ae4-8ca3-b8d2e18fc350",
+      "name": "spd_lbf_spe_dpc_m12_01_2026",
+      "title": "2026 - Legge di Bilancio - 12 Difesa - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/a79e47a0-0a4c-4ae4-8ca3-b8d2e18fc350.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "c29f44e4-4721-4754-be0e-565846b38fff",
+      "name": "spd_lbf_spe_dpc_m10_01_2022",
+      "title": "2022 - Legge di Bilancio - 10 Infrastrutture e Mobilità - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c29f44e4-4721-4754-be0e-565846b38fff.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "4f37fb2c-2e22-424a-89df-572ddf30019b",
+      "name": "spd_lbf_spe_dpc_m05_01_2025",
+      "title": "2025 - Legge di Bilancio - 05 Giustizia - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/4f37fb2c-2e22-424a-89df-572ddf30019b.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "2a66174c-7cbb-4805-896a-f97c438fa4e1",
+      "name": "spd_lbf_spe_dpc_m04_01_2025",
+      "title": "2025 - Legge di Bilancio - 04 Lavoro e Politiche Sociali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2a66174c-7cbb-4805-896a-f97c438fa4e1.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "e6031724-5e37-4074-bbfc-0f331785fcf7",
+      "name": "spd_lbf_spe_dpc_m03_01_2026",
+      "title": "2026 - Legge di Bilancio - 03 Imprese e Made in Italy - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/e6031724-5e37-4074-bbfc-0f331785fcf7.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "fa379fbc-abd2-413a-8074-2f90c53aa597",
+      "name": "spd_lbf_spe_dpc_m00_01_2023",
+      "title": "2023 - Legge di Bilancio - 99 Stato - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/fa379fbc-abd2-413a-8074-2f90c53aa597.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "07e51389-d9fd-4bf3-a61c-e5aa6d013b93",
+      "name": "spd_lbf_spe_dpc_m03_01_2023",
+      "title": "2023 - Legge di Bilancio - 03 Imprese e Made in Italy - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/07e51389-d9fd-4bf3-a61c-e5aa6d013b93.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "269a2415-57ba-4766-ac54-a5635bfbecfa",
+      "name": "spd_lbf_spe_dpc_m09_01_2024",
+      "title": "2024 - Legge di Bilancio - 09 Ambiente e sicurezza energetica - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/269a2415-57ba-4766-ac54-a5635bfbecfa.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "5918a6cd-c55b-4de9-a810-b169e75fe323",
+      "name": "spd_lbf_spe_dpc_m12_01_2021",
+      "title": "2021 - Legge di Bilancio - 12 Difesa - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/5918a6cd-c55b-4de9-a810-b169e75fe323.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "e34275b8-f72e-4f20-b800-fe6f46cfc4d7",
+      "name": "spd_lbf_spe_dpc_m07_01_2025",
+      "title": "2025 - Legge di Bilancio - 07 Istruzione e Merito - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/e34275b8-f72e-4f20-b800-fe6f46cfc4d7.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "4b1bd75a-535d-44e3-8685-27daf237bd0a",
+      "name": "spd_lbf_spe_dpc_m03_01_2022",
+      "title": "2022 - Legge di Bilancio - 03 Sviluppo Economico - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/4b1bd75a-535d-44e3-8685-27daf237bd0a.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "00a22823-298b-4bd3-b4e6-4c783c34ce2a",
+      "name": "spd_lbf_spe_dpc_m06_01_2018",
+      "title": "2018 - Legge di Bilancio - 06 Affari Esteri e della Cooperazione Internazionale - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/00a22823-298b-4bd3-b4e6-4c783c34ce2a.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "2d614524-ccc7-4d5e-af46-c72ec34d4bbc",
+      "name": "spd_lbf_spe_dpc_m12_01_2023",
+      "title": "2023 - Legge di Bilancio - 12 Difesa - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2d614524-ccc7-4d5e-af46-c72ec34d4bbc.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "8750a717-75ab-4635-bbb0-6e711f7c36fc",
+      "name": "spd_lbf_spe_dpc_m04_01_2018",
+      "title": "2018 - Legge di Bilancio - 04 Lavoro e Politiche Sociali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/8750a717-75ab-4635-bbb0-6e711f7c36fc.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "b68abbbf-5950-4a75-a183-50d81e8de122",
+      "name": "spd_lbf_spe_dpc_m15_01_2020",
+      "title": "2020 - Legge di Bilancio - 15 Salute - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/b68abbbf-5950-4a75-a183-50d81e8de122.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "105311bb-eddf-4b74-98b6-a1500c93c361",
+      "name": "spd_lbf_spe_dpc_m15_01_2026",
+      "title": "2026 - Legge di Bilancio - 15 Salute - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/105311bb-eddf-4b74-98b6-a1500c93c361.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "2f8239d2-10f9-4821-939b-e7e6e2f2d7ac",
+      "name": "spd_lbf_spe_dpc_m13_01_2018",
+      "title": "2018 - Legge di Bilancio - 13 Politiche Agricole Alimentari e Forestali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/2f8239d2-10f9-4821-939b-e7e6e2f2d7ac.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "7b33edde-606f-418c-bcf0-db225da4e080",
+      "name": "spd_lbf_spe_dpc_m03_01_2024",
+      "title": "2024 - Legge di Bilancio - 03 Imprese e Made in Italy - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/7b33edde-606f-418c-bcf0-db225da4e080.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "1abf0b7d-e4d7-4252-9d73-17858e935789",
+      "name": "spd_lbf_spe_dpc_m00_01_2026",
+      "title": "2026 - Legge di Bilancio - 99 Stato - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/1abf0b7d-e4d7-4252-9d73-17858e935789.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "dbc6f1c8-8d44-482f-931b-2b0d2366d817",
+      "name": "spd_lbf_spe_dpc_m10_01_2025",
+      "title": "2025 - Legge di Bilancio - 10 Infrastrutture e Trasporti - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/dbc6f1c8-8d44-482f-931b-2b0d2366d817.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "1f8ed8c5-89b3-4a01-b79b-461c965c034f",
+      "name": "spd_lbf_spe_dpc_m15_01_2024",
+      "title": "2024 - Legge di Bilancio - 15 Salute - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/1f8ed8c5-89b3-4a01-b79b-461c965c034f.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "3ba5bf16-e887-429f-8e7b-977d3219bcf6",
+      "name": "spd_lbf_spe_dpc_m12_01_2019",
+      "title": "2019 - Legge di Bilancio - 12 Difesa - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/3ba5bf16-e887-429f-8e7b-977d3219bcf6.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "d8ea8aef-c5a3-4721-b696-84e686d23252",
+      "name": "spd_lbf_spe_dpc_m02_01_2018",
+      "title": "2018 - Legge di Bilancio - 02 Economia e Finanze - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d8ea8aef-c5a3-4721-b696-84e686d23252.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "8e431944-faaf-42a3-8d66-77bb6e7fb1f4",
+      "name": "spd_lbf_spe_dpc_m06_01_2024",
+      "title": "2024 - Legge di Bilancio - 06 Affari Esteri e della Cooperazione Internazionale - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/8e431944-faaf-42a3-8d66-77bb6e7fb1f4.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "8b7c38aa-3da5-46ce-bf76-3cfbcbc29640",
+      "name": "spd_lbf_spe_dpc_m06_01_2022",
+      "title": "2022 - Legge di Bilancio - 06 Affari Esteri e della Cooperazione Internazionale - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/8b7c38aa-3da5-46ce-bf76-3cfbcbc29640.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "476b12f1-8c54-413d-b1bd-fa43bd6dabb7",
+      "name": "spd_lbf_spe_dpc_m03_01_2021",
+      "title": "2021 - Legge di Bilancio - 03 Sviluppo Economico - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/476b12f1-8c54-413d-b1bd-fa43bd6dabb7.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "32d834c6-7748-4ed3-8694-a3dae61ce85f",
+      "name": "spd_lbf_spe_dpc_m16_01_2022",
+      "title": "2022 - Legge di Bilancio - 16 Turismo - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/32d834c6-7748-4ed3-8694-a3dae61ce85f.csv",
+      "tags": [
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "200fc81e-747f-4f58-aef5-c3611a5a73c0",
+      "name": "spd_lbf_spe_dpc_m07_01_2018",
+      "title": "2018 - Legge di Bilancio - 07 Istruzione, Università e Ricerca - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/200fc81e-747f-4f58-aef5-c3611a5a73c0.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "b8920fd2-9a5f-4bfa-b32f-4ea51b22fcb9",
+      "name": "spd_lbf_spe_dpc_m15_01_2022",
+      "title": "2022 - Legge di Bilancio - 15 Salute - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/b8920fd2-9a5f-4bfa-b32f-4ea51b22fcb9.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "c3cd470d-df12-4caf-9ec4-3cecdc275987",
+      "name": "spd_lbf_spe_dpc_m14_01_2017",
+      "title": "2017 - Legge di Bilancio - 14 Beni e Attività Culturali e Turismo - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c3cd470d-df12-4caf-9ec4-3cecdc275987.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "c50b4c3e-e548-4334-a7ec-6b84d14acf0b",
+      "name": "spd_lbf_spe_dpc_m07_01_2021",
+      "title": "2021 - Legge di Bilancio - 07 Istruzione - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c50b4c3e-e548-4334-a7ec-6b84d14acf0b.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "b30d7daf-0b95-4b1b-81f2-b542863433ca",
+      "name": "spd_lbf_spe_dpc_m11_01_2022",
+      "title": "2022 - Legge di Bilancio - 11 Università - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/b30d7daf-0b95-4b1b-81f2-b542863433ca.csv",
+      "tags": [
+        "Bilancio",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "bd72c20e-d679-49a7-a898-7f7ce36dd4f6",
+      "name": "spd_lbf_spe_dpc_m09_01_2026",
+      "title": "2026 - Legge di Bilancio - 09 Ambiente e sicurezza energetica - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/bd72c20e-d679-49a7-a898-7f7ce36dd4f6.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "7bed1834-fd98-4a19-976a-71dd6a582616",
+      "name": "spd_lbf_spe_dpc_m06_01_2020",
+      "title": "2020 - Legge di Bilancio - 06 Affari Esteri e della Cooperazione Internazionale - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/7bed1834-fd98-4a19-976a-71dd6a582616.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "69e06f8e-ba3c-4d49-aa19-cc57b71b9d33",
+      "name": "spd_lbf_spe_dpc_m15_01_2019",
+      "title": "2019 - Legge di Bilancio - 15 Salute - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/69e06f8e-ba3c-4d49-aa19-cc57b71b9d33.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "41988068-4a1e-4221-b4c5-b4ee219e8f59",
+      "name": "spd_lbf_spe_dpc_m15_01_2018",
+      "title": "2018 - Legge di Bilancio - 15 Salute - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/41988068-4a1e-4221-b4c5-b4ee219e8f59.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "d4c14e9b-1f12-40d3-a16e-8a3497344da6",
+      "name": "spd_lbf_spe_dpc_m05_01_2018",
+      "title": "2018 - Legge di Bilancio - 05 Giustizia - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/d4c14e9b-1f12-40d3-a16e-8a3497344da6.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "4a935e1c-35f0-441c-99c8-bf5ba35a1c8a",
+      "name": "spd_lbf_spe_dpc_m06_01_2025",
+      "title": "2025 - Legge di Bilancio - 06 Affari Esteri e della Cooperazione Internazionale - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/4a935e1c-35f0-441c-99c8-bf5ba35a1c8a.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "fee8902a-94af-4b99-8688-6473100bd471",
+      "name": "spd_lbf_spe_dpc_m14_01_2025",
+      "title": "2025 - Legge di Bilancio - 14 Cultura - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/fee8902a-94af-4b99-8688-6473100bd471.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "f47de9b3-e7aa-4b18-989c-73cf36120933",
+      "name": "spd_lbf_spe_dpc_m08_01_2017",
+      "title": "2017 - Legge di Bilancio - 08 Interno - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/f47de9b3-e7aa-4b18-989c-73cf36120933.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "14bb208c-852e-4089-832e-5603e68ea571",
+      "name": "spd_lbf_spe_dpc_m06_01_2017",
+      "title": "2017 - Legge di Bilancio - 06 Affari Esteri e della Cooperazione Internazionale - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/14bb208c-852e-4089-832e-5603e68ea571.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "9b85b575-b306-432a-b4a1-c7d5f1d45c81",
+      "name": "spd_lbf_spe_dpc_m10_01_2023",
+      "title": "2023 - Legge di Bilancio - 10 Infrastrutture e Trasporti - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/9b85b575-b306-432a-b4a1-c7d5f1d45c81.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "52744adb-3afe-4f50-9839-1e3ef6a31049",
+      "name": "spd_lbf_spe_dpc_m09_01_2017",
+      "title": "2017 - Legge di Bilancio - 09 Ambiente e Tutela del Territorio e del Mare - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/52744adb-3afe-4f50-9839-1e3ef6a31049.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "fc5143ea-31ed-4f86-8c27-89e77b0b4af7",
+      "name": "spd_lbf_spe_dpc_m07_01_2022",
+      "title": "2022 - Legge di Bilancio - 07 Istruzione - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/fc5143ea-31ed-4f86-8c27-89e77b0b4af7.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "1a0629b0-15f3-4af2-8a7a-1869ffdee263",
+      "name": "spd_lbf_spe_dpc_m16_01_2024",
+      "title": "2024 - Legge di Bilancio - 16 Turismo - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/1a0629b0-15f3-4af2-8a7a-1869ffdee263.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "c6a6deeb-b082-42d5-9d42-2b70c73c2bdc",
+      "name": "spd_lbf_spe_dpc_m02_01_2019",
+      "title": "2019 - Legge di Bilancio - 02 Economia e Finanze - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c6a6deeb-b082-42d5-9d42-2b70c73c2bdc.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "7d475b0b-93d8-459b-9d06-8aa7920da364",
+      "name": "spd_lbf_spe_dpc_m13_01_2017",
+      "title": "2017 - Legge di Bilancio - 13 Politiche Agricole Alimentari e Forestali - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/7d475b0b-93d8-459b-9d06-8aa7920da364.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "09047312-ebf1-441f-97e8-9cb9dbcd9652",
+      "name": "spd_lbf_spe_dpc_m09_01_2022",
+      "title": "2022 - Legge di Bilancio - 09 Transizione Ecologica - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/09047312-ebf1-441f-97e8-9cb9dbcd9652.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "9bfe9f98-c26b-40f9-b27b-434f7c67ef92",
+      "name": "spd_lbf_spe_dpc_m03_01_2019",
+      "title": "2019 - Legge di Bilancio - 03 Sviluppo Economico - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/9bfe9f98-c26b-40f9-b27b-434f7c67ef92.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "56ef39da-616d-4122-a5a2-4cb0019f25d3",
+      "name": "spd_lbf_spe_dpc_m06_01_2023",
+      "title": "2023 - Legge di Bilancio - 06 Affari Esteri e della Cooperazione Internazionale - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/56ef39da-616d-4122-a5a2-4cb0019f25d3.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "ff4680ac-13d4-4979-aeda-766a29a4a36f",
+      "name": "spd_lbf_spe_dpc_m02_01_2023",
+      "title": "2023 - Legge di Bilancio - 02 Economia e Finanze - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/ff4680ac-13d4-4979-aeda-766a29a4a36f.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "4251ed4c-b3dd-4ae4-add1-1cb778a848ec",
+      "name": "spd_lbf_spe_dpc_m06_01_2019",
+      "title": "2019 - Legge di Bilancio - 06 Affari Esteri e della Cooperazione Internazionale - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/4251ed4c-b3dd-4ae4-add1-1cb778a848ec.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "aec71b2e-53c1-4f0a-a7e5-4f5689e57149",
+      "name": "spd_lbf_spe_dpc_m16_01_2025",
+      "title": "2025 - Legge di Bilancio - 16 Turismo - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/aec71b2e-53c1-4f0a-a7e5-4f5689e57149.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "e9a58a4b-d19c-43d6-8992-3955d58ce055",
+      "name": "spd_lbf_spe_dpc_m08_01_2018",
+      "title": "2018 - Legge di Bilancio - 08 Interno - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/e9a58a4b-d19c-43d6-8992-3955d58ce055.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "bad3d053-b1ef-48e9-8b4e-37c2f23d5f74",
+      "name": "spd_lbf_spe_dpc_m07_01_2026",
+      "title": "2026 - Legge di Bilancio - 07 Istruzione e Merito - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/bad3d053-b1ef-48e9-8b4e-37c2f23d5f74.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "980cf14b-9094-44cd-9777-7f7817dd6f0c",
+      "name": "spd_lbf_spe_dpc_m00_01_2019",
+      "title": "2019 - Legge di Bilancio - 99 Stato - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/980cf14b-9094-44cd-9777-7f7817dd6f0c.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "433402a8-0d56-446f-b97a-9f647842db5f",
+      "name": "spd_lbf_spe_dpc_m11_01_2024",
+      "title": "2024 - Legge di Bilancio - 11 Università - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/433402a8-0d56-446f-b97a-9f647842db5f.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Bilancio"
+      ]
+    },
+    {
+      "uuid": "c88a9020-cc67-4c3b-9a25-60cd97913102",
+      "name": "spd_lbf_spe_dpc_m05_01_2019",
+      "title": "2019 - Legge di Bilancio - 05 Giustizia - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/c88a9020-cc67-4c3b-9a25-60cd97913102.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "75c85c3e-bba9-4467-8e9d-21c59bedda89",
+      "name": "spd_lbf_spe_dpc_m03_01_2018",
+      "title": "2018 - Legge di Bilancio - 03 Sviluppo Economico - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/75c85c3e-bba9-4467-8e9d-21c59bedda89.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "edb88e53-8e3b-4922-9d1c-dbb182a4a067",
+      "name": "spd_lbf_spe_dpc_m08_01_2024",
+      "title": "2024 - Legge di Bilancio - 08 Interno - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/edb88e53-8e3b-4922-9d1c-dbb182a4a067.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "677a2af4-386b-4a84-8ada-8eae139b3dba",
+      "name": "spd_lbf_spe_dpc_m09_01_2021",
+      "title": "2021 - Legge di Bilancio - 09 Ambiente e Tutela del Territorio e del Mare - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/677a2af4-386b-4a84-8ada-8eae139b3dba.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "f9c20b3f-6373-4d1f-821b-b50b4f723e2a",
+      "name": "spd_lbf_spe_dpc_m07_01_2023",
+      "title": "2023 - Legge di Bilancio - 07 Istruzione e Merito - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/f9c20b3f-6373-4d1f-821b-b50b4f723e2a.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "e9ed88ad-0ff8-4ece-a27e-90a9a5e3176c",
+      "name": "spd_lbf_spe_dpc_m15_01_2017",
+      "title": "2017 - Legge di Bilancio - 15 Salute - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/e9ed88ad-0ff8-4ece-a27e-90a9a5e3176c.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "21feffa7-1856-4838-8d68-d5ff8f557616",
+      "name": "spd_lbf_spe_dpc_m13_01_2026",
+      "title": "2026 - Legge di Bilancio - 13 Agricoltura e sovranita' alimentare - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/21feffa7-1856-4838-8d68-d5ff8f557616.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    },
+    {
+      "uuid": "28ddf004-6a6b-4624-bb24-821170d1fd72",
+      "name": "spd_lbf_spe_dpc_m06_01_2021",
+      "title": "2021 - Legge di Bilancio - 06 Affari Esteri e della Cooperazione Internazionale - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/28ddf004-6a6b-4624-bb24-821170d1fd72.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "7250a89c-646a-4bff-aa1e-84e4d157a148",
+      "name": "spd_lbf_spe_dpc_m08_01_2019",
+      "title": "2019 - Legge di Bilancio - 08 Interno - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/7250a89c-646a-4bff-aa1e-84e4d157a148.csv",
+      "tags": [
+        "Bilancio Finanziario dello Stato",
+        "Legge di Bilancio (LB)",
+        "Spesa"
+      ]
+    },
+    {
+      "uuid": "77872cec-325f-427c-b63c-c750f561a24c",
+      "name": "spd_lbf_spe_dpc_m16_01_2026",
+      "title": "2026 - Legge di Bilancio - 16 Turismo - DPCM 22/09/2014 art.3",
+      "csv_url": "http://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/77872cec-325f-427c-b63c-c750f561a24c.csv",
+      "tags": [
+        "Spesa",
+        "Legge di Bilancio (LB)",
+        "Bilancio Finanziario dello Stato"
+      ]
+    }
+  ]
+}

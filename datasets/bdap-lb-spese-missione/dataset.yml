@@ -7,7 +7,7 @@ dataset:
   tags: [finanza-pubblica, bdap, bilancio-stato, legge-bilancio, previsione]
   category: finanza-pubblica
   description: "Legge di Bilancio Pubblicata — Spese per Missione DPCM Art.3. Previsioni iniziali del governo per amministrazione, programma e capitolo. Confronto con rendiconto e pagamenti."
-  years: [2025, 2026]
+  years: [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
   time_coverage:
     start_year: 2015
     end_year: 2026
@@ -18,8 +18,19 @@ raw:
     - name: "lb_spese_missione_{year}"
       type: "http_file"
       args:
-        url: "https://bdap-opendata.rgs.mef.gov.it/export/csv/{year}---Legge-di-Bilancio---99-Stato---DPCM-22-09-2014-art3.csv"
+        url: "https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/"
         filename: "lb_spese_missione_{year}.csv"
+        url_suffix_by_year:
+          2017: "2853e71d-ab6b-4f17-b593-0060f5ecf93b.csv"
+          2018: "ce66c79f-3344-4154-a3b6-09bffb435e5e.csv"
+          2019: "980cf14b-9094-44cd-9777-7f7817dd6f0c.csv"
+          2020: "fcbb21e3-5b9b-4391-afea-a24c84f54673.csv"
+          2021: "9093fff5-a47d-4ade-9c9e-eb479b59210a.csv"
+          2022: "2fe9a2f4-aad2-4e95-b2ac-43a603b648b2.csv"
+          2023: "fa379fbc-abd2-413a-8074-2f90c53aa597.csv"
+          2024: "9437a38f-f214-48b8-a19b-dcdf88779697.csv"
+          2025: "6088b9e1-487f-47bc-ab00-9ff328f986a7.csv"
+          2026: "1abf0b7d-e4d7-4252-9d73-17858e935789.csv"
       primary: true
 
 clean:
@@ -71,10 +82,10 @@ mart:
   tables:
     - name: "mart_lb_spese_anno"
       sql: "sql/mart_spese_anno.sql"
-      years: [2025, 2026]
+      years: [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
     - name: "mart_lb_vs_rendiconto"
       sql: "sql/mart_vs_rendiconto.sql"
-      years: [2025, 2026]
+      years: [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
   required_tables:
     - "mart_lb_spese_anno"
     - "mart_vs_rendiconto"
