@@ -2,6 +2,12 @@
 # CLI toolkit del Lab. La memoria DuckDB è controllata da safe_connect
 # (lab-connectors) via env DUCKDB_MEMORY_LIMIT (default 2GB).
 TOOLKIT = toolkit
+# --- Config dataset --------------------------------------------------------
+# prefix: prefisso per i dataset (es. bdap per tutti i dataset openbdap)
+# years: anni da processare (default: tutti quelli nei dataset.yml)
+PREFIX = bdap
+YEARS = all
+
 
 DATASETS := $(shell find datasets -name dataset.yml 2>/dev/null | sort)
 SUPPORT  := $(shell find support -name dataset.yml 2>/dev/null | sort)

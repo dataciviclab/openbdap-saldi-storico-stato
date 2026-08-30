@@ -1,0 +1,83 @@
+name: pipeline
+
+on:
+  pull_request:
+    types: [closed]
+    paths:
+      - "datasets/**"
+      - "support/**"
+      - ".github/workflows/pipeline.yml"
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "Anni (es. 2025 o all) — default: dalla config dei dataset"
+        required: false
+        default: ""
+
+concurrency:
+  group: pipeline-${{ github.event.pull_request.number || github.ref || 'schedule' }}
+  cancel-in-progress: false
+
+jobs:
+  pipeline:
+    if: github.event.pull_request.merged == true || github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    env:
+      DUCKDB_MEMORY_LIMIT: 1.5GB
+      DUCKDB_THREADS: 2
+      DUCKDB_PRESERVE_INSERTION_ORDER: false
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.merge_commit_sha || github.ref }}
+          fetch-depth: 0
+
+      - uses: dataciviclab/.github/actions/python-setup@main
+
+      - name: Support seeds
+        run: make seeds
+
+      - name: Run datasets
+        run: make run
+
+      - name: Dashboard tests
+        run: pytest dashboard/tests/ -v
+
+      - name: Auth GCP
+        id: gcs
+        uses: dataciviclab/.github/actions/gcs-auth@main
+        env:
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+
+      - name: Sync to GCS
+        if: steps.gcs.outputs.ready == 'true'
+        run: |
+          for slug_dir in out/data/clean/*/; do
+            [ -d "$slug_dir" ] || continue
+            slug=$(basename "$slug_dir")
+            year=$(ls "$slug_dir" 2>/dev/null | sort -rn | head -1)
+            [ -z "$year" ] && echo "No clean output for $slug" && continue
+            gsutil -m rsync -r "${slug_dir}${year}/" "gs://dataciviclab-clean/openbdap-saldi-storico-stato/$slug/$year/"
+            echo "$slug clean synced"
+          done
+          for slug_dir in out/data/mart/*/; do
+            [ -d "$slug_dir" ] || continue
+            slug=$(basename "$slug_dir")
+            year=$(ls "$slug_dir" 2>/dev/null | sort -rn | head -1)
+            [ -z "$year" ] && echo "No mart output for $slug" && continue
+            gsutil -m rsync -r "${slug_dir}${year}/" "gs://dataciviclab-mart/openbdap-saldi-storico-stato/$slug/$year/"
+            echo "$slug mart synced"
+          done
+
+      - name: Registry update PR
+        uses: dataciviclab/.github/actions/registry-update-pr@main
+        with:
+          prefix: "openbdap-saldi-storico-stato"
+          flat: "true"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
