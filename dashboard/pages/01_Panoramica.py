@@ -25,7 +25,13 @@ row = df_saldi[df_saldi["anno"] == latest].iloc[0]
 row_prev = df_saldi[df_saldi["anno"] == prev].iloc[0] if prev in df_saldi["anno"].values else None
 
 # --- KPI in alto ---
-col1, col2 = st.columns(2)
+if not df_lb.empty:
+    lb_latest = int(df_lb["anno"].max())
+    lb_row = df_lb[df_lb["anno"] == lb_latest].iloc[0]
+    col1, col2, col3 = st.columns(3)
+else:
+    col1, col2, col3 = st.columns(3)
+
 delta_deficit = None
 if row_prev is not None:
     d = abs(row["saldo_netto_da_finanziare"]) - abs(row_prev["saldo_netto_da_finanziare"])
@@ -44,13 +50,14 @@ col2.metric(
     f"€ {row['avanzo_primario']/1e9:,.0f} mld",
     delta=delta_avanzo,
 )
-
-# LB KPI
 if not df_lb.empty:
-    lb_latest = int(df_lb["anno"].max())
-    lb_row = df_lb[df_lb["anno"] == lb_latest].iloc[0]
-    st.metric("📋 Previsione governo (LB)", f"€ {lb_row['lb_totale_cp_mld']:.0f} mld",
-              help=f"Legge di Bilancio {lb_latest} — previsioni iniziali")
+    col3.metric(
+        "📋 Previsione governo (LB)",
+        f"€ {lb_row['lb_totale_cp_mld']:.0f} mld",
+        help=f"Legge di Bilancio {lb_latest} — previsioni iniziali",
+    )
+else:
+    col3.metric("📋 Previsione governo (LB)", "N/D")
 
 # --- Trend Saldo Netto ---
 st.subheader(f"Evoluzione saldi (2003-{latest})")

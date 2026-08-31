@@ -78,6 +78,6 @@ jobs:
         uses: dataciviclab/.github/actions/registry-update-pr@main
         with:
           prefix: "openbdap-saldi-storico-stato"
-          flat: "true"
+          flat: "false"
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

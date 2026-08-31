@@ -57,6 +57,11 @@ fig2.add_trace(go.Scatter(
 fig2.update_layout(yaxis_title="Milioni di €", height=350, margin={"t": 30})
 st.plotly_chart(fig2, width="stretch")
 
+st.info("📊 Per un'analisi approfondita del debito pubblico italiano — "
+        "stock, spread, scadenze, fusion layer multi-fonte — "
+        "vedi la [Dashboard Debito Pubblico Intelligence]"
+        "(https://dataciviclab.github.io/debito-pubblico-intelligence/).")
+
 # --- Top missioni pagamenti ---
 st.subheader("Le 10 missioni più pagate (tutti gli anni)")
 
