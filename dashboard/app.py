@@ -32,7 +32,9 @@ pg = st.navigation(pages, position="sidebar")
 
 st.sidebar.markdown("---")
 st.sidebar.caption("Fonti: OpenBDAP RGS/MEF")
-st.sidebar.caption("Codice: dataciviclab/openbdap-saldi-storico-stato")
+st.sidebar.caption(
+    "Codice: [dataciviclab/openbdap-saldi-storico-stato](https://github.com/dataciviclab/openbdap-saldi-storico-stato)"
+)
 st.sidebar.caption("[DataCivicLab](https://dataciviclab.org/) · CC BY 4.0")
 
 pg.run()
