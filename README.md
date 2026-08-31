@@ -106,4 +106,4 @@ Il repo eredita 6 Discussion dal progetto originale:
 
 ## License
 
-CC BY 4.0 - [DataCivicLab](https://dataciviclab.org/)
+MIT License - [DataCivicLab](https://dataciviclab.org/)
