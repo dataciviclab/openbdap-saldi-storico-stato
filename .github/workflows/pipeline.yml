@@ -20,7 +20,7 @@ jobs:
     if: github.event.pull_request.merged == true || github.event_name != 'pull_request'
     uses: dataciviclab/.github/.github/workflows/pipeline-reusable.yml@main
     with:
-      repo-slug: "openbdap-saldi-storico-stato"
+      repo-slug: "bilancio-pubblico"
       run-command: "make run-all"
       sync-pattern: "per-dataset"
     secrets: inherit
