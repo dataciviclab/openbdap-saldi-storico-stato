@@ -1,0 +1,92 @@
+root: "../../out"
+schema_version: 1
+
+dataset:
+  name: "bdap_entrate_stato"
+  source_id: "openbdap"
+  tags: [finanza-pubblica, bdap, entrate, bilancio-stato]
+  category: finanza-pubblica
+  description: "Entrate dello Stato per Titolo/Natura/Tipologia/Provento — Previsioni Definitive CP/CS. Serie storica 2008-2024."
+  years: [2025]
+  time_coverage:
+    start_year: 2008
+    end_year: 2025
+
+raw:
+  output_policy: overwrite
+  sources:
+    - name: "openbdap_entrate_csv"
+      type: "http_file"
+      args:
+        url: "https://bdap-opendata.rgs.mef.gov.it/export/csv/Rendiconto-Pubblicato---Serie-storica---Entrate-Aggregato-per-Titolo-Natura-Tipologia-e-Provento.csv"
+        filename: "bdap_entrate_stato_serie_storica.csv"
+      primary: true
+
+clean:
+  sql: "sql/clean.sql"
+  required_columns:
+    [
+      esercizio_finanziario,
+      codice_titolo,
+      titolo,
+      codice_natura,
+      natura,
+      codice_tipologia,
+      tipologia,
+      codice_provento,
+      provento,
+    ]
+  read:
+    source: config_only
+    mode: latest
+    header: false
+    skip: 1
+    delim: ";"
+    encoding: "cp1252"
+    trim_whitespace: true
+    columns:
+      column00: "VARCHAR"
+      column01: "VARCHAR"
+      column02: "VARCHAR"
+      column03: "VARCHAR"
+      column04: "VARCHAR"
+      column05: "VARCHAR"
+      column06: "VARCHAR"
+      column07: "VARCHAR"
+      column08: "VARCHAR"
+      column09: "VARCHAR"
+      column10: "VARCHAR"
+      column11: "VARCHAR"
+  validate:
+    not_null: [esercizio_finanziario]
+    min_rows: 1000
+
+mart:
+  tables:
+    - name: "mart_entrate_titolo_natura_anno"
+      sql: "sql/mart_entrate_titolo_natura.sql"
+    - name: "mart_entrate_anno"
+      sql: "sql/mart_entrate_anno.sql"
+    - name: "mart_trend_tributarie"
+      sql: "sql/mart_trend_tributarie.sql"
+  required_tables:
+    - "mart_entrate_titolo_natura_anno"
+    - "mart_entrate_anno"
+    - "mart_trend_tributarie"
+  validate:
+    table_rules:
+      mart_entrate_titolo_natura_anno:
+        min_rows: 80
+        primary_key: [anno, codice_titolo, codice_natura]
+      mart_entrate_anno:
+        min_rows: 15
+        primary_key: [anno]
+      mart_trend_tributarie:
+        min_rows: 15
+        primary_key: [anno]
+
+validation:
+  fail_on_error: true
+
+output:
+  artifacts: minimal

@@ -1,0 +1,105 @@
+root: "../../out"
+schema_version: 1
+
+dataset:
+  name: "bdap_lb_spese_missione"
+  source_id: "openbdap"
+  tags: [finanza-pubblica, bdap, bilancio-stato, legge-bilancio, previsione]
+  category: finanza-pubblica
+  description: "Legge di Bilancio Pubblicata — Spese per Missione DPCM Art.3. Previsioni iniziali del governo per amministrazione, programma e capitolo. Confronto con rendiconto e pagamenti."
+  years: [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+  time_coverage:
+    start_year: 2015
+    end_year: 2026
+
+raw:
+  output_policy: overwrite
+  sources:
+    - name: "lb_spese_missione_{year}"
+      type: "http_file"
+      args:
+        url: "https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/"
+        filename: "lb_spese_missione_{year}.csv"
+        url_suffix_by_year:
+          2017: "2853e71d-ab6b-4f17-b593-0060f5ecf93b.csv"
+          2018: "ce66c79f-3344-4154-a3b6-09bffb435e5e.csv"
+          2019: "980cf14b-9094-44cd-9777-7f7817dd6f0c.csv"
+          2020: "fcbb21e3-5b9b-4391-afea-a24c84f54673.csv"
+          2021: "9093fff5-a47d-4ade-9c9e-eb479b59210a.csv"
+          2022: "2fe9a2f4-aad2-4e95-b2ac-43a603b648b2.csv"
+          2023: "fa379fbc-abd2-413a-8074-2f90c53aa597.csv"
+          2024: "9437a38f-f214-48b8-a19b-dcdf88779697.csv"
+          2025: "6088b9e1-487f-47bc-ab00-9ff328f986a7.csv"
+          2026: "1abf0b7d-e4d7-4252-9d73-17858e935789.csv"
+      primary: true
+
+clean:
+  sql: "sql/clean.sql"
+  required_columns: [esercizio_finanziario, amministrazione, missione, programma, capitolo, previsioni_iniziali_cp]
+  read:
+    source: config_only
+    mode: latest
+    header: false
+    skip: 1
+    delim: ";"
+    encoding: "cp1252"
+    trim_whitespace: true
+    null_padding: true
+    ignore_errors: true
+    sample_size: -1
+    columns:
+      column00: "VARCHAR"  # Esercizio Finanziario
+      column01: "VARCHAR"  # Stato di Previsione
+      column02: "VARCHAR"  # Descrizione Amministrazione
+      column03: "VARCHAR"  # Codice Centro Responsabilità
+      column04: "VARCHAR"  # Descr. Centro Responsabilità
+      column05: "VARCHAR"  # Codice Azione
+      column06: "VARCHAR"  # Descrizione Azione
+      column07: "VARCHAR"  # Numero Capitolo
+      column08: "VARCHAR"  # Denominazione Capitolo
+      column09: "VARCHAR"  # Codice Missione
+      column10: "VARCHAR"  # Descrizione Missione
+      column11: "VARCHAR"  # Codice Programma
+      column12: "VARCHAR"  # Descrizione Programma
+      column13: "VARCHAR"  # Codice Titolo
+      column14: "VARCHAR"  # Descrizione Titolo
+      column15: "VARCHAR"  # Codice Categoria
+      column16: "VARCHAR"  # Descrizione Categoria
+      column17: "VARCHAR"  # Codice Divisione COFOG 1
+      column18: "VARCHAR"  # Descr. Divisione COFOG 1
+      column19: "VARCHAR"  # Codice Gruppo COFOG 2
+      column20: "VARCHAR"  # Descr. Gruppo COFOG 2
+      column21: "VARCHAR"  # Codice Classe COFOG 3
+      column22: "VARCHAR"  # Descr. Classe COFOG 3
+      column23: "VARCHAR"  # Percentuale Ripartizione COFOG
+      column24: "VARCHAR"  # Previsioni iniziali competenza
+      column25: "VARCHAR"  # Previsioni iniziali cassa
+  validate:
+    not_null: [esercizio_finanziario, missione]
+    min_rows: 1000
+
+mart:
+  tables:
+    - name: "mart_lb_spese_anno"
+      sql: "sql/mart_spese_anno.sql"
+      years: [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+    - name: "mart_lb_vs_rendiconto"
+      sql: "sql/mart_vs_rendiconto.sql"
+      years: [2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026]
+  required_tables:
+    - "mart_lb_spese_anno"
+    - "mart_vs_rendiconto"
+  validate:
+    table_rules:
+      mart_lb_spese_anno:
+        min_rows: 1
+        primary_key: [anno]
+      mart_vs_rendiconto:
+        min_rows: 1
+        primary_key: [anno, missione]
+
+validation:
+  fail_on_error: true
+
+output:
+  artifacts: minimal

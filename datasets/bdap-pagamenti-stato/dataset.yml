@@ -1,0 +1,104 @@
+root: "../../out"
+schema_version: 1
+
+dataset:
+  name: "bdap_pagamenti_stato"
+  source_id: "openbdap"
+  tags: [finanza-pubblica, bdap, pagamenti, consuntivo, bilancio-stato]
+  category: finanza-pubblica
+  description: "Consuntivo pagamenti Bilancio dello Stato per Amministrazione/Missione/Categoria Economica. 2014-2025."
+  years: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+  time_coverage:
+    start_year: 2014
+    end_year: 2025
+
+raw:
+  output_policy: overwrite
+  sources:
+    - name: "pagamenti_stato_{year}"
+      type: "http_file"
+      args:
+        url: "https://bdap-opendata.rgs.mef.gov.it/SpodCkanApi/api/3/datastore/dump/"
+        filename: "pagamenti_stato_{year}.csv"
+        url_suffix_by_year:
+          2014: "aa2c3fc9-6aa5-4039-82f3-50ac006908df.csv"
+          2015: "c505f26e-5dc4-4a83-a92b-3a376d47f236.csv"
+          2016: "8ed8a49e-e261-4077-997c-73870a2ccef4.csv"
+          2017: "aa18accb-efcb-456a-90a5-be926824a1c2.csv"
+          2018: "6df5755c-d9ab-4910-a8a1-92dc4257a059.csv"
+          2019: "1f6ce634-62dd-4150-aa82-f8fb1bb9180e.csv"
+          2020: "95f99a7f-ab0e-4fe1-aaed-3b013d546491.csv"
+          2021: "15ea522c-0bae-4637-8666-32d98bed141f.csv"
+          2022: "a6578c8f-2162-4322-82dd-81a5390fd6f6.csv"
+          2023: "1b9fc5c3-aaa6-4d93-9355-9e17408335e8.csv"
+          2024: "c7100aed-ee56-4068-b78b-467baa915bb4.csv"
+          2025: "c67841b5-f95b-4592-8809-dc300ebac71b.csv"
+      primary: true
+
+clean:
+  sql: "sql/clean.sql"
+  read:
+    source: "config_only"
+    mode: "latest"
+    header: true
+    delim: ";"
+    encoding: "utf-8"
+    null_padding: true
+    trim_whitespace: true
+    ignore_errors: true
+    sample_size: -1
+    columns:
+      esercizio_finanziario: "VARCHAR"
+      codice_stp: "VARCHAR"
+      amministrazione: "VARCHAR"
+      codice_missione: "VARCHAR"
+      missione: "VARCHAR"
+      codice_categoria: "VARCHAR"
+      categoria: "VARCHAR"
+      op_erario: "VARCHAR"
+      op_tesoreria: "VARCHAR"
+      op_esterno: "VARCHAR"
+      oa_tesoreria: "VARCHAR"
+      oa_spesa_funz_deleg: "VARCHAR"
+      rsf_stipendi: "VARCHAR"
+      rsf_altro: "VARCHAR"
+      note_imputazione: "VARCHAR"
+      totale_pagato: "VARCHAR"
+  validate:
+    not_null: [esercizio_finanziario, missione, categoria]
+    min_rows: 400
+    primary_key: [esercizio_finanziario, codice_stp, codice_missione, codice_categoria]
+  required_columns: [esercizio_finanziario, codice_stp, amministrazione, codice_missione, missione, codice_categoria, categoria, op_erario, op_tesoreria, op_esterno, oa_tesoreria, oa_spesa_funz_deleg, rsf_stipendi, rsf_altro, note_imputazione, totale_pagato]
+
+mart:
+  tables:
+    - name: "mart_pagamenti_missione_categoria"
+      sql: "sql/mart_pagamenti_missione_categoria.sql"
+    - name: "mart_pagamenti_anno"
+      sql: "sql/mart_pagamenti_anno.sql"
+      years: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+    - name: "mart_costo_debito_bilancio"
+      sql: "sql/mart_costo_debito_bilancio.sql"
+      years: [2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025]
+  required_tables:
+    - "mart_pagamenti_missione_categoria"
+    - "mart_pagamenti_anno"
+    - "mart_costo_debito_bilancio"
+  validate:
+    table_rules:
+      mart_pagamenti_missione_categoria:
+        required_columns: [esercizio_finanziario, amministrazione, missione, categoria, totale_pagato]
+        primary_key: [esercizio_finanziario, amministrazione, missione, categoria]
+        min_rows: 300
+      mart_pagamenti_anno:
+        min_rows: 1
+        primary_key: [anno]
+      mart_costo_debito_bilancio:
+        min_rows: 1
+        primary_key: [anno]
+
+validation:
+  fail_on_error: true
+
+output:
+  artifacts: minimal

@@ -1,0 +1,30 @@
+name: Pipeline
+
+on:
+  pull_request:
+    types: [closed]
+    paths:
+      - "datasets/**"
+      - "support/**"
+  schedule:
+    - cron: "0 6 1 * *"
+  workflow_dispatch:
+    inputs:
+      years:
+        description: "Anni (es. 2025 o all)"
+        required: false
+        default: ""
+
+jobs:
+  pipeline:
+    if: github.event.pull_request.merged == true || github.event_name != 'pull_request'
+    uses: dataciviclab/.github/.github/workflows/pipeline-reusable.yml@main
+    with:
+      repo-slug: "bilancio-pubblico"
+      run-command: "make run-all"
+      sync-pattern: "per-dataset"
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
+    secrets: inherit

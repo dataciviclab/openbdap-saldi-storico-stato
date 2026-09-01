@@ -1,0 +1,106 @@
+root: "../../out"
+schema_version: 1
+
+dataset:
+  name: "bdap_saldi_stato"
+  source_id: "openbdap"
+  tags:
+    [finanza-pubblica, bdap, saldi, deficit, avanzo-primario, bilancio-stato]
+  category: finanza-pubblica
+  description: "Saldi aggregati del Bilancio dello Stato — serie storica 2003-2024. Spese correnti, investimenti, interessi, avanzo primario, deficit."
+  years: [2025]
+  time_coverage:
+    start_year: 2003
+    end_year: 2025
+
+raw:
+  output_policy: overwrite
+  sources:
+    - name: "bdap_saldi_csv"
+      type: "http_file"
+      args:
+        url: "https://bdap-opendata.rgs.mef.gov.it/export/csv/Rendiconto-Pubblicato---Serie-storica---Saldi.csv"
+        filename: "bdap_saldi_stato_serie_storica.csv"
+      primary: true
+
+clean:
+  sql: "sql/clean.sql"
+  required_columns:
+    [
+      esercizio_finanziario,
+      spese_correnti,
+      spese_per_interessi,
+      spese_in_conto_capitale,
+      spese_complessive,
+      spese_finali,
+      entrate_tributarie,
+      entrate_finali,
+      saldo_netto_da_finanziare,
+      indebitamento_netto,
+      avanzo_primario,
+      ricorso_al_mercato,
+    ]
+  read:
+    source: config_only
+    mode: latest
+    header: true
+    delim: ";"
+    encoding: "utf-8"
+    trim_whitespace: true
+    columns:
+      ANNO: "VARCHAR"
+      RISPARMIO_PUBBLICO: "VARCHAR"
+      SALDO_NETTO: "VARCHAR"
+      INDEBITAMENTO_NETTO: "VARCHAR"
+      RICORSO_MERCATO: "VARCHAR"
+      AVANZO_PRIMARIO: "VARCHAR"
+      SPESE_CORRENTI: "VARCHAR"
+      SPESE_INTERESSI: "VARCHAR"
+      SPESE_CONTO_CAPITALE: "VARCHAR"
+      SPESE_ACQ_ATT_FINE: "VARCHAR"
+      SPESE_RIMBORSO_PRESTITI: "VARCHAR"
+      SPESE_COMPLESSIVE: "VARCHAR"
+      SPESE_FINALI: "VARCHAR"
+      SPESE_FIN_NETTO_ATT_FIN: "VARCHAR"
+      ENTRATE_TRIBUTARIE: "VARCHAR"
+      ENTRATE_EXTRA_TRIBUTARIE: "VARCHAR"
+      ENTR_ALIEN_PATR_RISCOS: "VARCHAR"
+      RISCOSSIONE_CREDITI: "VARCHAR"
+      ENTR_ACCENSIONE_PRESTITI: "VARCHAR"
+      ENTRATE_FINALI: "VARCHAR"
+      ENTR_FIN_NETTO_RISCO_CRED: "VARCHAR"
+      ENTRATE_CORRENTI: "VARCHAR"
+  validate:
+    not_null: [esercizio_finanziario]
+    min_rows: 20
+    primary_key: [esercizio_finanziario]
+
+mart:
+  tables:
+    - name: "mart_saldi_anno"
+      sql: "sql/mart_saldi.sql"
+    - name: "mart_composizione_spesa"
+      sql: "sql/mart_composizione_spesa.sql"
+    - name: "mart_avanzo_primario"
+      sql: "sql/mart_avanzo_primario.sql"
+  required_tables:
+    - "mart_saldi_anno"
+    - "mart_composizione_spesa"
+    - "mart_avanzo_primario"
+  validate:
+    table_rules:
+      mart_saldi_anno:
+        min_rows: 20
+        primary_key: [anno]
+      mart_composizione_spesa:
+        min_rows: 20
+        primary_key: [anno]
+      mart_avanzo_primario:
+        min_rows: 20
+        primary_key: [anno]
+
+validation:
+  fail_on_error: true
+
+output:
+  artifacts: minimal

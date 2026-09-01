@@ -1,0 +1,98 @@
+root: "../../out"
+schema_version: 1
+
+dataset:
+  name: "bdap_spese_stato"
+  source_id: "openbdap"
+  tags: [finanza-pubblica, bdap, spese, bilancio-stato]
+  category: finanza-pubblica
+  description: "Spese dello Stato per Missione/Programma/Macroaggregato — Previsioni Definitive CP/CS. Serie storica 2008-2024."
+  years: [2025]
+  time_coverage:
+    start_year: 2008
+    end_year: 2025
+
+raw:
+  output_policy: overwrite
+  sources:
+    - name: "openbdap_spese_csv"
+      type: "http_file"
+      args:
+        url: "https://bdap-opendata.rgs.mef.gov.it/export/csv/Rendiconto-Pubblicato---Serie-storica---Spese-Aggregato-per-Missione-Programma-e-Macroaggregato.csv"
+        filename: "bdap_spese_stato_serie_storica.csv"
+      primary: true
+
+clean:
+  sql: "sql/clean.sql"
+  required_columns:
+    [
+      esercizio_finanziario,
+      codice_missione,
+      missione,
+      codice_programma,
+      programma,
+      codice_macroaggregato,
+      macroaggregato,
+    ]
+  read:
+    source: config_only
+    mode: latest
+    header: true
+    delim: ";"
+    encoding: "cp1252"
+    trim_whitespace: true
+    null_padding: true
+    ignore_errors: true
+    sample_size: -1
+    columns:
+      "Esercizio Finanziario": "VARCHAR"
+      "Codice Missione": "VARCHAR"
+      "Missione": "VARCHAR"
+      "Codice Programma": "VARCHAR"
+      "Programma": "VARCHAR"
+      "Codice Macroaggregato": "VARCHAR"
+      "Macroaggregato": "VARCHAR"
+      "Previsioni Definitive CP": "VARCHAR"
+      "Previsioni Definitive CS": "VARCHAR"
+  validate:
+    not_null: [esercizio_finanziario]
+    min_rows: 1000
+
+mart:
+  tables:
+    - name: "mart_spese_missione_anno"
+      sql: "sql/mart_spese_missione.sql"
+    - name: "mart_spese_anno"
+      sql: "sql/mart_spese_anno.sql"
+    - name: "mart_investimenti_vs_corrente"
+      sql: "sql/mart_investimenti_vs_corrente.sql"
+  required_tables:
+    - "mart_spese_missione_anno"
+    - "mart_spese_anno"
+    - "mart_investimenti_vs_corrente"
+  validate:
+    table_rules:
+      mart_spese_missione_anno:
+        min_rows: 80
+        primary_key: [anno, missione]
+      mart_spese_anno:
+        min_rows: 15
+        primary_key: [anno]
+      mart_investimenti_vs_corrente:
+        min_rows: 15
+        primary_key: [anno]
+        required_columns:
+          [
+            anno,
+            funzionamento_mld,
+            trasferimenti_mld,
+            investimenti_mld,
+            onere_debito_mld,
+            totale_mld,
+          ]
+
+validation:
+  fail_on_error: true
+
+output:
+  artifacts: minimal

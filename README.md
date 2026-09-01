@@ -1,109 +1,108 @@
-# Bilancio dello Stato - Serie storica saldi e spese per missione (2003-2024)
+# Bilancio Pubblico Intelligence
 
-## Domanda civica
+**Quanto spende lo Stato italiano, come lo finanzia, e cosa resta per gli investimenti?**
 
-La spesa corrente comprime strutturalmente gli investimenti?
+Sistema di intelligence sul bilancio dello Stato italiano: raccoglie i dati ufficiali BDAP (RGS/MEF),
+li trasforma in mart analitici e li rende interrogabili via dashboard Streamlit.
 
-## Perché questo progetto
+- **Fonte**: [OpenBDAP - RGS/MEF](https://bdap-opendata.rgs.mef.gov.it/)
+- **Copertura**: 2003-2026 (a seconda del dataset)
+- **Livello**: Nazionale - Stato centrale
+- **Output pubblico**: Dashboard Streamlit + Discussion
 
-Negli ultimi vent'anni lo Stato italiano ha chiuso ogni esercizio in deficit, con la spesa corrente che assorbe in media il 64% del totale. La spesa in conto capitale si è fermata all'8,5%, toccando il minimo del 4,9% nel 2015. L'avanzo primario è stato positivo in 16 anni su 22, ma gli interessi sul debito (75-90 mld/anno) lo hanno azzerato sistematicamente.
+## Cosa risponde
 
-Questo progetto verifica se la compressione degli investimenti sia strutturale o congiunturale, lavorando su:
+1. **Lo Stato è strutturalmente in deficit?** → saldi storici 2003-2025
+2. **Le spese correnti comprimono gli investimenti?** → composizione spesa per macroaggregato (trasferimenti/investimenti/debito/funzionamento)
+3. **Quanto pesano le entrate tributarie?** → trend entrate per titolo/natura
+4. **Quanto costa il debito a bilancio?** → consuntivo pagamenti missione 034
+5. **Come varia la spesa per missione?** → spese per DPCM Art.3
+6. **Il governo mantiene le promesse?** → confronto Legge di Bilancio vs Rendiconto per 34 missioni
 
-- la serie storica dei saldi aggregati dello Stato
-- la serie storica delle spese per missione, programma e macroaggregato
+## Dataset
 
-Stato effettivo degli output:
-
-- il filone oggi più chiuso e discussion-linked è quello sui `saldi`
-- il dataset `spese per missione / programma / macroaggregato` è incluso nel perimetro del repo con pipeline documentata, ma non ha ancora un filone pubblico equivalente già chiuso
-
-## Ruoli
-
-- Project Lead: [Gabri](https://github.com/Gabrymi93)
-- Data: [Matteo](https://github.com/matteocavo) · [Gabri](https://github.com/Gabrymi93)
-- Ricerca semantica CERES: [Andrea](https://github.com/AndreaBozzo)
-- Viz: [Matteo](https://github.com/matteocavo)
-- QA: [Gabri](https://github.com/Gabrymi93)
-- Docs: [Matteo](https://github.com/matteocavo)
-
-## Dataset utilizzati
-
-- Fonte: [OpenBDAP - Rendiconto Pubblicato, Serie storica Saldi](https://bdap-opendata.rgs.mef.gov.it/content/rendiconto-pubblicato-serie-storica-saldi)
-- Fonte: [OpenBDAP - Spese per Missione, Programma e Macroaggregato](https://bdap-opendata.rgs.mef.gov.it/content/rendiconto-pubblicato-serie-storica-spese-aggregato-missione-programma-e-macroaggregato)
-- Periodo: 2003-2024 (saldi) · 2008-2024 (spese)
-- Livello: Nazionale - Stato centrale
-
-## Perimetro finale del progetto
-
-Questo repo chiude il proprio perimetro su due dataset:
-
-- `saldi storici`
-- `spese per missione / programma / macroaggregato`
-
-Non entra in questo perimetro finale:
-
-- una terza linea su `entrate`
-- una migrazione completa al `toolkit`
-- una rifondazione dell'architettura dati del repo
-
-Nota sul perimetro:
-
-- "fuori perimetro" su `entrate` significa non aprire ora un terzo dataset dedicato
-- non significa escludere l'uso dei campi di entrata già presenti nel dataset `saldi storici`
-
-Il progetto viene quindi mantenuto come `legacy-active / stable`, con pipeline esplicita nei notebook e output pubblici nelle Discussions / dashboard.
-
-## Output pubblico
-
-- Tipo: dashboard / discussions
-- Output principale: [Discussions pubbliche del repo](https://github.com/dataciviclab/openbdap-saldi-storico-stato/discussions)
-- Eventuale dashboard: parte dell'output pubblico del progetto, ma non requisito bloccante per la chiusura del perimetro legacy
-
-## Stato progetto
-
-Legacy-active / stable
-
-- il repo resta valido e consultabile
-- la pipeline corrente è documentata
-- eventuali evoluzioni future `toolkit-native` vanno trattate come filone separato
-
-## Come si contribuisce
-
-1. **[Discussion](https://github.com/dataciviclab/openbdap-saldi-storico-stato/discussions)** per idee / contesto
-2. **[Issue](https://github.com/orgs/dataciviclab/projects/5/views/7?sliceBy%5Bvalue%5D=dataciviclab%2Fopenbdap-saldi-storico-stato)** per task concreti
-3. **Branch** per lavorare
-4. **Pull Request** per revisione e merge
-
-Dettagli in `WORKFLOW.md`.
-
-## Link utili
-
-- [Avanzamento progetto](https://github.com/orgs/dataciviclab/projects/5)
-- [Metodo DataCivicLab](https://github.com/dataciviclab/dataciviclab/blob/main/METHOD.md)
-
-## Chiusura del progetto
-
-Questo progetto si considera chiuso bene quando:
-
-- le principali Discussions hanno almeno una risposta dati pubblica
-- i notebook principali sono identificati e documentati come pipeline / output
-- `raw`, `clean` e `mart` sono descritti in modo coerente con il perimetro reale
-- README, metodo e dataset dicono chiaramente cosa il progetto copre e cosa no
-
-## Discussions principali e stato
-
-| Discussion | Tema | Stato | Notebook collegato |
+| Dataset | Anni | Mart | Descrizione |
 |---|---|---|---|
-| `#9` | Deficit strutturale | risposta pubblicata + follow-up numerico pubblicato | `notebooks/discussions/04_risposta_discussion_09_deficit_strutturale.ipynb` |
-| `#16` | Ricorso al mercato | risposta notebook presente e verificata | `notebooks/discussions/06_risposta_discussion_16_ricorso_mercato.ipynb` |
-| `#14` | Avanzo primario | aperta intenzionalmente come follow-up contributivo leggero | materiale analitico presente da collegare nel repo |
-| `#12` | Entrate tributarie e copertura della macchina | aperta intenzionalmente come follow-up contributivo leggero | materiale analitico presente da collegare nel repo |
-| `#10` | Spese correnti vs investimenti | risposta notebook presente e verificata | `notebooks/discussions/05_risposta_discussion_10_spese_correnti_investimenti.ipynb` |
-| `#17` | Interessi sul debito | risposta notebook presente e verificata | `notebooks/discussions/07_risposta_discussion_17_interessi_sul_debito.ipynb` |
+| bdap_saldi_stato | 2003-2025 | 3 | Saldi aggregati: deficit, avanzo primario, ricorso mercato |
+| bdap_entrate_stato | 2008-2025 | 3 | Entrate per Titolo/Natura/Tipologia/Provento |
+| bdap_spese_stato | 2008-2025 | 3 | Spese per Missione/Programma/Macroaggregato |
+| bdap_pagamenti_stato | 2014-2025 | 3x12 | Consuntivo pagamenti per Amministrazione/Missione/Categoria |
+| bdap_lb_spese_missione | 2017-2026 | 2 | Legge di Bilancio per missione DPCM Art.3 |
 
-Il criterio di chiusura non è avere una nuova architettura, ma rendere leggibile il legame:
+### Mart analitici (16 totali)
 
-`Discussion -> notebook -> risposta dati`
+**Saldi** (3): mart_saldi_anno, mart_composizione_spesa, mart_avanzo_primario
 
-Le discussion `#12` e `#14` possono restare aperte intenzionalmente come spazio di contributo e follow-up leggero, non come ambiguita di perimetro del repo.
+**Entrate** (3): mart_entrate_titolo_natura_anno, mart_entrate_anno, mart_trend_tributarie
+
+**Spese** (3): mart_spese_missione_anno, mart_spese_anno, mart_investimenti_vs_corrente
+
+**Pagamenti** (3x12): mart_pagamenti_missione_categoria, mart_pagamenti_anno, mart_costo_debito_bilancio
+
+**LB** (2): mart_lb_spese_anno, mart_lb_vs_rendiconto
+
+## Dashboard
+
+Dashboard Streamlit con 7 pagine:
+
+| Pagina | Contenuto |
+|---|---|
+| Panoramica | KPI deficit, avanzo, previsione governo + trend saldi + composizione |
+| Composizione Spesa | Trend trasferimenti/investimenti/debito/funzionamento (2008-2025) |
+| Entrate | Trend totali, quote tributarie, top titoli per titolo/natura |
+| Spese per Missione | Top10 missioni per importo, trend spese totali |
+| Pagamenti e Debito | Trend pagati, costo debito (missione 034), top10 missioni |
+| Query SQL | Query libere su tutti i 16 mart |
+| Promesse vs Realtà | LB vs Rendiconto per missione (2017-2025, 34 missioni) |
+
+## Come si usa
+
+```bash
+# Setup
+pip install -r requirements.txt
+
+# Validare config
+make check
+
+# Eseguire tutte le pipeline
+make run
+
+# Dashboard
+cd dashboard && streamlit run app.py
+```
+
+## Struttura
+
+```
+.github/workflows/          # CI/CD (check + pipeline reusable)
+datasets/                   # Pipeline toolkit (5 dataset)
+  bdap-saldi-stato/
+  bdap-entrate-stato/
+  bdap-spese-stato/
+  bdap-pagamenti-stato/
+  bdap-lb-spese-missione/
+dashboard/                  # Streamlit (7 pagine)
+notebooks/                  # Analisi legacy (Discussion)
+Makefile                    # PREFIX=bdap, YEARS=all
+```
+
+## CI/CD
+
+- **check.yml**: Valida i config YAML su ogni PR/push (reusable workflow)
+- **pipeline.yml**: Esegue le pipeline, sync GCS, aggiorna registry (reusable workflow, trigger: PR merged + 1 del mese)
+
+## Domande civiche (Discussions)
+
+Il repo eredita 6 Discussion dal progetto originale:
+
+- [#9](https://github.com/dataciviclab/openbdap-saldi-storico-stato/discussions/9) Lo Stato e strutturalmente in deficit?
+- [#10](https://github.com/dataciviclab/openbdap-saldi-storico-stato/discussions/10) Le spese correnti comprimono gli investimenti?
+- [#12](https://github.com/dataciviclab/openbdap-saldi-storico-stato/discussions/12) Le entrate tributarie coprono la macchina dello Stato?
+- [#14](https://github.com/dataciviclab/openbdap-saldi-storico-stato/discussions/14) L'avanzo primario e un mito o una realta?
+- [#15](https://github.com/dataciviclab/openbdap-saldi-storico-stato/discussions/15) Discussion di partenza sul bilancio
+- [#16](https://github.com/dataciviclab/openbdap-saldi-storico-stato/discussions/16) Il ricorso al mercato e una costante?
+- [#17](https://github.com/dataciviclab/openbdap-saldi-storico-stato/discussions/17) Quanto paga lo Stato in interessi?
+
+## License
+
+MIT License - [DataCivicLab](https://dataciviclab.org/)
