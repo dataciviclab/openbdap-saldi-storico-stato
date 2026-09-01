@@ -23,4 +23,8 @@ jobs:
       repo-slug: "bilancio-pubblico"
       run-command: "make run-all"
       sync-pattern: "per-dataset"
+    permissions:
+      contents: write
+      pull-requests: write
+      id-token: write
     secrets: inherit
