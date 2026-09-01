@@ -3,15 +3,8 @@ name: check
 on:
   pull_request:
     paths:
-      - "**/*.py"
-      - "**/*.yml"
-      - "**/*.yaml"
-      - "**/*.sql"
-      - "**/Makefile"
-      - "requirements.txt"
-  push:
-    branches: [main]
-    paths:
+      - "datasets/**"
+      - "support/**"
       - "**/*.py"
       - "**/*.yml"
       - "**/*.yaml"
@@ -20,9 +13,26 @@ on:
       - "requirements.txt"
 
 jobs:
+  detect:
+    runs-on: ubuntu-latest
+    outputs:
+      dirs: ${{ steps.detect.outputs.dirs }}
+      count: ${{ steps.detect.outputs.count }}
+      found: ${{ steps.detect.outputs.found }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: dataciviclab/.github/actions/detect-changed-datasets@main
+        id: detect
+        with:
+          paths: "datasets support"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   validate-config:
+    needs: detect
+    if: needs.detect.outputs.found == 'true'
     uses: dataciviclab/.github/.github/workflows/dataset-config-check-reusable.yml@main
     with:
       install: "pip install -r requirements.txt"
-      globs: "support datasets"
+      configs: ${{ needs.detect.outputs.dirs }}
       years: "from-config"

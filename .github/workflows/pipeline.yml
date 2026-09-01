@@ -6,7 +6,6 @@ on:
     paths:
       - "datasets/**"
       - "support/**"
-      - ".github/workflows/pipeline.yml"
   schedule:
     - cron: "0 6 1 * *"
   workflow_dispatch:
@@ -24,5 +23,4 @@ jobs:
       repo-slug: "openbdap-saldi-storico-stato"
       run-command: "make run-all"
       sync-pattern: "per-dataset"
-    secrets:
-      GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+    secrets: inherit
