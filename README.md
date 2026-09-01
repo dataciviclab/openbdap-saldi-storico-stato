@@ -82,7 +82,6 @@ datasets/                   # Pipeline toolkit (5 dataset)
   bdap-pagamenti-stato/
   bdap-lb-spese-missione/
 dashboard/                  # Streamlit (7 pagine)
-_local/                     # Script locali (gitignored)
 notebooks/                  # Analisi legacy (Discussion)
 Makefile                    # PREFIX=bdap, YEARS=all
 ```
