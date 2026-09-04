@@ -22,7 +22,6 @@ jobs:
     with:
       repo-slug: "bilancio-pubblico"
       run-command: "make run-all"
-      sync-pattern: "per-dataset"
     permissions:
       contents: write
       pull-requests: write
