@@ -1,0 +1,992 @@
+{
+  "schema_version": 1,
+  "repo": "openbdap-saldi-storico-stato",
+  "source_repo": "dataciviclab/openbdap-saldi-storico-stato",
+  "updated_at": "2026-09-04",
+  "datasets": [
+    {
+      "slug": "bdap_entrate_stato",
+      "name": "Bdap Entrate Stato",
+      "description": "Entrate dello Stato per Titolo/Natura/Tipologia/Provento — Previsioni Definitive CP/CS. Serie storica 2008-2024.",
+      "source": "",
+      "source_id": "openbdap",
+      "period": {
+        "start": 2008,
+        "end": 2025
+      },
+      "tags": [
+        "finanza-pubblica",
+        "bdap",
+        "entrate",
+        "bilancio-stato"
+      ],
+      "category": "finanza-pubblica",
+      "columns": [
+        {
+          "name": "esercizio_finanziario",
+          "type": "INTEGER",
+          "role": "dimension",
+          "description": "",
+          "semantic_type": "year"
+        },
+        {
+          "name": "codice_titolo",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "titolo",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_natura",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "natura",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_tipologia",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "tipologia",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_provento",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "provento",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "previsioni_definitive_cp",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "previsioni_definitive_cs",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        }
+      ],
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-clean/bilancio-pubblico/bdap_entrate_stato/2025/bdap_entrate_stato_2025_clean.parquet",
+        "multi_file": false
+      },
+      "stage": "incubating",
+      "mart_refs": [
+        "bdap_entrate_stato__mart_entrate_titolo_natura_anno",
+        "bdap_entrate_stato__mart_entrate_anno",
+        "bdap_entrate_stato__mart_trend_tributarie"
+      ]
+    },
+    {
+      "slug": "bdap_lb_spese_missione",
+      "name": "Bdap Lb Spese Missione",
+      "description": "Legge di Bilancio Pubblicata — Spese per Missione DPCM Art.3. Previsioni iniziali del governo per amministrazione, programma e capitolo. Confronto con rendiconto e pagamenti.",
+      "source": "",
+      "source_id": "openbdap",
+      "period": {
+        "start": 2015,
+        "end": 2026
+      },
+      "tags": [
+        "finanza-pubblica",
+        "bdap",
+        "bilancio-stato",
+        "legge-bilancio",
+        "previsione"
+      ],
+      "category": "finanza-pubblica",
+      "columns": [
+        {
+          "name": "esercizio_finanziario",
+          "type": "INTEGER",
+          "role": "dimension",
+          "description": "",
+          "semantic_type": "year"
+        },
+        {
+          "name": "stato_previsione",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "amministrazione",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_cr",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "descrizione_cr",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_azione",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "descrizione_azione",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "capitolo",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "denominazione_capitolo",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_missione",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "missione",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_programma",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "programma",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_titolo",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "titolo",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_categoria",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "categoria",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_cofog1",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "descrizione_cofog1",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "percentuale_cofog",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "previsioni_iniziali_cp",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "previsioni_iniziali_cs",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        }
+      ],
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-clean/bilancio-pubblico/bdap_lb_spese_missione/*/bdap_lb_spese_missione_*_clean.parquet",
+        "multi_file": true
+      },
+      "stage": "incubating",
+      "mart_refs": [
+        "bdap_lb_spese_missione__mart_lb_spese_anno",
+        "bdap_lb_spese_missione__mart_lb_vs_rendiconto"
+      ]
+    },
+    {
+      "slug": "bdap_pagamenti_stato",
+      "name": "Bdap Pagamenti Stato",
+      "description": "Consuntivo pagamenti Bilancio dello Stato per Amministrazione/Missione/Categoria Economica. 2014-2025.",
+      "source": "",
+      "source_id": "openbdap",
+      "period": {
+        "start": 2014,
+        "end": 2025
+      },
+      "tags": [
+        "finanza-pubblica",
+        "bdap",
+        "pagamenti",
+        "consuntivo",
+        "bilancio-stato"
+      ],
+      "category": "finanza-pubblica",
+      "columns": [
+        {
+          "name": "esercizio_finanziario",
+          "type": "INTEGER",
+          "role": "dimension",
+          "description": "",
+          "semantic_type": "year"
+        },
+        {
+          "name": "codice_stp",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "amministrazione",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_missione",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "missione",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_categoria",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "categoria",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "op_erario",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "op_tesoreria",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "op_esterno",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "oa_tesoreria",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "oa_spesa_funz_deleg",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "rsf_stipendi",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "rsf_altro",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "note_imputazione",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "totale_pagato",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        }
+      ],
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-clean/bilancio-pubblico/bdap_pagamenti_stato/*/bdap_pagamenti_stato_*_clean.parquet",
+        "multi_file": true
+      },
+      "stage": "incubating",
+      "mart_refs": [
+        "bdap_pagamenti_stato__mart_pagamenti_missione_categoria",
+        "bdap_pagamenti_stato__mart_pagamenti_anno",
+        "bdap_pagamenti_stato__mart_costo_debito_bilancio"
+      ]
+    },
+    {
+      "slug": "bdap_saldi_stato",
+      "name": "Bdap Saldi Stato",
+      "description": "Saldi aggregati del Bilancio dello Stato — serie storica 2003-2024. Spese correnti, investimenti, interessi, avanzo primario, deficit.",
+      "source": "",
+      "source_id": "openbdap",
+      "period": {
+        "start": 2003,
+        "end": 2025
+      },
+      "tags": [
+        "finanza-pubblica",
+        "bdap",
+        "saldi",
+        "deficit",
+        "avanzo-primario",
+        "bilancio-stato"
+      ],
+      "category": "finanza-pubblica",
+      "columns": [
+        {
+          "name": "esercizio_finanziario",
+          "type": "INTEGER",
+          "role": "dimension",
+          "description": "",
+          "semantic_type": "year"
+        },
+        {
+          "name": "risparmio_pubblico",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "saldo_netto_da_finanziare",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "indebitamento_netto",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "ricorso_al_mercato",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "avanzo_primario",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "spese_correnti",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "spese_per_interessi",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "spese_in_conto_capitale",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "spese_acquisizione_attivita_finanziarie",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "spese_per_rimborso_prestiti",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "spese_complessive",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "spese_finali",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "spese_finali_netto_attivita_finanziarie",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "entrate_tributarie",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "entrate_extra_tributarie",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "entrate_alienazioni_patrimoniali_e_riscossioni",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "riscossione_crediti",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "entrate_accensione_prestiti",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "entrate_finali",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "entrate_finali_netto_riscossione_crediti",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "entrate_correnti",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        }
+      ],
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-clean/bilancio-pubblico/bdap_saldi_stato/2025/bdap_saldi_stato_2025_clean.parquet",
+        "multi_file": false
+      },
+      "stage": "incubating",
+      "mart_refs": [
+        "bdap_saldi_stato__mart_saldi_anno",
+        "bdap_saldi_stato__mart_composizione_spesa",
+        "bdap_saldi_stato__mart_avanzo_primario"
+      ]
+    },
+    {
+      "slug": "bdap_spese_stato",
+      "name": "Bdap Spese Stato",
+      "description": "Spese dello Stato per Missione/Programma/Macroaggregato — Previsioni Definitive CP/CS. Serie storica 2008-2024.",
+      "source": "",
+      "source_id": "openbdap",
+      "period": {
+        "start": 2008,
+        "end": 2025
+      },
+      "tags": [
+        "finanza-pubblica",
+        "bdap",
+        "spese",
+        "bilancio-stato"
+      ],
+      "category": "finanza-pubblica",
+      "columns": [
+        {
+          "name": "esercizio_finanziario",
+          "type": "INTEGER",
+          "role": "dimension",
+          "description": "",
+          "semantic_type": "year"
+        },
+        {
+          "name": "codice_missione",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "missione",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_programma",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "programma",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "codice_macroaggregato",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "macroaggregato",
+          "type": "VARCHAR",
+          "role": "dimension",
+          "description": ""
+        },
+        {
+          "name": "previsioni_definitive_cp",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        },
+        {
+          "name": "previsioni_definitive_cs",
+          "type": "DOUBLE",
+          "role": "metric",
+          "description": ""
+        }
+      ],
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-clean/bilancio-pubblico/bdap_spese_stato/2025/bdap_spese_stato_2025_clean.parquet",
+        "multi_file": false
+      },
+      "stage": "incubating",
+      "mart_refs": [
+        "bdap_spese_stato__mart_spese_missione_anno",
+        "bdap_spese_stato__mart_spese_anno",
+        "bdap_spese_stato__mart_investimenti_vs_corrente"
+      ]
+    }
+  ],
+  "marts": [
+    {
+      "slug": "bdap_entrate_stato__mart_entrate_anno",
+      "dataset": "bdap_entrate_stato",
+      "table": "mart_entrate_anno",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_entrate_stato/2025/mart_entrate_anno.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_entrate_stato__mart_entrate_titolo_natura_anno",
+      "dataset": "bdap_entrate_stato",
+      "table": "mart_entrate_titolo_natura_anno",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_entrate_stato/2025/mart_entrate_titolo_natura_anno.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_entrate_stato__mart_trend_tributarie",
+      "dataset": "bdap_entrate_stato",
+      "table": "mart_trend_tributarie",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_entrate_stato/2025/mart_trend_tributarie.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_lb_spese_missione__mart_lb_spese_anno",
+      "dataset": "bdap_lb_spese_missione",
+      "table": "mart_lb_spese_anno",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_lb_spese_missione/mart_lb_spese_anno.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_lb_spese_missione__mart_lb_vs_rendiconto",
+      "dataset": "bdap_lb_spese_missione",
+      "table": "mart_lb_vs_rendiconto",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_lb_spese_missione/mart_lb_vs_rendiconto.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_pagamenti_stato__mart_costo_debito_bilancio",
+      "dataset": "bdap_pagamenti_stato",
+      "table": "mart_costo_debito_bilancio",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_pagamenti_stato/mart_costo_debito_bilancio.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_pagamenti_stato__mart_pagamenti_anno",
+      "dataset": "bdap_pagamenti_stato",
+      "table": "mart_pagamenti_anno",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_pagamenti_stato/mart_pagamenti_anno.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_pagamenti_stato__mart_pagamenti_missione_categoria",
+      "dataset": "bdap_pagamenti_stato",
+      "table": "mart_pagamenti_missione_categoria",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_pagamenti_stato/2025/mart_pagamenti_missione_categoria.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_saldi_stato__mart_avanzo_primario",
+      "dataset": "bdap_saldi_stato",
+      "table": "mart_avanzo_primario",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_saldi_stato/2025/mart_avanzo_primario.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_saldi_stato__mart_composizione_spesa",
+      "dataset": "bdap_saldi_stato",
+      "table": "mart_composizione_spesa",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_saldi_stato/2025/mart_composizione_spesa.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_saldi_stato__mart_saldi_anno",
+      "dataset": "bdap_saldi_stato",
+      "table": "mart_saldi_anno",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_saldi_stato/2025/mart_saldi_anno.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_spese_stato__mart_investimenti_vs_corrente",
+      "dataset": "bdap_spese_stato",
+      "table": "mart_investimenti_vs_corrente",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_spese_stato/2025/mart_investimenti_vs_corrente.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_spese_stato__mart_spese_anno",
+      "dataset": "bdap_spese_stato",
+      "table": "mart_spese_anno",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_spese_stato/2025/mart_spese_anno.parquet",
+        "multi_file": false
+      }
+    },
+    {
+      "slug": "bdap_spese_stato__mart_spese_missione_anno",
+      "dataset": "bdap_spese_stato",
+      "table": "mart_spese_missione_anno",
+      "location": {
+        "type": "gcs",
+        "path": "gs://dataciviclab-mart/bilancio-pubblico/bdap_spese_stato/2025/mart_spese_missione_anno.parquet",
+        "multi_file": false
+      }
+    }
+  ],
+  "signals": [
+    {
+      "id": "bdap_entrate_stato",
+      "source_id": "openbdap",
+      "status": "ok",
+      "label": "bdap_entrate_stato",
+      "detail": "anno 2025 — mart: si",
+      "action": "",
+      "run": {
+        "run_id": "20260904T112245Z_bc85f25e",
+        "year": 2025,
+        "status": "SUCCESS",
+        "quality_score": {
+          "raw": 100,
+          "clean": 95,
+          "mart": 100
+        },
+        "output_rows": {
+          "raw": 1490,
+          "clean": 1490,
+          "mart": 147
+        },
+        "output_bytes": {
+          "raw": 303951,
+          "clean": 22545,
+          "mart": 9463
+        },
+        "started_at": "2026-09-04T11:22:45.505658+00:00",
+        "finished_at": "2026-09-04T11:22:49.996793+00:00",
+        "duration_seconds": 4.491
+      }
+    },
+    {
+      "id": "bdap_lb_spese_missione",
+      "source_id": "openbdap",
+      "status": "ok",
+      "label": "bdap_lb_spese_missione",
+      "detail": "anni 2017-2026 — mart: si",
+      "action": "",
+      "run": {
+        "run_id": "20260904T112434Z_524cdbb5",
+        "year": 2026,
+        "status": "SUCCESS",
+        "quality_score": {
+          "raw": 100,
+          "clean": 95
+        },
+        "output_rows": {
+          "raw": 7481,
+          "clean": 7481
+        },
+        "output_bytes": {
+          "raw": 5172527,
+          "clean": 293539
+        },
+        "started_at": "2026-09-04T11:24:34.636638+00:00",
+        "finished_at": "2026-09-04T11:24:46.448881+00:00",
+        "duration_seconds": 11.812
+      }
+    },
+    {
+      "id": "bdap_pagamenti_stato",
+      "source_id": "openbdap",
+      "status": "ok",
+      "label": "bdap_pagamenti_stato",
+      "detail": "anni 2014-2025 — mart: si",
+      "action": "",
+      "run": {
+        "run_id": "20260904T112507Z_35b2f9a4",
+        "year": 2025,
+        "status": "SUCCESS",
+        "quality_score": {
+          "raw": 100,
+          "clean": 100,
+          "mart": 100
+        },
+        "output_rows": {
+          "raw": 542,
+          "clean": 542,
+          "mart": 542
+        },
+        "output_bytes": {
+          "raw": 117921,
+          "clean": 19844,
+          "mart": 7804
+        },
+        "started_at": "2026-09-04T11:25:07.127095+00:00",
+        "finished_at": "2026-09-04T11:25:08.468415+00:00",
+        "duration_seconds": 1.341
+      }
+    },
+    {
+      "id": "bdap_saldi_stato",
+      "source_id": "openbdap",
+      "status": "ok",
+      "label": "bdap_saldi_stato",
+      "detail": "anno 2025 — mart: si",
+      "action": "",
+      "run": {
+        "run_id": "20260904T112511Z_e31285f8",
+        "year": 2025,
+        "status": "SUCCESS",
+        "quality_score": {
+          "raw": 100,
+          "clean": 100,
+          "mart": 100
+        },
+        "output_rows": {
+          "raw": 23,
+          "clean": 23,
+          "mart": 69
+        },
+        "output_bytes": {
+          "raw": 8205,
+          "clean": 7527,
+          "mart": 9437
+        },
+        "started_at": "2026-09-04T11:25:11.207157+00:00",
+        "finished_at": "2026-09-04T11:25:12.773361+00:00",
+        "duration_seconds": 1.566
+      }
+    },
+    {
+      "id": "bdap_spese_stato",
+      "source_id": "openbdap",
+      "status": "ok",
+      "label": "bdap_spese_stato",
+      "detail": "anno 2025 — mart: si",
+      "action": "",
+      "run": {
+        "run_id": "20260904T112518Z_14300f14",
+        "year": 2025,
+        "status": "SUCCESS",
+        "quality_score": {
+          "raw": 100,
+          "clean": 100,
+          "mart": 100
+        },
+        "output_rows": {
+          "raw": 10889,
+          "clean": 10889,
+          "mart": 648
+        },
+        "output_bytes": {
+          "raw": 1909013,
+          "clean": 133351,
+          "mart": 20356
+        },
+        "started_at": "2026-09-04T11:25:18.585992+00:00",
+        "finished_at": "2026-09-04T11:25:25.110904+00:00",
+        "duration_seconds": 6.525
+      }
+    }
+  ],
+  "codelists": [],
+  "entities": {
+    "entities": {
+      "Tempo": {
+        "entity": "Tempo",
+        "label": "Tempo / data",
+        "datasets": [
+          {
+            "slug": "bdap_entrate_stato",
+            "name": "Bdap Entrate Stato",
+            "column": "esercizio_finanziario",
+            "semantic_type": "year"
+          },
+          {
+            "slug": "bdap_lb_spese_missione",
+            "name": "Bdap Lb Spese Missione",
+            "column": "esercizio_finanziario",
+            "semantic_type": "year"
+          },
+          {
+            "slug": "bdap_pagamenti_stato",
+            "name": "Bdap Pagamenti Stato",
+            "column": "esercizio_finanziario",
+            "semantic_type": "year"
+          },
+          {
+            "slug": "bdap_saldi_stato",
+            "name": "Bdap Saldi Stato",
+            "column": "esercizio_finanziario",
+            "semantic_type": "year"
+          },
+          {
+            "slug": "bdap_spese_stato",
+            "name": "Bdap Spese Stato",
+            "column": "esercizio_finanziario",
+            "semantic_type": "year"
+          }
+        ],
+        "types": {
+          "year": 5
+        }
+      }
+    },
+    "bridges": []
+  }
+}
