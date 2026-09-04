@@ -27,6 +27,7 @@ def get_last_updated() -> str:
 
 # --- Saldi ---
 
+
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_saldi_anno():
     return _mart("bdap_saldi_stato", "mart_saldi_anno", 2025)
@@ -43,6 +44,7 @@ def load_avanzo_primario():
 
 
 # --- Entrate ---
+
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_entrate_anno():
@@ -61,6 +63,7 @@ def load_trend_tributarie():
 
 # --- Spese ---
 
+
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_spese_missione():
     return _mart("bdap_spese_stato", "mart_spese_missione_anno", 2025)
@@ -72,6 +75,7 @@ def load_spese_anno():
 
 
 # --- Pagamenti ---
+
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_pagamenti_anno():
@@ -89,7 +93,9 @@ def load_pagamenti_missione_anno():
     frames = []
     for year in range(2014, 2026):
         try:
-            df = _mart("bdap_pagamenti_stato", "mart_pagamenti_missione_categoria", year)
+            df = _mart(
+                "bdap_pagamenti_stato", "mart_pagamenti_missione_categoria", year
+            )
             if not df.empty:
                 frames.append(df)
         except Exception:
@@ -98,6 +104,7 @@ def load_pagamenti_missione_anno():
 
 
 # --- LB (Legge di Bilancio) ---
+
 
 @st.cache_data(ttl=3600, show_spinner=False)
 def load_lb_spese_anno():
