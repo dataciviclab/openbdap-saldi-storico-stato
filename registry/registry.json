@@ -95,7 +95,7 @@
         "path": "gs://dataciviclab-clean/bilancio-pubblico/bdap_entrate_stato/2025/bdap_entrate_stato_2025_clean.parquet",
         "multi_file": false
       },
-      "stage": "incubating",
+      "stage": "published",
       "mart_refs": [
         "bdap_entrate_stato__mart_entrate_titolo_natura_anno",
         "bdap_entrate_stato__mart_entrate_anno",
@@ -260,7 +260,7 @@
         "path": "gs://dataciviclab-clean/bilancio-pubblico/bdap_lb_spese_missione/*/bdap_lb_spese_missione_*_clean.parquet",
         "multi_file": true
       },
-      "stage": "incubating",
+      "stage": "published",
       "mart_refs": [
         "bdap_lb_spese_missione__mart_lb_spese_anno",
         "bdap_lb_spese_missione__mart_lb_vs_rendiconto"
@@ -388,7 +388,7 @@
         "path": "gs://dataciviclab-clean/bilancio-pubblico/bdap_pagamenti_stato/*/bdap_pagamenti_stato_*_clean.parquet",
         "multi_file": true
       },
-      "stage": "incubating",
+      "stage": "published",
       "mart_refs": [
         "bdap_pagamenti_stato__mart_pagamenti_missione_categoria",
         "bdap_pagamenti_stato__mart_pagamenti_anno",
@@ -554,7 +554,7 @@
         "path": "gs://dataciviclab-clean/bilancio-pubblico/bdap_saldi_stato/2025/bdap_saldi_stato_2025_clean.parquet",
         "multi_file": false
       },
-      "stage": "incubating",
+      "stage": "published",
       "mart_refs": [
         "bdap_saldi_stato__mart_saldi_anno",
         "bdap_saldi_stato__mart_composizione_spesa",
@@ -640,7 +640,7 @@
         "path": "gs://dataciviclab-clean/bilancio-pubblico/bdap_spese_stato/2025/bdap_spese_stato_2025_clean.parquet",
         "multi_file": false
       },
-      "stage": "incubating",
+      "stage": "published",
       "mart_refs": [
         "bdap_spese_stato__mart_spese_missione_anno",
         "bdap_spese_stato__mart_spese_anno",
