@@ -1,8 +1,8 @@
 {
   "schema_version": 1,
-  "repo": "openbdap-saldi-storico-stato",
-  "source_repo": "dataciviclab/openbdap-saldi-storico-stato",
-  "updated_at": "2026-09-04",
+  "repo": "bilancio-pubblico",
+  "source_repo": "dataciviclab/bilancio-pubblico",
+  "updated_at": "2026-09-05",
   "datasets": [
     {
       "slug": "bdap_entrate_stato",
