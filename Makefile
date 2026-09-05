@@ -47,10 +47,10 @@ clean-runs:
 
 .PHONY: registry registry-write
 registry:
-	$(TOOLKIT) registry build
+	$(TOOLKIT) registry build --prefix bilancio-pubblico
 
 registry-write:
-	$(TOOLKIT) registry build --write
+	$(TOOLKIT) registry build --prefix bilancio-pubblico --write
 
 .PHONY: test
 test:

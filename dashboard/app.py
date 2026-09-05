@@ -5,12 +5,16 @@ I dati del bilancio dello Stato italiano, resi interrogabili.
 
 import streamlit as st
 
+from lab_connectors.branding import apply_branding
+
 st.set_page_config(
     page_title="Bilancio Pubblico - Dashboard",
     page_icon="🇮🇹",
     layout="wide",
     initial_sidebar_state="expanded",
 )
+
+apply_branding(repo_name="bilancio-pubblico", repo_url="https://github.com/dataciviclab/bilancio-pubblico")
 
 pages = {
     "": [
@@ -30,11 +34,9 @@ pages = {
 
 pg = st.navigation(pages, position="sidebar")
 
-st.sidebar.markdown("---")
 st.sidebar.caption("Fonti: OpenBDAP RGS/MEF")
 st.sidebar.caption(
-    "Codice: [dataciviclab/openbdap-saldi-storico-stato](https://github.com/dataciviclab/openbdap-saldi-storico-stato)"
+    "Codice: [dataciviclab/bilancio-pubblico](https://github.com/dataciviclab/bilancio-pubblico)"
 )
-st.sidebar.caption("[DataCivicLab](https://dataciviclab.org/) · MIT License")
 
 pg.run()
